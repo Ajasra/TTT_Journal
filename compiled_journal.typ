@@ -7,15 +7,16 @@
 #align(center + horizon)[
   #v(-20pt)
   #rect(stroke: 1pt + rgb("#111111"), inset: 15pt, radius: 4pt)[
-    #set text(size: 18pt, weight: "bold")
+    #set text(size: 16pt, weight: "bold")
     #raw("CYBERNETIC JOURNAL")
   ]
   #v(10pt)
-  #text(style: "italic", size: 10pt)[An Apparatus of Autopoietic Stabilization and Temporal Bifurcation]
+  #text(style: "italic", size: 8pt)[An Apparatus of Autopoietic Stabilization and Temporal Bifurcation]
   #v(40pt)
   #align(left)[
     #block(width: 85%, spacing: 12pt)[
-      #line(length: 100%, stroke: 0.5pt)
+      #set text(size: 8pt)
+      #show raw: set text(size: 8pt)
       #grid(
         columns: (auto, 1fr),
         gutter: 10pt,
@@ -23,7 +24,6 @@
         raw("OPERATOR:   "), [ #box(width: 100%, stroke: (bottom: 0.5pt + rgb("#888888")))[] ],
         raw("EPOCH SPAN: "), [ #raw("CYCLE 1 - 3 // EPOCH SPAN: 93 DAYS // A5 STAMP") ]
       )
-      #line(length: 100%, stroke: 0.5pt)
     ]
   ]
 ]
@@ -32,6 +32,7 @@
 // Page 2: System State Baseline
 #system-header("SYSTEM BASELINE", "OWNERSHIP & ENCODING")
 #v(4pt)
+#set text(size: 8pt)
 Establish and document your core cybernetic operator baseline parameters:
 #v(4pt)
 #grid(
@@ -46,12 +47,16 @@ Establish and document your core cybernetic operator baseline parameters:
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
     #v(1pt)
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
+    #v(1pt)
+    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
   ],
   [
     #set text(weight: "bold", size: 10pt)
     #raw("COGNITIVE FREQUENCY (Mental Focus State):") \
     #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))
     "Define baseline intellectual bandwidth, primary study domains, and estimated daily deep-focus limit."
+    #v(1pt)
+    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
     #v(1pt)
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
     #v(1pt)
@@ -66,12 +71,16 @@ Establish and document your core cybernetic operator baseline parameters:
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
     #v(1pt)
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
+    #v(1pt)
+    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
   ],
   [
     #set text(weight: "bold", size: 10pt)
     #raw("ATTENTION FILTER ID (Device & Filter Rules):") \
     #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))
     "List the active device configurations, screen time thresholds, website blocklists, or notification rules in place."
+    #v(1pt)
+    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
     #v(1pt)
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
     #v(1pt)
@@ -99,20 +108,20 @@ Operator Systemic Commitment:
 #system-header("CYBERNETIC OPERATING MANUAL (1/2)", "SYSTEM GUIDE", show-date: false)
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 8pt, radius: 2pt, fill: rgb("#fafafa"))[
-  #set text(size: 10.5pt, weight: "bold")
+  #set text(size: 9.5pt, weight: "bold")
   #raw("AUTOPOIETIC RE-PROGRAMMING") \
   #v(2pt)
-  #set text(size: 9.5pt, weight: "regular")
+  #set text(size: 8pt, weight: "regular")
   This journal is a physical-conceptual instrument of material-discursive boundary making. It is designed to restructure cognitive pathways, regulate intensive energy, and balance stability (homeostasis) with adaptive mutation (homeorhesis). It operates on two distinct temporal scales: Chronos (striated, clock-measured administrative time) and Aion (smooth, intensive evental time of creative play).
 ]
 #v(2pt)
 #section-title("THE TEMPORAL SPLIT (CHRONOS vs. AION)")
-#set text(size: 9.5pt)
+#set text(size: 8pt)
 - *Chronos (Striated Time):* Clock-tied scheduling. Use the Chronos column on the right console to log linear tasks, calendars, and structural routines.
 - *Aion (Smooth Time):* Event-time creative play. Use the Aion column on the right console to log rhizomatic research, drift concepts, and open-ended study.
 - *Rule:* Never let Chronos override Aion play. Allocate dedicated time segments for Aion drift to avoid mental entropy decay.
 #section-title("▲ THE VECTOR FORCE FIELD")
-#set text(size: 9.5pt)
+#set text(size: 8pt)
 Each morning, define the four vectors acting on your cognitive landscape (rated 0-10):
 - *▲ Attractors:* Primary intellectual/creative draws pulling focus.
 - *■ Stabilizers:* Maintenance routines (diet, sleep hygiene, physical movement).
@@ -124,21 +133,21 @@ Each morning, define the four vectors acting on your cognitive landscape (rated 
 #system-header("CYBERNETIC OPERATING MANUAL (2/2)", "SYSTEM GUIDE", show-date: false)
 #v(6pt)
 #section-title("THE DAILY CONSOLE: CHRONOS & AION")
-#set text(size: 9.5pt)
+#set text(size: 8pt)
 The right page console handles active actualization. Divide your daily cognitive loads between Chronos columns (scheduled work) and Aion columns (fluid drift tasks).
 - *Free Ink-Log / Drift Processor:* Use the middle block as an associative notes area. Capture fleeting web links, citations, or metrics to avoid cognitive fragmentation.
 #section-title("EVENING DIAGNOSTIC & FEEDFORWARD LOOP")
-#set text(size: 9.5pt)
+#set text(size: 8pt)
 Before system shutdown each evening, audit the day's coordinates:
 - *1. State Space:* Plot your coordinate mapping Vitality/Joy and Flow/Discipline.
 - *2. Entanglement Audit:* Register screens, platforms, or habit traps that captured your agency.
 - *3. Diffraction Pattern:* Map how actions rippled into constructive or destructive wave interferences.
 #v(4pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#111111"), inset: 8pt, fill: rgb("#fafafa"))[
-  #set text(size: 9.5pt, weight: "bold")
+  #set text(size: 8pt, weight: "bold")
   #raw("THE FEEDFORWARD SEED (THE CYBERNETIC LINK):") \
   #v(2pt)
-  #set text(size: 9pt, weight: "regular")
+  #set text(size: 8pt, weight: "regular")
   Formulate a single instruction based on the evening diagnostic. Write it in the seed block. The next morning, copy this seed directly into the attunement block to program the day's starting boundaries.
 ]
 #pagebreak()
@@ -185,15 +194,15 @@ Before system shutdown each evening, audit the day's coordinates:
 Plot your initial 8-coordinate vector space signature below. Set coordinates for Attractor (A1), Stabilizer (S1), Flight Line (F1), Resistor (R1), Vitality (V1), Diffraction (D1), Chronos (C1), and Aion (A2) based on your baseline week:
 #v(10pt)
 #align(center)[
-  #rect(width: 170pt, height: 170pt, stroke: 0.5pt + rgb("#111111"), fill: rgb("#ffffff"))[
-    #place(center + horizon)[#circle(radius: 80pt, stroke: 0.25pt + rgb("#bbbbbb"))]
-    #place(center + horizon)[#circle(radius: 60pt, stroke: 0.25pt + rgb("#cccccc"))]
-    #place(center + horizon)[#circle(radius: 40pt, stroke: 0.25pt + rgb("#dddddd"))]
-    #place(center + horizon)[#circle(radius: 20pt, stroke: 0.25pt + rgb("#eeeeee"))]
-    #place(top + left)[#line(start: (0pt, 85pt), end: (170pt, 85pt), stroke: 0.25pt + rgb("#b1b1b1"))]
-    #place(top + left)[#line(start: (85pt, 0pt), end: (85pt, 170pt), stroke: 0.25pt + rgb("#b1b1b1"))]
-    #place(top + left)[#line(start: (25pt, 25pt), end: (145pt, 145pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-    #place(top + left)[#line(start: (25pt, 145pt), end: (145pt, 25pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+  #rect(width: 200pt, height: 200pt, stroke: 0.5pt + rgb("#111111"), fill: rgb("#ffffff"))[
+    #place(center + horizon)[#circle(radius: 90pt, stroke: 0.25pt + rgb("#bbbbbb"))]
+    #place(center + horizon)[#circle(radius: 70pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 50pt, stroke: 0.25pt + rgb("#dddddd"))]
+    #place(center + horizon)[#circle(radius: 30pt, stroke: 0.25pt + rgb("#eeeeee"))]
+    #place(top + left)[#line(start: (0pt, 95pt), end: (190pt, 95pt), stroke: 0.25pt + rgb("#b1b1b1"))]
+    #place(top + left)[#line(start: (95pt, 0pt), end: (95pt, 190pt), stroke: 0.25pt + rgb("#b1b1b1"))]
+    #place(top + left)[#line(start: (25pt, 25pt), end: (165pt, 165pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+    #place(top + left)[#line(start: (25pt, 165pt), end: (165pt, 25pt), stroke: 0.25pt + rgb("#d4d4d8"))]
     #place(top + center, dy: 4pt)[#set text(size: 6pt); #raw("A1 (ATTRACTOR)")]
     #place(bottom + center, dy: -4pt)[#set text(size: 6pt); #raw("R1 (RESISTOR)")]
     #place(left + horizon, dx: 4pt)[#set text(size: 6pt); #raw("S1 (STABILIZER)")]
@@ -891,44 +900,36 @@ Plot your initial 8-coordinate vector space signature below. Set coordinates for
 #challenge-tracker-block("", "30 DAYS")
 #v(8pt)
 #challenge-tracker-block("", "30 DAYS")
-#pagebreak()
-// Page 228: Challenge Trackers Page 1 Right
-#system-header("SYSTEM CHALLENGE TRACKERS: FIELD 1/2", "METRIC GRIDS")
 #v(8pt)
 #challenge-tracker-block("", "30 DAYS")
 #pagebreak()
-// Page 229: Challenge Trackers Page 2 Left
+// Page 228: Challenge Trackers Page 2 Right
 #system-header("SYSTEM CHALLENGE TRACKERS: FIELD 2/2", "METRIC GRIDS")
 #v(8pt)
 #challenge-tracker-block("", "30 DAYS")
 #v(8pt)
 #challenge-tracker-block("", "30 DAYS")
-#pagebreak()
-// Page 230: Challenge Trackers Page 2 Right
-#system-header("SYSTEM CHALLENGE TRACKERS: FIELD 2/2", "METRIC GRIDS")
 #v(8pt)
 #challenge-tracker-block("", "30 DAYS")
 #pagebreak()
-// Page 231: Trajectory Mapping Setup
+// Page 229: Trajectory Mapping Setup
 #system-header("ABSOLUTE DIAGNOSTIC: TRAJECTORY MAPPING", "LONG-TERM MAPPING")
 #v(8pt)
 Use this grid to aggregate your F_net and Vitality ratings across the entire 93-day cycle.
 Plot coordinates weekly to visualize your autopoietic stabilization trajectory:
 #v(10pt)
 #align(center)[
-  #rect(width: 140pt, height: 140pt, stroke: 0.5pt + rgb("#888888"), fill: rgb("#ffffff"))[
-    #place(center + horizon)[
-      #circle(radius: 60pt, stroke: 0.25pt + rgb("#cccccc"))
-      #circle(radius: 45pt, stroke: 0.25pt + rgb("#cccccc"))
-      #circle(radius: 30pt, stroke: 0.25pt + rgb("#cccccc"))
-      #circle(radius: 15pt, stroke: 0.25pt + rgb("#cccccc"))
-      #line(start: (-70pt, 0pt), end: (70pt, 0pt), stroke: 0.25pt + rgb("#a1a1aa"))
-      #line(start: (0pt, -70pt), end: (0pt, 70pt), stroke: 0.25pt + rgb("#a1a1aa"))
-    ]
-    #place(top + center, dy: 4pt)[#set text(size: 5.5pt); #raw("VITALITY (JOY)")]
-    #place(bottom + center, dy: -4pt)[#set text(size: 5.5pt); #raw("DRAIN (EXHAUST)")]
-    #place(left + horizon, dx: 4pt)[#set text(size: 5.5pt); #raw("SMOOTH (FLOW)")]
-    #place(right + horizon, dx: -4pt)[#set text(size: 5.5pt); #raw("STRIATED (ORDER)")]
+  #rect(width: 200pt, height: 200pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[
+    #place(center + horizon)[#circle(radius: 80pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 60pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 40pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 20pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(top + left)[#line(start: (0pt, 95pt), end: (190pt, 95pt), stroke: 0.25pt + rgb("#a1a1aa"))]
+    #place(top + left)[#line(start: (95pt, 0pt), end: (95pt, 190pt), stroke: 0.25pt + rgb("#a1a1aa"))]
+    #place(top + center, dy: 6pt)[#set text(size: 6pt); #raw("VITALITY (JOY)")]
+    #place(bottom + center, dy: -6pt)[#set text(size: 6pt); #raw("DRAIN (EXHAUST)")]
+    #place(left + horizon, dx: 6pt)[#set text(size: 6pt); #raw("SMOOTH (FLOW)")]
+    #place(right + horizon, dx: -6pt)[#set text(size: 6pt); #raw("STRIATED (ORDER)")]
   ]
 ]
 #v(12pt)

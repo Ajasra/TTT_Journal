@@ -84,14 +84,14 @@
   v(2pt)
   
   rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 8pt, radius: 2pt)[
-    #set text(size: 10pt)
+    #set text(size: 9pt)
     #raw("> MATERIAL ALLIES (Tools, interfaces, environment):") \
     #v(2pt)
-    #write-lines(3, height: 11pt)
+    #write-lines(3, height: 10pt)
     #v(3pt)
     #raw("> AGENTIAL CUT (What boundary are you enacting today?):") \
     #v(2pt)
-    #write-lines(3, height: 11pt)
+    #write-lines(3, height: 10pt)
   ]
   
   section-title("VECTOR FORCE FIELD")
@@ -101,28 +101,28 @@
     row-gutter: 8pt,
     column-gutter: 11pt,
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("▲ ATTRACTOR [  /10]") \
       #v(2pt)
-      #write-lines(1, height: 11pt)
+      #write-lines(2, height: 10pt)
     ],
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("■ STABILIZER [  /10]") \
       #v(2pt)
-      #write-lines(1, height: 11pt)
+      #write-lines(2, height: 10pt)
     ],
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("⤏ FLIGHT LINE [  /10]") \
       #v(2pt)
-      #write-lines(1, height: 11pt)
+      #write-lines(2, height: 10pt)
     ],
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("▼ RESISTOR [  /10]") \
       #v(2pt)
-      #write-lines(1, height: 11pt)
+      #write-lines(2, height: 10pt)
     ]
   )
   
@@ -130,7 +130,7 @@
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(12, height: 11pt)
+    #write-lines(16, height: 10pt)
   ]
 }
 
@@ -145,18 +145,18 @@
   
   grid(
     columns: (1fr, 1fr),
-    gutter: 12pt,
+    gutter: 10pt,
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("CHRONOS // STRIATED (Tasks)") \
       #v(2pt)
-      #write-lines(5, height: 12pt)
+      #write-lines(6, height: 10pt)
     ],
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("AION // SMOOTH (Drifts)") \
       #v(2pt)
-      #write-lines(5, height: 12pt)
+      #write-lines(6, height: 10pt)
     ]
   )
   
@@ -164,7 +164,7 @@
   raw("FREE INK-LOG / DRIFT PROCESSOR (Associative Notes):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(5, height: 12pt)
+    #write-lines(10, height: 10pt)
   ]
   
   v(2pt)
@@ -177,13 +177,13 @@
     columns: (1.2fr, 1fr),
     gutter: 10pt,
     [
-      #set text(size: 10pt)
+      #set text(size: 9pt)
       #raw("1. STATE SPACE") \
       #v(2pt)
       #align(center)[
-        #rect(width: 85pt, height: 85pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"))[
-          #place(top + left)[#line(start: (0pt, 42.5pt), end: (85pt, 42.5pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + left)[#line(start: (42.5pt, 0pt), end: (42.5pt, 85pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+        #rect(width: 120pt, height: 120pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"))[
+          #place(top + left)[#line(start: (0pt, 55pt), end: (110pt, 55pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + left)[#line(start: (55pt, 0pt), end: (55pt, 110pt), stroke: 0.25pt + rgb("#d4d4d8"))]
           #place(top + center, dy: 2pt)[#set text(size: 4.5pt); #raw("VITALITY / JOY")]
           #place(bottom + center, dy: -2pt)[#set text(size: 4.5pt); #raw("DRAIN / EXHAUST")]
           #place(left + horizon, dx: 2pt)[#set text(size: 4.5pt); #raw("SMOOTH / FLOW")]
@@ -192,22 +192,22 @@
       ]
     ],
     [
-      #set text(size: 9.5pt)
+      #set text(size: 9pt)
       #raw("2. ENTANGLEMENT AUDIT") \
       #v(2pt)
-      #write-lines(3, height: 12pt)
+      #write-lines(4, height: 10pt)
       
       #v(2pt)
       #raw("3. DIFFRACTION PATTERN") \
       #v(2pt)
-      #write-lines(3, height: 12pt)
+      #write-lines(4, height:   10pt)
     ]
   )
   
   v(2pt)
   raw("4. FEEDFORWARD SEED (Tomorrow's Initial Boundary):")
   rect(width: 100%, fill: rgb("#fafafa"), stroke: 0.5pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(2, height: 12pt)
+    #write-lines(2, height: 10pt)
   ]
 }
 
@@ -223,7 +223,7 @@
   raw("// 0. MACRO ATTRACTORS (Weekly Focus)")
   v(1pt)
   rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 8pt, radius: 2pt)[
-    #write-lines(4, height: 11pt)
+    #write-lines(6, height: 11pt)
   ]
   
   v(4pt)
@@ -237,7 +237,7 @@
   raw("// 2. RESERVOIR OF POTENTIALS (Aion Tank / Undated Task List)")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(8, height: 11pt)
+    #write-lines(12, height: 11pt)
   ]
 }
 
@@ -254,37 +254,37 @@
   v(2pt)
   grid(
     columns: (1fr, 1fr),
-    gutter: 10pt,
+    gutter: 8pt,
     [
-      #set text(size: 10pt)
+      #set text(size: 8pt)
       #raw("Homeostatic (Stability):  [   ]") \
-      #v(6pt)
+      #v(1pt)
       #raw("Amplifying (Acceleration): [   ]") \
-      #v(6pt)
+      #v(1pt)
       #raw("Flight Lines (Escapes):    [   ]")
     ],
     [
-      #set text(size: 10pt)
+      #set text(size: 8pt)
       #raw("Rhizomatic (Connections): [   ]") \
-      #v(6pt)
+      #v(1pt)
       #raw("Complexity (Information): [   ]") \
-      #v(6pt)
+      #v(1pt)
       #raw("Stagnation (Rigidity):    [   ]")
     ]
   )
   
-  v(4pt)
+  v(10pt)
   raw("// 4. MATERIAL ADJUSTMENTS (Workspace, routine, environment)")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(11, height: 11pt)
+    #write-lines(12, height: 11pt)
   ]
   
   v(4pt)
   raw("// 5. THE RESIDUE FOLD (Carried-forward issues)")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(11, height: 11pt)
+    #write-lines(13, height: 11pt)
   ]
 }
 
@@ -375,28 +375,28 @@
 // TEMPLATE 7: CHALLENGE TRACKER COMPONENT (3 grids per page)
 // -----------------------------------------------------------------------------
 #let challenge-tracker-block(title, target) = {
-  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 6pt, radius: 2pt)[
+  rect(width: 100%, stroke: 0.5pt + rgb("#999999"), inset: 6pt, radius: 2pt)[
     #set text(size: 8pt)
     #grid(
       columns: (1fr, auto),
-      raw("// SYSTEM CHALLENGE: " + title),
+      raw("// SYSTEM CHALLENGE: __________________________________________"),
       raw("TARGET: " + target)
     )
     #v(4pt)
     #align(center)[
       #table(
         columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-        stroke: 0.25pt + rgb("#444444"),
+        stroke: 0.25pt + rgb("#aaaaaa"),
         inset: 3pt,
         align: center,
-        raw("01"), raw("02"), raw("03"), raw("04"), raw("05"), raw("06"), raw("07"), raw("08"), raw("09"), raw("10"),
-        raw("11"), raw("12"), raw("13"), raw("14"), raw("15"), raw("16"), raw("17"), raw("18"), raw("19"), raw("20"),
-        raw("21"), raw("22"), raw("23"), raw("24"), raw("25"), raw("26"), raw("27"), raw("28"), raw("29"), raw("30")
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" ")
       )
     ]
     #v(2pt)
     #raw("SYSTEM DIAGNOSTIC (Somatic and attentional adjustments):") \
-    #write-lines(2, height: 13pt)
+    #write-lines(6, height: 10pt)
   ]
 }
 
