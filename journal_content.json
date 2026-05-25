@@ -1,0 +1,123 @@
+{
+  "system_metadata": {
+    "title": "CYBERNETIC JOURNAL",
+    "subtitle": "An Apparatus of Autopoietic Stabilization and Temporal Bifurcation",
+    "tagline": "CYCLE 1 - 3 // EPOCH SPAN: 93 DAYS // A5 STAMP"
+  },
+  "guide_text": {
+    "manifesto_header": "AUTOPOIETIC RE-PROGRAMMING",
+    "manifesto_body": "This journal is a physical-conceptual instrument of material-discursive boundary making. It is designed to restructure cognitive pathways, regulate intensive energy, and balance stability (homeostasis) with adaptive mutation (homeorhesis). It operates on two distinct temporal scales: Chronos (striated, clock-measured administrative time) and Aion (smooth, intensive evental time of creative play).",
+    "protocols_header": "OPERATIONAL METHODOLOGY",
+    "protocols_morning": "▲ ATTRACTORS: Intensive focus pulls towards primary goals.\n■ STABILIZERS: Homeostatic routines (maintenance habits, diet, rest).\n⤏ FLIGHT LINES: Rhizomatic escapes, creative detours, and deviations.\n▼ RESISTORS: Friction points, cognitive drag, and thermodynamic limits.",
+    "protocols_evening": "At the end of the day, audit your systemic coordinates:\n1. STATE SPACE: Plot a single coordinate indicating Vitality/Joy and Flow/Discipline.\n2. ENTANGLEMENT AUDIT: Record where agency was captured by bad assemblages (interfaces, distractions).\n3. DIFFRACTION PATTERN: Register how actions rippled out and caused constructive or destructive wave interference.\n4. FEEDFORWARD SEED: Inscribe a single seed to initialize tomorrow's state."
+  },
+  "taxonomy": {
+    "title": "16-DIMENSIONAL TAXONOMY REFERENCE",
+    "dimensions": [
+      {
+        "id": "A1",
+        "name": "ATTRACTOR FORCE",
+        "desc": "Focus gradient; pull strength towards primary creative and intellectual vectors."
+      },
+      {
+        "id": "S1",
+        "name": "STABILIZATION INDEX",
+        "desc": "Sustenance level of homeostatic habits and system maintenance routines."
+      },
+      {
+        "id": "F1",
+        "name": "FLIGHT VELOCITY",
+        "desc": "Rate of creative escape, detour, and unexpected rhizomatic associations."
+      },
+      {
+        "id": "R1",
+        "name": "THERMODYNAMIC RESISTANCE",
+        "desc": "Cognitive drag, somatic exhaustion, and system-level friction."
+      },
+      {
+        "id": "V1",
+        "name": "VITALITY / JOY",
+        "desc": "Spinozian affect score. Measure of intensive power of action."
+      },
+      {
+        "id": "D1",
+        "name": "DIFFRACTION RATIO",
+        "desc": "Coherence of actions. High values indicate constructive wave ripples."
+      },
+      {
+        "id": "C1",
+        "name": "CHRONOS METRIC",
+        "desc": "Completion rate of scheduled linear tasks."
+      },
+      {
+        "id": "A2",
+        "name": "AION DRIFT",
+        "desc": "Depth and duration of un-dated evental time and research play."
+      }
+    ]
+  },
+  "calibration_prompts": {
+    "cycle_1": {
+      "title": "CYCLE 1: DETERRITORIALIZATION",
+      "subtitle": "Days 1–31 // Phase Focus: Destabilizing Stagnation & Pruning Obsolete Habit Loops",
+      "guideline": "Map systemic constraints, identify digital/physical dependencies to drop, and prune stagnant goals.",
+      "prompts": {
+        "left_1": "ATTRACTOR DECAY (Pruning stagnant goals or tasks):",
+        "left_2": "EMERGENT FLIGHT LINES (New, spontaneous interests):",
+        "left_3": "CYCLE 1 CONSTRAINTS (What dependencies will you deterritorialize?):",
+        "right_1": "THERMODYNAMIC TUNING (How will you adjust system temperature?):",
+        "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 1):"
+      }
+    },
+    "cycle_2": {
+      "title": "CYCLE 2: RE-ORGANIZATION",
+      "subtitle": "Days 32–62 // Phase Focus: Assembling Emergent Workflows & Homeorhesis",
+      "guideline": "Assemble new workflows, connect habits, and balance discipline with creative deviation.",
+      "prompts": {
+        "left_1": "ATTRACTOR INTEGRATION (Merging new workflows together):",
+        "left_2": "EMERGENT CONNECTIONS (New rhizomatic connections built):",
+        "left_3": "CYCLE 2 WORKFLOWS (How did you adjust and re-assemble structure?):",
+        "right_1": "THERMODYNAMIC TUNING (Modulating energy vs. focus):",
+        "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 2):"
+      }
+    },
+    "cycle_3": {
+      "title": "CYCLE 3: STABILIZATION",
+      "subtitle": "Days 63–93 // Phase Focus: Territorializing Stable Routines & Boundary Locking",
+      "guideline": "Anchor stable habits, set defensive boundaries, and lock down homeostatic loops.",
+      "prompts": {
+        "left_1": "ATTRACTOR CONSOLIDATION (Locking down core high-value vectors):",
+        "left_2": "HABIT ANCHORS (Physical routine stabilization checkpoints):",
+        "left_3": "CYCLE 3 BOUNDARIES (What strict filters will you lock to prevent drag?):",
+        "right_1": "THERMODYNAMIC TUNING (Preventing late-stage entropy decay):",
+        "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 3):"
+      }
+    }
+  },
+  "challenge_trackers": [
+    {
+      "id": "CH1",
+      "title": ""
+    },
+    {
+      "id": "CH2",
+      "title": ""
+    },
+    {
+      "id": "CH3",
+      "title": ""
+    },
+    {
+      "id": "CH4",
+      "title": ""
+    },
+    {
+      "id": "CH5",
+      "title": ""
+    },
+    {
+      "id": "CH6",
+      "title": ""
+    }
+  ]
+}
