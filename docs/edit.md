@@ -56,15 +56,16 @@ Each page design is isolated inside a Typst template file within the `templates/
 ### Important Layout Rules
 
 1.  **Scoped Font Sizing:**
-    To match the backup document's design layout exactly, the global font size undergoes specific transitions at page boundaries:
+    To match the layout design exactly, the global font size undergoes specific transitions at page boundaries:
     *   **Baseline page:** Set to `8pt`.
     *   **Guide pages:** Set to `9.5pt`.
     *   **Vector Space & all subsequent loops:** Set to `8.5pt`.
     
-    If you add a new template that needs custom local sizing, do it inside the function scope (`#set text(size: Xpt)`) to avoid polluting subsequent page layouts.
+    If we add a new template that requires custom local sizing, we define it inside the function scope (`#set text(size: Xpt)`) to avoid polluting subsequent page layouts.
 
 2.  **Dotted Line Spacing:**
-    Dotted input lines are generated using the `write-lines(count, height)` helper function. If you modify a prompt's length and it pushes the lines onto a new page, decrease the `count` of lines or reduce the `height` parameter (e.g., from `10pt` to `9.5pt`) in the respective template file to prevent overflow.
+    Dotted input lines are generated using the `write-lines(count, height)` helper function. If we modify a prompt's length and it pushes the lines onto a new page, we decrease the line `count` or reduce the `height` parameter (e.g., from `10pt` to `9.5pt`) in the respective template file to prevent overflow.
 
 3.  **Monospaced Styling:**
-    Typst raw blocks (`#raw("...")`) automatically inherit the document's monospace font fallbacks. To keep styling clean and consistent across tables and labels, avoid assigning static absolute font sizes to labels; instead, let them scale proportionally with the surrounding scope size.
+    Typst raw blocks (`#raw("...")`) automatically inherit the document's monospace font fallbacks. To keep styling clean and consistent across tables and labels, we avoid assigning static absolute font sizes to labels; instead, we let them scale proportionally with the surrounding scope size.
+

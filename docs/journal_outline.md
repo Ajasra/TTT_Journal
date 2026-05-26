@@ -1,33 +1,33 @@
-# Architectural Blueprint: The 100-Day Cybernetic Journal
+# Architectural Blueprint: The 84-Day Cybernetic Journal
 
-This document provides the definitive structural outline, template designs, and philosophical-cybernetic justifications for our physical, A5-format 100-Day Cybernetic Journal. This layout serves as the official specification for the programmatic PDF generation phase.
+*This document provides the definitive structural outline, template designs, and philosophical-cybernetic justifications for our physical, A5-format 84-Day Cybernetic Journal. This layout serves as the official specification for the programmatic PDF generation phase.*
 
 ---
 
 ## I. Philosophical & Systemic Architecture
 
-The journal operates as an **apparatus of physical-conceptual measurement** (agential realism) rather than a passive notebook. It aims to restructure cognitive patterns, regulate systemic energy, and balance stability (homeostasis) with adaptive mutation (homeorhesis).
+The apparatus operates as a **performative apparatus of physical-conceptual measurement** (agential realism) rather than a passive notebook. It aims to restructure cognitive patterns, regulate systemic energy, and balance stability (homeostasis) with adaptive mutation (homeorhesis).
 
 ```mermaid
 flowchart TD
-    subgraph virtual_potential ["Aion: The Virtual"]
+    subgraph VP ["Aion: The Virtual"]
         A["Lines of Flight"] --> B["Attractor Basins"]
         B --> C["Reservoir of Potentials"]
     end
-    subgraph metric_actualization ["Chronos: The Actual"]
+    subgraph MA ["Chronos: The Actual"]
         D["Linear Tasks / Milestones"] --> E["Evening Diagnostics"]
         E --> F["Inscribed Physical Trace"]
     end
-    subgraph journal_interface ["Agential Cut"]
+    subgraph JI ["Agential Cut"]
         G["Left Page: Morning Attunement"] <--> H["Right Page: Evening Inscription"]
     end
     C <-->|Intra-active Feedback| G
     H <-->|Diffractive Mapping| E
-    style journal_interface fill:#0f172a,stroke:#38bdf8,stroke-width:2px
+    style JI fill:#0f172a,stroke:#38bdf8,stroke-width:2px
 ```
 
 ### 1. Baradian Spacetimemattering
-In Karen Barad's framework, time, space, and matter are not pre-existing entities but are continuously co-constituted through *intra-active* practices. Writing is a physical process that draws an **agential cut**—separating observer and observed. The journal does not record a static day; writing in it actively materializes the day’s boundary, turning fleeting thoughts into a physical trace in cream paper and ink.
+In Karen Barad's framework, time, space, and matter are not pre-existing entities but are continuously co-constituted through *intra-active* practices. Writing is a physical process that draws an **agential cut**—separating observer and observed. The apparatus does not record a static day; writing within it actively materializes the day’s boundary, turning fleeting thoughts into a physical trace on uncoated cream paper.
 
 ### 2. Temporal Bifurcation: Chronos vs. Aion
 *   **Chronos (Striated / Linear):** The time of clock-ticks, structured schedules, appointments, and task completion.
@@ -35,63 +35,63 @@ In Karen Barad's framework, time, space, and matter are not pre-existing entitie
 By dividing the task fields, we prevent the administrative demands of Chronos from crowding out the creative potential of Aion.
 
 ### 3. Diffractive Interference
-Instead of simple mirroring (reflection), the journal acts as a **diffraction grating**. Through the Weekly Folds, you trace how waves of attention, stress, sleep, and environment interfere with one another, mapping out constructive or destructive patterns.
+Instead of simple mirroring (reflection), the apparatus acts as a **diffraction grating**. Through the Weekly Folds, we trace how waves of attention, stress, sleep, and environment interfere with one another, mapping out constructive or destructive patterns.
 
 ---
 
-## II. Master Page Map (240 Pages)
+## II. Master Page Map (230 Pages)
 
-To fit within standard thread-sewn bindings (15 signatures of 16 pages each), the journal contains exactly **240 pages**. It is structured around **3 cycles** of 31 days each (93 total tracking days), leaving room for setup guidelines, macro taxonomies, challenge trackers, and absolute diagnostic matrices.
+To satisfy our physical page budget constraints, the apparatus contains exactly **230 pages**. It is structured around **3 cycles** of 28 days each (84 total tracking days), leaving room for setup guidelines, macro taxonomies, challenge trackers, and absolute diagnostic matrices.
 
 ### Structural Rule:
 1. **Cycle Setup Calibration:** A 2-page calibration spread initializes the rules, metrics, and parameters at the *beginning* of each cycle.
 2. **Weekly Fold:** A 2-page fold runs at the *beginning* of each week, serving as a setup, focus selector, and diffraction layout prior to the 7 daily spreads.
-3. **Transition Days:** The remaining 3 days of each 31-day cycle (Days 29–31, 60–62, 91–93) are grouped together as consecutive daily spreads at the end of each cycle.
+3. **Daily Spreads:** Each day consists of a two-page spread (Left: Morning, Right: Evening).
 
 | Page Range | Section / Template Type | Operational Purpose | Temporal Scale |
 | :--- | :--- | :--- | :--- |
 | **Page 1** | Front Page / Title Page | Title, system initialization parameters, operator credentials. | Day 0 |
-| **Page 2** | System State Baseline | Baseline structural indices and ownership log. | Day 0 |
-| **Pages 3–6** | Cybernetic Operating Guide | Explains the Vector Force Field, Chronos/Aion split, and diagnostic loops. | Epochal |
-| **Pages 7–8** | 16-Dimensional Taxonomy Reference | Legend, coordinates, and definitions of the structural state dimensions. | Epochal |
-| **Pages 9–10** | Calibration Zero (Initial Baseline) | Pre-cycle mapping of the operator's 16D state vector. | Day 0 |
-| **Pages 11–82** | **Cycle 1: Days 1–31 (Deterritorialization)** | First systemic iteration of daily, weekly, and meta-systemic loops. | 31-Day Cycle |
-| *Pages 11–12* | Cycle 1 Calibration (Setup) | Initialize parameters, thermodynamic tuning, rules, and decay analysis. | 31-Day Setup |
-| *Pages 13–14* | Weekly Fold 1 (Diffraction Space) | Weekly calibration, macros, and diffraction interference audit. | Weekly Setup |
-| *Pages 15–28* | Week 1: Days 1–7 | 7 consecutive daily spreads (Left: Morning, Right: Evening). | Daily |
-| *Pages 29–30* | Weekly Fold 2 (Diffraction Space) | Weekly calibration. | Weekly Setup |
-| *Pages 31–44* | Week 2: Days 8–14 | 7 consecutive daily spreads. | Daily |
-| *Pages 45–46* | Weekly Fold 3 (Diffraction Space) | Weekly calibration. | Weekly Setup |
-| *Pages 47–60* | Week 3: Days 15–21 | 7 consecutive daily spreads. | Daily |
-| *Pages 61–62* | Weekly Fold 4 (Diffraction Space) | Weekly calibration. | Weekly Setup |
-| *Pages 63–76* | Week 4: Days 22–28 | 7 consecutive daily spreads. | Daily |
-| *Pages 77–82* | Cycle 1 Transition Phase: Days 29–31 | 3 consecutive daily spreads. *Remaining days of Cycle 1.* | Daily |
-| **Pages 83–154** | **Cycle 2: Days 32–62 (Re-organization)** | Second systemic iteration. | 31-Day Cycle |
-| *Pages 83–84* | Cycle 2 Calibration (Setup) | Initialize parameters and set development goals for Cycle 2. | 31-Day Setup |
-| *Pages 85–148* | Weeks 5–8 (Daily Spreads & Folds) | 4 alternating blocks of [Weekly Fold (2 pages) + 7 Daily Spreads (14 pages)]. | Weekly / Daily |
-| *Pages 149–154* | Cycle 2 Transition Phase: Days 60–62 | 3 consecutive daily spreads. | Daily |
-| **Pages 155–226** | **Cycle 3: Days 63–93 (Stabilization)** | Third systemic iteration. | 31-Day Cycle |
-| *Pages 155–156* | Cycle 3 Calibration (Setup) | Initialize parameters and set development goals for Cycle 3. | 31-Day Setup |
-| *Pages 157–220* | Weeks 9–12 (Daily Spreads & Folds) | 4 alternating blocks of [Weekly Fold (2 pages) + 7 Daily Spreads (14 pages)]. | Weekly / Daily |
-| *Pages 221–226* | Cycle 3 Transition Phase: Days 91–93 | 3 consecutive daily spreads. | Daily |
-| **Pages 227–228** | The Challenge Trackers: Page 1 | 3 visual terminal-style grid trackers for habit challenges. | 30-Day Grid |
-| **Pages 229–230** | The Challenge Trackers: Page 2 | 3 additional visual terminal-style grid trackers for habit challenges. | 30-Day Grid |
-| **Pages 231–236** | Absolute Diagnostic & Trajectory Mapping | Tracing the full 93-day vector trajectory and 16D state vectors consolidation. | Long-Term |
-| **Pages 237–239** | Open Sketchpads & Drift Logs | Free-form schematic mapping and notes. | Long-Term |
-| **Page 240** | System Shutdown / End Page | Final system diagnostic summary and closure stamp. | Long-Term |
+| **Page 2** | Blank Page | Secondary cover buffer. | Day 0 |
+| **Page 3** | System State Baseline | Baseline structural indices and ownership log. | Day 0 |
+| **Pages 4–7** | Operating Guidelines | Guides explaining the Vector Force Field, Chronos/Aion split, and diagnostic loops. | Epochal |
+| **Pages 8–9** | 16-Dimensional Taxonomy Reference | Legend, coordinates, and definitions of the structural state dimensions. | Epochal |
+| **Pages 10–13** | Stratification Spreads | Somatic baselines, allies, vector space, and intent mapping. | Day 0 Setup |
+| **Pages 14–79** | **Cycle 1: Days 1–28 (Deterritorialization)** | First systemic iteration of daily, weekly, and meta-systemic loops. | 28-Day Cycle |
+| *Pages 14–15* | Cycle 1 Calibration (Setup) | Initialize cycle-level parameters and friction tuning targets. | 28-Day Setup |
+| *Pages 16–17* | Weekly Fold 1 (Diffraction Space) | Weekly calibration, macros, and diffraction interference audit. | Weekly Setup |
+| *Pages 18–31* | Week 1: Days 1–7 | 7 consecutive daily spreads (Left: Morning, Right: Evening). | Daily |
+| *Pages 32–33* | Weekly Fold 2 (Diffraction Space) | Weekly calibration. | Weekly Setup |
+| *Pages 34–47* | Week 2: Days 8–14 | 7 consecutive daily spreads. | Daily |
+| *Pages 48–49* | Weekly Fold 3 (Diffraction Space) | Weekly calibration. | Weekly Setup |
+| *Pages 50–63* | Week 3: Days 15–21 | 7 consecutive daily spreads. | Daily |
+| *Pages 64–65* | Weekly Fold 4 (Diffraction Space) | Weekly calibration. | Weekly Setup |
+| *Pages 66–79* | Week 4: Days 22–28 | 7 consecutive daily spreads. | Daily |
+| **Pages 80–145** | **Cycle 2: Days 29–56 (Re-organization)** | Second systemic iteration. | 28-Day Cycle |
+| *Pages 80–81* | Cycle 2 Calibration (Setup) | Initialize parameters and set development goals for Cycle 2. | 28-Day Setup |
+| *Pages 82–145* | Weeks 5–8 (Daily Spreads & Folds) | 4 alternating blocks of [Weekly Fold (2 pages) + 7 Daily Spreads (14 pages)]. | Weekly / Daily |
+| **Pages 146–211** | **Cycle 3: Days 57–84 (Stabilization)** | Third systemic iteration. | 28-Day Cycle |
+| *Pages 146–147* | Cycle 3 Calibration (Setup) | Initialize parameters and set development goals for Cycle 3. | 28-Day Setup |
+| *Pages 148–211* | Weeks 9–12 (Daily Spreads & Folds) | 4 alternating blocks of [Weekly Fold (2 pages) + 7 Daily Spreads (14 pages)]. | Weekly / Daily |
+| **Pages 212–213** | Challenge Trackers | Visual terminal-style grid trackers for habit challenges (Challenges 1–6). | 28-Day Grid |
+| **Pages 214–215** | Trajectory Mapping & Analysis | Tracing the full 84-day vector trajectory and 16D state vectors consolidation. | Long-Term |
+| **Pages 216–217** | Topological Left & Right | Global topological mapping grids. | Long-Term |
+| **Pages 218–219** | Autopoietic Diagnostics | Diagnostic coordinate summaries and system telemetry charts. | Long-Term |
+| **Pages 220–228** | Sketchpads | Free-form schematic mapping and notes. | Long-Term |
+| **Page 229** | Blank Page | Back of cover buffer. | Day 85 |
+| **Page 230** | System Shutdown / End Page | Final system diagnostic summary and closure stamp. | Day 85 |
 
 ---
 
 ## III. Detailed Template Visualizations
 
-To avoid visual clutter and maintain a premium aesthetic, daily spreads contain only structural lines and minimal, short reminders. In-depth instructions are relegated to the Operating Guide at the front of the journal.
+To avoid visual clutter and maintain a premium aesthetic, daily spreads contain only structural lines and minimal, short reminders. In-depth instructions are relegated to the Operating Guide at the front of the apparatus.
 
 ### 1. The Daily Spread
 
 #### Left Page: Morning Attunement (The Virtual Field)
 ```
 ================================================================================
-DAY [ ___ / 100 ]   DATE: ____/____/____                    [MORNING ATTUNEMENT]
+DAY [ ___ / 84 ]   DATE: ____/____/____                     [MORNING ATTUNEMENT]
 ================================================================================
 
 // 1. INTRA-ACTIVE ATTUNEMENT
@@ -218,15 +218,15 @@ Estimate your system's output vectors over the past 7 days (0 to 10):
 
 ---
 
-### 3. The 31-Day Meta-Systemic Update (Two-Page Spread)
-Placed at the *beginning* of each 31-day cycle, initializing setup parameters and developmental goals.
+### 3. The 28-Day Meta-Systemic Update (Two-Page Spread)
+Placed at the *beginning* of each 28-day cycle, initializing setup parameters and developmental goals.
 
 #### Cycle-Specific Calibration Targets:
-*   **Cycle 1: Deterritorialization (Day 11 Setup)**
+*   **Cycle 1: Deterritorialization (Day 14 Setup)**
     *   *Prompting Focus:* Identifying digital/physical dependencies to drop, mapping resistances, and pruning obsolete attractors.
-*   **Cycle 2: Re-organization (Day 83 Setup)**
+*   **Cycle 2: Re-organization (Day 80 Setup)**
     *   *Prompting Focus:* Assembling and testing new workflows, connecting emergent attractors, and balancing system temperature (stagnation vs. chaos).
-*   **Cycle 3: Stabilization/Territorialization (Day 155 Setup)**
+*   **Cycle 3: Stabilization/Territorialization (Day 146 Setup)**
     *   *Prompting Focus:* Locking down stable habits, anchoring physical routines, and setting strict homeostatic boundaries.
 
 ```
@@ -245,9 +245,9 @@ CYCLE [ _ ] TRANSITION: SETUP & CALIBRATION                      [LEFT PAGE]
    _____________________________________________________________________________
 
 // 3. SYSTEM CONSTRAINTS AUDIT (Cycle-Specific Prompts)
-   [Cycle 1 Focus: What external dependencies or habits will you deterritorialize?]
-   [Cycle 2 Focus: How will you adjust and re-assemble your workflows?]
-   [Cycle 3 Focus: What homeostatic boundaries will you lock down to anchor routines?]
+   [Cycle 1 Focus: What external dependencies or habits will we deterritorialize?]
+   [Cycle 2 Focus: How will we adjust and re-assemble our workflows?]
+   [Cycle 3 Focus: What homeostatic boundaries will we lock down to anchor routines?]
    _____________________________________________________________________________
    _____________________________________________________________________________
 
@@ -256,11 +256,11 @@ FRICTION TUNING & SYSTEMIC EVOLUTION                             [RIGHT PAGE]
 ================================================================================
 
 // 4. THERMODYNAMIC TUNING
-(How will you adjust the system "temperature" [stagnation vs. chaos] for this cycle?)
+(How will we adjust the system "temperature" [stagnation vs. chaos] for this cycle?)
    _____________________________________________________________________________
    _____________________________________________________________________________
 
-// 5. JOURNAL PROTOCOL EVOLUTION
+// 5. APPARATUS PROTOCOL EVOLUTION
 (Rules changes introduced for this cycle [fountain pen rules, wake time limits, etc.])
    _____________________________________________________________________________
    _____________________________________________________________________________
@@ -273,8 +273,8 @@ FRICTION TUNING & SYSTEMIC EVOLUTION                             [RIGHT PAGE]
 
 ---
 
-### 4. The End Pages: Challenge Trackers (Pages 227–230)
-Exactly 2 pages, designed with 3 terminal-style visual blocks each, creating 6 challenge tracks in total.
+### 4. The End Pages: Challenge Trackers (Pages 212–213)
+Designed with 3 terminal-style visual blocks each, creating 6 challenge tracks in total.
 
 ```
 ================================================================================
@@ -282,17 +282,17 @@ THE CHALLENGE TRACKER                                          [LEFT/RIGHT PAGE]
 ================================================================================
 
 // SYSTEM CHALLENGE: __________________________________________________
-[ TARGET: 30 DAYS ] 
+[ TARGET: 28 DAYS ] 
 
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐  // Fill in each node [X]
-│ 01│ 02│ 03│ 04│ 05│ 06│ 07│ 08│ 09│ 10│  // as you complete the day.
+│ 01│ 02│ 03│ 04│ 05│ 06│ 07│ 08│ 09│ 10│  // as we complete the day.
 ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
 │ 11│ 12│ 13│ 14│ 15│ 16│ 17│ 18│ 19│ 20│
 ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
-│ 21│ 22│ 23│ 24│ 25│ 26│ 27│ 28│ 29│ 30│
+│ 21│ 22│ 23│ 24│ 25│ 26│ 27│ 28│   │   │
 └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
 
-// SYSTEM DIAGNOSTIC (How did this challenge alter your daily assemblage?):
+// SYSTEM DIAGNOSTIC (How did this challenge alter our daily assemblage?):
 ________________________________________________________________________________
 ________________________________________________________________________________
 ________________________________________________________________________________
@@ -306,21 +306,21 @@ Every element in this layout serves a functional, systemic purpose designed to p
 
 ### 1. The Fixed Left/Right Layout Split
 *   **The Reasoning:** Morning energy is virtual and vector-based; evening energy is actualized and diagnostic. 
-*   **Why we do it:** Placing the **Vector Force Field** on the left page isolates pre-activity attunement, ensuring your first interaction of the day is theoretical and intentional, not transactional.
+*   **Why we do it:** Placing the **Vector Force Field** on the left page isolates pre-activity attunement, ensuring our first interaction of the day is theoretical and intentional, not transactional.
 
 ### 2. The Vector Force Field Operations
 *   **The Reasoning:** Tasks are not simple chores; they are dynamic vectors.
-*   **Why we do it:** A standard checklist treats all tasks as identical. By sorting tasks into **Attractors** (intentional pulls), **Stabilizers** (routine maintenance), **Flight Lines** (creative play), and **Resistors** (necessary blocks/friction), you curate a balanced ecosystem. If your day consists only of Stabilizers, the system is decaying; if only Flight Lines, the system is dissolving into chaos.
+*   **Why we do it:** A standard checklist treats all tasks as identical. By sorting tasks into **Attractors** (intentional pulls), **Stabilizers** (routine maintenance), **Flight Lines** (creative play), and **Resistors** (necessary blocks/friction), we curate a balanced ecosystem. If our day consists only of Stabilizers, the system is decaying; if only Flight Lines, the system is dissolving into chaos.
 
 ### 3. Diffractive Mappings vs. Representational Reflections
 *   **The Reasoning:** Traditional reflection treats the mind as a mirror. Diffraction maps how waves of action interfere.
-*   **Why we do it:** Reflection is passive. Diffraction focuses on the interference pattern: *how* sleep affected writing, *how* coffee modified anxiety, or *how* coding clashed with documentation. You analyze the system as an entangled web of cause and effect.
+*   **Why we do it:** Reflection is passive. Diffraction focuses on the interference pattern: *how* sleep affected writing, *how* coffee modified anxiety, or *how* coding clashed with documentation. We analyze the system as an entangled web of cause and effect.
 
 ---
 
 ## V. Physical Print & Typographic Specifications
 
-To generate a PDF that feels premium and tactile, the layout pipeline must output vector documents configured to the following print specifications:
+To generate a PDF that feels premium and tactile, the layout pipeline outputs vector documents configured to the following print specifications:
 
 ```mermaid
 flowchart TD
@@ -338,7 +338,7 @@ flowchart TD
 *   **Inner Gutter Margin (Binding Edge):** $20\text{mm}$.
 *   **Outer Page Margin:** $15\text{mm}$.
 *   **Top & Bottom Margins:** $18\text{mm}$.
-*   *Why:* The extended inner gutter is a physical constraint. It ensures that when Smyth-sewn, text does not slip into the binding fold, and the journal lies flat on the desk.
+*   *Why:* The extended inner gutter is a physical constraint. It ensures that when Smyth-sewn, text does not slip into the binding fold, and the apparatus lies flat on the desk.
 *   **Underlay Grid:** A subtle, low-opacity ($12\%$ opacity, neutral grey) $5\text{mm}$ dot grid covers all open writing spaces, allowing structured formatting or free-form diagramming.
 
 ### 2. Typographic Palette
@@ -348,4 +348,4 @@ flowchart TD
 
 ### 3. Materials and Production Blueprint
 *   **Paper Stock:** $120\text{gsm}$ uncoated, acid-free cream-tinted paper stock. High density prevents bleed-through (ghosting) when using fountain pens or fine-liners.
-*   **Binding:** Smyth Sewn signatures. Thread-bound signatures are mandatory for double-page spreads, allowing the journal to open a full $180^\circ$ flat.
+*   **Binding:** Smyth Sewn signatures. Thread-bound signatures are mandatory for double-page spreads, allowing the apparatus to open a full $180^\circ$ flat.
