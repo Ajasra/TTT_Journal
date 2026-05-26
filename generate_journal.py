@@ -203,9 +203,73 @@ def main():
     lines.append("")
     
     # -------------------------------------------------------------------------
-    # PAGES 5-8: CALIBRATION ZERO (Initial Baseline - 4 pages)
+    # PAGES 5-6: 16-DIMENSIONAL TAXONOMY REFERENCE (2 pages)
     # -------------------------------------------------------------------------
-    lines.append("// Page 5: Calibration Zero - Somatic & Attention Baselines")
+    print("Generating 16-Dimensional Taxonomy Reference spreads...")
+    # Page 5: Taxonomy Left Page
+    lines.append("// Page 5: 16-Dimensional Taxonomy Reference (1/2)")
+    lines.append('#system-header("16-DIMENSIONAL TAXONOMY REFERENCE (1/2)", "SYSTEM REFERENCE")')
+    lines.append("#v(6pt)")
+    lines.append("Reference matrix for tracking systemic cognitive forces and metrics:")
+    lines.append("#v(8pt)")
+    
+    for dim in taxonomy["dimensions"][:4]:
+        dim_id = dim["id"]
+        dim_name = dim["name"]
+        dim_desc = dim["desc"]
+        lines.append(f'#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[')
+        lines.append(f'  #set text(size: 9pt)')
+        lines.append(f'  #grid(')
+        lines.append(f'    columns: (auto, 1fr),')
+        lines.append(f'    gutter: 10pt,')
+        lines.append(f'    raw("{dim_id}:"), [ *{dim_name}* ]')
+        lines.append(f'  )')
+        lines.append(f'  #v(2pt)')
+        lines.append(f'  #set text(size: 8.5pt, fill: rgb("#444444"))')
+        lines.append(f'  "{dim_desc}"')
+        lines.append(f'  #v(4pt)')
+        lines.append(f'  #set text(size: 7.5pt, fill: rgb("#888888"))')
+        lines.append(f'  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")')
+        lines.append(f'  #write-lines(1, height: 12pt)')
+        lines.append(f']')
+        lines.append(f'#v(2pt)')
+    lines.append("#pagebreak()")
+    lines.append("")
+    
+    # Page 6: Taxonomy Right Page
+    lines.append("// Page 6: 16-Dimensional Taxonomy Reference (2/2)")
+    lines.append('#system-header("16-DIMENSIONAL TAXONOMY REFERENCE (2/2)", "SYSTEM REFERENCE")')
+    lines.append("#v(6pt)")
+    lines.append("Reference matrix for tracking systemic cognitive forces and metrics:")
+    lines.append("#v(8pt)")
+    
+    for dim in taxonomy["dimensions"][4:]:
+        dim_id = dim["id"]
+        dim_name = dim["name"]
+        dim_desc = dim["desc"]
+        lines.append(f'#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[')
+        lines.append(f'  #set text(size: 9pt)')
+        lines.append(f'  #grid(')
+        lines.append(f'    columns: (auto, 1fr),')
+        lines.append(f'    gutter: 10pt,')
+        lines.append(f'    raw("{dim_id}:"), [ *{dim_name}* ]')
+        lines.append(f'  )')
+        lines.append(f'  #v(2pt)')
+        lines.append(f'  #set text(size: 8.5pt, fill: rgb("#444444"))')
+        lines.append(f'  "{dim_desc}"')
+        lines.append(f'  #v(4pt)')
+        lines.append(f'  #set text(size: 7.5pt, fill: rgb("#888888"))')
+        lines.append(f'  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")')
+        lines.append(f'  #write-lines(1, height: 12pt)')
+        lines.append(f']')
+        lines.append(f'#v(2pt)')
+    lines.append("#pagebreak()")
+    lines.append("")
+    
+    # -------------------------------------------------------------------------
+    # PAGES 7-10: CALIBRATION ZERO (Initial Baseline - 4 pages)
+    # -------------------------------------------------------------------------
+    lines.append("// Page 7: Calibration Zero - Somatic & Attention Baselines")
     lines.append('#system-header("CALIBRATION ZERO: SOMATIC & ATTENTION BASELINE", "PRE-CYCLE 1/4")')
     lines.append("#v(6pt)")
     lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), inset: 8pt)[')
@@ -224,7 +288,7 @@ def main():
     lines.append("#pagebreak()")
     lines.append("")
     
-    lines.append("// Page 6: Calibration Zero - Material Allies & Infrastructure")
+    lines.append("// Page 8: Calibration Zero - Material Allies & Infrastructure")
     lines.append('#system-header("CALIBRATION ZERO: MATERIAL ALLIES & INFRASTRUCTURE", "PRE-CYCLE 2/4")')
     lines.append("#v(6pt)")
     lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[')
@@ -243,7 +307,7 @@ def main():
     lines.append("#pagebreak()")
     lines.append("")
     
-    lines.append("// Page 7: Calibration Zero - Radar Space")
+    lines.append("// Page 9: Calibration Zero - Radar Space")
     lines.append('#system-header("CALIBRATION ZERO: INITIAL VECTOR SPACE", "PRE-CYCLE 3/4")')
     lines.append("#v(8pt)")
     lines.append("Plot your initial 8-coordinate vector space signature below. Set coordinates for Attractor (A1), Stabilizer (S1), Flight Line (F1), Resistor (R1), Vitality (V1), Diffraction (D1), Chronos (C1), and Aion (A2) based on your baseline week:")
@@ -251,9 +315,15 @@ def main():
     lines.append("#align(center)[")
     lines.append('  #rect(width: 200pt, height: 200pt, stroke: 0.5pt + rgb("#111111"), fill: rgb("#ffffff"))[')
     lines.append('    #place(center + horizon)[#circle(radius: 90pt, stroke: 0.25pt + rgb("#bbbbbb"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 70pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 50pt, stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 30pt, stroke: 0.25pt + rgb("#eeeeee"))]')
+    lines.append('    #place(center + horizon)[#circle(radius: 72pt, stroke: 0.25pt + rgb("#cccccc"))]')
+    lines.append('    #place(center + horizon)[#circle(radius: 54pt, stroke: 0.25pt + rgb("#dddddd"))]')
+    lines.append('    #place(center + horizon)[#circle(radius: 36pt, stroke: 0.25pt + rgb("#eeeeee"))]')
+    lines.append('    #place(center + horizon)[#circle(radius: 18pt, stroke: 0.25pt + rgb("#f4f4f4"))]')
+    lines.append('    #place(center + horizon, dx: 3pt, dy: -18pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("2")]')
+    lines.append('    #place(center + horizon, dx: 3pt, dy: -36pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("4")]')
+    lines.append('    #place(center + horizon, dx: 3pt, dy: -54pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("6")]')
+    lines.append('    #place(center + horizon, dx: 3pt, dy: -72pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("8")]')
+    lines.append('    #place(center + horizon, dx: 3pt, dy: -90pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("10")]')
     lines.append('    #place(top + left)[#line(start: (0pt, 95pt), end: (190pt, 95pt), stroke: 0.25pt + rgb("#b1b1b1"))]')
     lines.append('    #place(top + left)[#line(start: (95pt, 0pt), end: (95pt, 190pt), stroke: 0.25pt + rgb("#b1b1b1"))]')
     lines.append('    #place(top + left)[#line(start: (25pt, 25pt), end: (165pt, 165pt), stroke: 0.25pt + rgb("#d4d4d8"))]')
@@ -279,7 +349,7 @@ def main():
     lines.append("#pagebreak()")
     lines.append("")
     
-    lines.append("// Page 8: Calibration Zero - Diffractive Baseline & Systemic Goals")
+    lines.append("// Page 10: Calibration Zero - Diffractive Baseline & Systemic Goals")
     lines.append('#system-header("CALIBRATION ZERO: SYSTEMIC INTENTIONS", "PRE-CYCLE 4/4")')
     lines.append("#v(6pt)")
     lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[')
@@ -291,7 +361,7 @@ def main():
     lines.append("#v(6pt)")
     lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[')
     lines.append('  #set text(size: 10pt)')
-    lines.append('  #raw("> THE BASELINE CONTRACT (Core negative feedback rules - what will you forbid?):")')
+    lines.append('  #raw("> HOMEOSTATIC ATTRACTOR DAMPING (What threshold triggers automated intervention to reduce energy expenditure?):")')
     lines.append('  #v(2pt)')
     lines.append('  #write-lines(12, height: 11pt)')
     lines.append("]")
@@ -428,27 +498,29 @@ def main():
     lines.append("]")
     lines.append("#pagebreak()")
     
-    # Pages 233-234: 16-Dimensional vector compilation
-    lines.append("// Page 233: 16-Dimensional vector compilation - Left")
-    lines.append('#system-header("16-DIMENSIONAL META-SYSTEMIC SCORING", "COMPILATION 1/2")')
+    # Pages 231-232: 16-Dimensional vector compilation
+    lines.append("// Page 231: 16-Dimensional vector compilation - Left")
+    lines.append('#system-header("16-DIMENSIONAL TOPOLOGICAL RELATIONSHIPS", "COMPILATION 1/2")')
     lines.append("#v(8pt)")
-    lines.append("Compile cycle-level median scores for each structural state variable:")
+    lines.append("Analyze vector interactions and boundary leakages for each cycle (Map parasitism, e.g., A1 < R1, or list leaks):")
     lines.append("#v(10pt)")
     lines.append("#grid(")
     lines.append("  columns: (1fr),")
     lines.append("  gutter: 10pt,")
-    lines.append('  [ #raw("A1 (ATTRACTOR FORCE):      CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("S1 (STABILIZATION INDEX):  CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("F1 (FLIGHT VELOCITY):     CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("R1 (THERMODYNAMIC DRAG):  CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("V1 (VITALITY/JOY SCORE):   CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("D1 (DIFFRACTION COHERENCE): CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("C1 (CHRONOS METRIC):       CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],')
-    lines.append('  [ #raw("A2 (AION DRIFT FREQUENCY):  CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ]')
+    lines.append('  [ #raw("A1 vs R1 (Attractor / Resistance Leakage):  C1 [      ]  C2 [      ]  C3 [      ]") ],')
+    lines.append('  [ #raw("S1 vs F1 (Stabilizer / Flight Line Drift):  C1 [      ]  C2 [      ]  C3 [      ]") ],')
+    lines.append('  [ #raw("V1 vs D1 (Vitality / Diffraction Wave):   C1 [      ]  C2 [      ]  C3 [      ]") ],')
+    lines.append('  [ #raw("C1 vs A2 (Chronos / Aion Parasitism):     C1 [      ]  C2 [      ]  C3 [      ]") ]')
     lines.append(")")
+    lines.append("#v(10pt)")
+    lines.append("Register key topological mutations where smooth space was captured or deterritorialized:")
+    lines.append("#v(4pt)")
+    lines.append('#rect(width: 100%, stroke: 0.25pt + rgb("#bbbbbb"), fill: rgb("#fafafa"), inset: 6pt)[')
+    lines.append('  #write-lines(4, height: 14pt)')
+    lines.append(']')
     lines.append("#pagebreak()")
     
-    lines.append("// Page 234: 16-Dimensional vector compilation - Right")
+    lines.append("// Page 232: 16-Dimensional vector compilation - Right")
     lines.append('#system-header("METRIC MATRIX SPECS", "COMPILATION 2/2")')
     lines.append("#v(10pt)")
     lines.append("Notes and secondary coordinate mappings:")
@@ -461,11 +533,11 @@ def main():
     lines.append("#write-lines(6, height: 18pt)")
     lines.append("#pagebreak()")
     
-    # Pages 235-236: Final autopoietic feedback diagnostics
-    lines.append("// Page 235: Final Autopoietic Diagnostics - Left")
-    lines.append('#system-header("AUTOPOIETIC STABILIZATION ASSESSMENT", "FINAL SYSTEM DIAG")')
+    # Pages 233-234: Final autopoietic feedback diagnostics
+    lines.append("// Page 233: Final Autopoietic Diagnostics - Left")
+    lines.append('#system-header("AUTOPOIETIC FLOW & HOMEORHESIS ASSESSMENT", "FINAL SYSTEM DIAG")')
     lines.append("#v(8pt)")
-    lines.append("Identify secondary state variables and environmental homeostatic indicators:")
+    lines.append("Identify secondary state variables and environmental homeorhesis indicators:")
     lines.append("#v(8pt)")
     lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[')
     lines.append('  #set text(size: 8.5pt)')
@@ -477,8 +549,8 @@ def main():
     lines.append("]")
     lines.append("#pagebreak()")
     
-    lines.append("// Page 236: Final Autopoietic Diagnostics - Right")
-    lines.append('#system-header("SYSTEM STABILIZATION RESULT", "FINAL CLASSIFIER")')
+    lines.append("// Page 234: Final Autopoietic Diagnostics - Right")
+    lines.append('#system-header("SYSTEM HOMEORHESIS RESULT", "FINAL CLASSIFIER")')
     lines.append("#v(10pt)")
     lines.append("Plot your absolute final system coordinates:")
     lines.append("#v(12pt)")
@@ -500,7 +572,7 @@ def main():
     lines.append("#grid(")
     lines.append("  columns: (1fr, 1.2fr),")
     lines.append("  gutter: 10pt,")
-    lines.append('  [ #raw("[ ] SYSTEM STABILIZED") \\ #raw("[ ] MUTATED SYSTEM STATE") ],')
+    lines.append('  [ #raw("[ ] SUSTAINED HOMEORHESIS") \\ #raw("[ ] MUTATED SYSTEM STATE") ],')
     lines.append('  [ #raw("[ ] ENTROPIC COLLAPSE") \\ #raw("[ ] HYPER-STRIATED REGIME") ]')
     lines.append(")")
     # -------------------------------------------------------------------------
@@ -562,15 +634,22 @@ def main():
         
         # Page indexes to preview:
         # Page 1: Title
-        # Page 3: Manual Guide (Manifesto)
-        # Page 9: Cycle 1 Calibration
-        # Page 11: Weekly Fold 1
-        # Page 13: Day 1 Left (Morning)
-        # Page 14: Day 1 Right (Operational Console)
-        # Page 225: Challenge Trackers Page 1
+        # Page 2: System State Baseline
+        # Page 3: Manual Guide (Philosophy & Attunement)
+        # Page 5: 16-Dimensional Taxonomy Reference
+        # Page 7: Calibration Zero Somatic Baseline
+        # Page 9: Calibration Zero Initial Vector Space
+        # Page 11: Cycle 1 Calibration (Setup)
+        # Page 13: Weekly Fold 1 (Diffractive Field)
+        # Page 15: Day 1 Left (Morning Attunement)
+        # Page 16: Day 1 Right (Operational Console)
+        # Page 227: Challenge Trackers Page 1 Left
         # Page 229: Trajectory Mapping Setup
+        # Page 231: 16-Dimensional Topological Relationships
+        # Page 233: Autopoietic Flow & Homeorhesis Assessment
+        # Page 235: Open Sketchpad 1
         # Page 240: System Shutdown
-        preview_indices = [0, 1, 2, 4, 5, 6, 6, 7, 8, 9, 10, 11, 12, 13, 14, 220, 221, 222, 223, 224, 225, 226, 227]
+        preview_indices = [0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 226, 228, 230, 232, 234, 239]
         for p_idx in preview_indices:
             if p_idx < total_pages:
                 page = doc.load_page(p_idx)

@@ -82,15 +82,15 @@
       }
     },
     "cycle_3": {
-      "title": "CYCLE 3: STABILIZATION",
-      "subtitle": "Days 63–93 // Phase Focus: Territorializing Stable Routines & Boundary Locking",
-      "guideline": "Anchor stable habits, set defensive boundaries, and lock down homeostatic loops.",
+      "title": "CYCLE 3: SUSTAINED HOMEORHESIS",
+      "subtitle": "Days 63–93 // Phase Focus: Dynamic Trajectory Flow & Evolutionary Adaptation",
+      "guideline": "Anchor resilient flow states, calibrate dynamic boundaries, and support open flight trajectories.",
       "prompts": {
-        "left_1": "ATTRACTOR CONSOLIDATION (Locking down core high-value vectors):",
-        "left_2": "HABIT ANCHORS (Physical routine stabilization checkpoints):",
-        "left_3": "CYCLE 3 BOUNDARIES (What strict filters will you lock to prevent drag?):",
-        "right_1": "THERMODYNAMIC TUNING (Preventing late-stage entropy decay):",
-        "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 3):"
+        "left_1": "TRAJECTORY CALIBRATION (Supporting dynamic flow along active flight lines):",
+        "left_2": "RESILIENT ANCHORS (Flexible triggers that adapt to somatic and environmental fluctuations):",
+        "left_3": "CYCLE 3 EVOLUTION (How will you maintain flow without collapsing into rigid homeostasis?):",
+        "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):",
+        "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"
       }
     }
   },

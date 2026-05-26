@@ -152,7 +152,149 @@ Before system shutdown each evening, audit the day's coordinates:
 ]
 #pagebreak()
 
-// Page 5: Calibration Zero - Somatic & Attention Baselines
+// Page 5: 16-Dimensional Taxonomy Reference (1/2)
+#system-header("16-DIMENSIONAL TAXONOMY REFERENCE (1/2)", "SYSTEM REFERENCE")
+#v(6pt)
+Reference matrix for tracking systemic cognitive forces and metrics:
+#v(8pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("A1:"), [ *ATTRACTOR FORCE* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Focus gradient; pull strength towards primary creative and intellectual vectors."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("S1:"), [ *STABILIZATION INDEX* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Sustenance level of homeostatic habits and system maintenance routines."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("F1:"), [ *FLIGHT VELOCITY* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Rate of creative escape, detour, and unexpected rhizomatic associations."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("R1:"), [ *THERMODYNAMIC RESISTANCE* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Cognitive drag, somatic exhaustion, and system-level friction."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#pagebreak()
+
+// Page 6: 16-Dimensional Taxonomy Reference (2/2)
+#system-header("16-DIMENSIONAL TAXONOMY REFERENCE (2/2)", "SYSTEM REFERENCE")
+#v(6pt)
+Reference matrix for tracking systemic cognitive forces and metrics:
+#v(8pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("V1:"), [ *VITALITY / JOY* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Spinozian affect score. Measure of intensive power of action."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("D1:"), [ *DIFFRACTION RATIO* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Coherence of actions. High values indicate constructive wave ripples."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("C1:"), [ *CHRONOS METRIC* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Completion rate of scheduled linear tasks."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+  #set text(size: 9pt)
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    raw("A2:"), [ *AION DRIFT* ]
+  )
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#444444"))
+  "Depth and duration of un-dated evental time and research play."
+  #v(4pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
+  #write-lines(1, height: 12pt)
+]
+#v(2pt)
+#pagebreak()
+
+// Page 7: Calibration Zero - Somatic & Attention Baselines
 #system-header("CALIBRATION ZERO: SOMATIC & ATTENTION BASELINE", "PRE-CYCLE 1/4")
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), inset: 8pt)[
@@ -170,7 +312,7 @@ Before system shutdown each evening, audit the day's coordinates:
 ]
 #pagebreak()
 
-// Page 6: Calibration Zero - Material Allies & Infrastructure
+// Page 8: Calibration Zero - Material Allies & Infrastructure
 #system-header("CALIBRATION ZERO: MATERIAL ALLIES & INFRASTRUCTURE", "PRE-CYCLE 2/4")
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
@@ -188,7 +330,7 @@ Before system shutdown each evening, audit the day's coordinates:
 ]
 #pagebreak()
 
-// Page 7: Calibration Zero - Radar Space
+// Page 9: Calibration Zero - Radar Space
 #system-header("CALIBRATION ZERO: INITIAL VECTOR SPACE", "PRE-CYCLE 3/4")
 #v(8pt)
 Plot your initial 8-coordinate vector space signature below. Set coordinates for Attractor (A1), Stabilizer (S1), Flight Line (F1), Resistor (R1), Vitality (V1), Diffraction (D1), Chronos (C1), and Aion (A2) based on your baseline week:
@@ -196,9 +338,15 @@ Plot your initial 8-coordinate vector space signature below. Set coordinates for
 #align(center)[
   #rect(width: 200pt, height: 200pt, stroke: 0.5pt + rgb("#111111"), fill: rgb("#ffffff"))[
     #place(center + horizon)[#circle(radius: 90pt, stroke: 0.25pt + rgb("#bbbbbb"))]
-    #place(center + horizon)[#circle(radius: 70pt, stroke: 0.25pt + rgb("#cccccc"))]
-    #place(center + horizon)[#circle(radius: 50pt, stroke: 0.25pt + rgb("#dddddd"))]
-    #place(center + horizon)[#circle(radius: 30pt, stroke: 0.25pt + rgb("#eeeeee"))]
+    #place(center + horizon)[#circle(radius: 72pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 54pt, stroke: 0.25pt + rgb("#dddddd"))]
+    #place(center + horizon)[#circle(radius: 36pt, stroke: 0.25pt + rgb("#eeeeee"))]
+    #place(center + horizon)[#circle(radius: 18pt, stroke: 0.25pt + rgb("#f4f4f4"))]
+    #place(center + horizon, dx: 3pt, dy: -18pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("2")]
+    #place(center + horizon, dx: 3pt, dy: -36pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("4")]
+    #place(center + horizon, dx: 3pt, dy: -54pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("6")]
+    #place(center + horizon, dx: 3pt, dy: -72pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("8")]
+    #place(center + horizon, dx: 3pt, dy: -90pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("10")]
     #place(top + left)[#line(start: (0pt, 95pt), end: (190pt, 95pt), stroke: 0.25pt + rgb("#b1b1b1"))]
     #place(top + left)[#line(start: (95pt, 0pt), end: (95pt, 190pt), stroke: 0.25pt + rgb("#b1b1b1"))]
     #place(top + left)[#line(start: (25pt, 25pt), end: (165pt, 165pt), stroke: 0.25pt + rgb("#d4d4d8"))]
@@ -223,7 +371,7 @@ Plot your initial 8-coordinate vector space signature below. Set coordinates for
 ]
 #pagebreak()
 
-// Page 8: Calibration Zero - Diffractive Baseline & Systemic Goals
+// Page 10: Calibration Zero - Diffractive Baseline & Systemic Goals
 #system-header("CALIBRATION ZERO: SYSTEMIC INTENTIONS", "PRE-CYCLE 4/4")
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
@@ -235,7 +383,7 @@ Plot your initial 8-coordinate vector space signature below. Set coordinates for
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
   #set text(size: 10pt)
-  #raw("> THE BASELINE CONTRACT (Core negative feedback rules - what will you forbid?):")
+  #raw("> HOMEOSTATIC ATTRACTOR DAMPING (What threshold triggers automated intervention to reduce energy expenditure?):")
   #v(2pt)
   #write-lines(12, height: 11pt)
 ]
@@ -677,9 +825,9 @@ Plot your initial 8-coordinate vector space signature below. Set coordinates for
 #pagebreak()
 
 // --- CYCLE 3 SETUP ---
-#calibration-left("3", "CYCLE 3: STABILIZATION", "Days 63–93 // Phase Focus: Territorializing Stable Routines & Boundary Locking", "Anchor stable habits, set defensive boundaries, and lock down homeostatic loops.", ("left_1": "ATTRACTOR CONSOLIDATION (Locking down core high-value vectors):", "left_2": "HABIT ANCHORS (Physical routine stabilization checkpoints):", "left_3": "CYCLE 3 BOUNDARIES (What strict filters will you lock to prevent drag?):", "right_1": "THERMODYNAMIC TUNING (Preventing late-stage entropy decay):", "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 3):"))
+#calibration-left("3", "CYCLE 3: SUSTAINED HOMEORHESIS", "Days 63–93 // Phase Focus: Dynamic Trajectory Flow & Evolutionary Adaptation", "Anchor resilient flow states, calibrate dynamic boundaries, and support open flight trajectories.", ("left_1": "TRAJECTORY CALIBRATION (Supporting dynamic flow along active flight lines):", "left_2": "RESILIENT ANCHORS (Flexible triggers that adapt to somatic and environmental fluctuations):", "left_3": "CYCLE 3 EVOLUTION (How will you maintain flow without collapsing into rigid homeostasis?):", "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):", "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"))
 #pagebreak()
-#calibration-right("3", ("left_1": "ATTRACTOR CONSOLIDATION (Locking down core high-value vectors):", "left_2": "HABIT ANCHORS (Physical routine stabilization checkpoints):", "left_3": "CYCLE 3 BOUNDARIES (What strict filters will you lock to prevent drag?):", "right_1": "THERMODYNAMIC TUNING (Preventing late-stage entropy decay):", "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 3):"))
+#calibration-right("3", ("left_1": "TRAJECTORY CALIBRATION (Supporting dynamic flow along active flight lines):", "left_2": "RESILIENT ANCHORS (Flexible triggers that adapt to somatic and environmental fluctuations):", "left_3": "CYCLE 3 EVOLUTION (How will you maintain flow without collapsing into rigid homeostasis?):", "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):", "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"))
 #pagebreak()
 
 // --- WEEK 9 FOLD ---
@@ -943,7 +1091,7 @@ Weekly Trajectory Coordinates:
   [ #raw("W7:  [   ,   ]") \ #raw("W8:  [   ,   ]") \ #raw("W9:  [   ,   ]") ]
 )
 #pagebreak()
-// Page 232: Trajectory Mapping Instructions
+// Page 230: Trajectory Mapping Instructions
 #system-header("TRAJECTORY ANALYSIS METRICS", "COORDINATE SPECS")
 #v(10pt)
 Audit the trajectory path using second-order cybernetic principles:
@@ -957,25 +1105,27 @@ Audit the trajectory path using second-order cybernetic principles:
   *3. Entropy Dissipation:* Are coordinates drifting steadily downwards into low vitality? This shows a systemic leak in energy or workspace alignment.
 ]
 #pagebreak()
-// Page 233: 16-Dimensional vector compilation - Left
-#system-header("16-DIMENSIONAL META-SYSTEMIC SCORING", "COMPILATION 1/2")
+// Page 231: 16-Dimensional vector compilation - Left
+#system-header("16-DIMENSIONAL TOPOLOGICAL RELATIONSHIPS", "COMPILATION 1/2")
 #v(8pt)
-Compile cycle-level median scores for each structural state variable:
+Analyze vector interactions and boundary leakages for each cycle (Map parasitism, e.g., A1 < R1, or list leaks):
 #v(10pt)
 #grid(
   columns: (1fr),
   gutter: 10pt,
-  [ #raw("A1 (ATTRACTOR FORCE):      CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("S1 (STABILIZATION INDEX):  CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("F1 (FLIGHT VELOCITY):     CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("R1 (THERMODYNAMIC DRAG):  CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("V1 (VITALITY/JOY SCORE):   CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("D1 (DIFFRACTION COHERENCE): CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("C1 (CHRONOS METRIC):       CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ],
-  [ #raw("A2 (AION DRIFT FREQUENCY):  CYCLE 1 [  /10]  CYCLE 2 [  /10]  CYCLE 3 [  /10]") ]
+  [ #raw("A1 vs R1 (Attractor / Resistance Leakage):  C1 [      ]  C2 [      ]  C3 [      ]") ],
+  [ #raw("S1 vs F1 (Stabilizer / Flight Line Drift):  C1 [      ]  C2 [      ]  C3 [      ]") ],
+  [ #raw("V1 vs D1 (Vitality / Diffraction Wave):   C1 [      ]  C2 [      ]  C3 [      ]") ],
+  [ #raw("C1 vs A2 (Chronos / Aion Parasitism):     C1 [      ]  C2 [      ]  C3 [      ]") ]
 )
+#v(10pt)
+Register key topological mutations where smooth space was captured or deterritorialized:
+#v(4pt)
+#rect(width: 100%, stroke: 0.25pt + rgb("#bbbbbb"), fill: rgb("#fafafa"), inset: 6pt)[
+  #write-lines(4, height: 14pt)
+]
 #pagebreak()
-// Page 234: 16-Dimensional vector compilation - Right
+// Page 232: 16-Dimensional vector compilation - Right
 #system-header("METRIC MATRIX SPECS", "COMPILATION 2/2")
 #v(10pt)
 Notes and secondary coordinate mappings:
@@ -987,10 +1137,10 @@ Notes and secondary coordinate mappings:
 #v(8pt)
 #write-lines(6, height: 18pt)
 #pagebreak()
-// Page 235: Final Autopoietic Diagnostics - Left
-#system-header("AUTOPOIETIC STABILIZATION ASSESSMENT", "FINAL SYSTEM DIAG")
+// Page 233: Final Autopoietic Diagnostics - Left
+#system-header("AUTOPOIETIC FLOW & HOMEORHESIS ASSESSMENT", "FINAL SYSTEM DIAG")
 #v(8pt)
-Identify secondary state variables and environmental homeostatic indicators:
+Identify secondary state variables and environmental homeorhesis indicators:
 #v(8pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
   #set text(size: 8.5pt)
@@ -1001,8 +1151,8 @@ Identify secondary state variables and environmental homeostatic indicators:
   #write-lines(3, height: 16pt)
 ]
 #pagebreak()
-// Page 236: Final Autopoietic Diagnostics - Right
-#system-header("SYSTEM STABILIZATION RESULT", "FINAL CLASSIFIER")
+// Page 234: Final Autopoietic Diagnostics - Right
+#system-header("SYSTEM HOMEORHESIS RESULT", "FINAL CLASSIFIER")
 #v(10pt)
 Plot your absolute final system coordinates:
 #v(12pt)
@@ -1024,7 +1174,7 @@ Authorized final state classification:
 #grid(
   columns: (1fr, 1.2fr),
   gutter: 10pt,
-  [ #raw("[ ] SYSTEM STABILIZED") \ #raw("[ ] MUTATED SYSTEM STATE") ],
+  [ #raw("[ ] SUSTAINED HOMEORHESIS") \ #raw("[ ] MUTATED SYSTEM STATE") ],
   [ #raw("[ ] ENTROPIC COLLAPSE") \ #raw("[ ] HYPER-STRIATED REGIME") ]
 )
 #set page(background: rect(width: 100%, height: 100%, fill: dot-grid))

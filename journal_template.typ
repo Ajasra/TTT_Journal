@@ -98,39 +98,47 @@
   v(2pt)
   grid(
     columns: (1fr, 1fr),
-    row-gutter: 8pt,
+    row-gutter: 6pt,
     column-gutter: 11pt,
     [
       #set text(size: 9pt)
-      #raw("▲ ATTRACTOR [  /10]") \
+      #raw("▲ ATTRACTOR (Focus pull)") \
       #v(2pt)
       #write-lines(2, height: 10pt)
     ],
     [
       #set text(size: 9pt)
-      #raw("■ STABILIZER [  /10]") \
+      #raw("■ STABILIZER (Maintenance)") \
       #v(2pt)
       #write-lines(2, height: 10pt)
     ],
     [
       #set text(size: 9pt)
-      #raw("⤏ FLIGHT LINE [  /10]") \
+      #raw("⤏ FLIGHT LINE (Detours)") \
       #v(2pt)
       #write-lines(2, height: 10pt)
     ],
     [
       #set text(size: 9pt)
-      #raw("▼ RESISTOR [  /10]") \
+      #raw("▼ RESISTOR (Drag/Friction)") \
       #v(2pt)
       #write-lines(2, height: 10pt)
     ]
   )
   
   v(2pt)
+  [
+    #set text(size: 8.5pt)
+    #raw("TOPOLOGICAL RELATION: Which vector parasitized the other? What leaked?")
+    #v(1pt)
+    #write-lines(1, height: 10pt)
+  ]
+  
+  v(2pt)
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(16, height: 10pt)
+    #write-lines(13, height: 10pt)
   ]
 }
 
@@ -250,26 +258,22 @@
   system-header("SYSTEMIC RE-CALIBRATION", "ADJUSTMENT FIELD")
   v(3pt)
   
-  raw("// 3. STRUCTURAL SIGNATURE ASSESSMENT (Rate 0 to 10)")
+  raw("// 3. STRUCTURAL SIGNATURE ASSESSMENT (Topological Dynamics / Dominance)")
   v(2pt)
   grid(
-    columns: (1fr, 1fr),
+    columns: (1.1fr, 1fr),
     gutter: 8pt,
     [
       #set text(size: 8pt)
-      #raw("Homeostatic (Stability):  [   ]") \
-      #v(1pt)
-      #raw("Amplifying (Acceleration): [   ]") \
-      #v(1pt)
-      #raw("Flight Lines (Escapes):    [   ]")
+      #raw("Homeostatic vs Amplifying:  [     ]") \
+      #v(1.5pt)
+      #raw("Flight Lines vs Stagnation: [     ]")
     ],
     [
       #set text(size: 8pt)
-      #raw("Rhizomatic (Connections): [   ]") \
-      #v(1pt)
-      #raw("Complexity (Information): [   ]") \
-      #v(1pt)
-      #raw("Stagnation (Rigidity):    [   ]")
+      #raw("Rhizomatic vs Complexity:   [     ]") \
+      #v(1.5pt)
+      #raw("Systemic Leak vs Capture:   [     ]")
     ]
   )
   
