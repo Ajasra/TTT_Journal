@@ -10,14 +10,14 @@
   rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 6pt, radius: 2pt)[
     #set text(size: 8.5pt)
     #raw("> MATERIAL ALLIES:")     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "Inventory the active physical tech and local environments shaping your stance today (e.g., lens focal lengths, server CPU states, ambient room light, seating configurations)."
+    "Inventory active physical tech and environments shaping your stance today."
     #v(1pt)
-    #write-lines(2, height: 10pt)
+    #write-lines(3, height: 10pt)
     #v(2pt)
     #raw("> THE AGENTIAL CUT:")     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "What specific boundary are you enacting for the next twelve hours? Define what is included within your field of engagement and what is barred from entry."
+    "Define your boundary for the next 12 hours: what is included and what is barred?"
     #v(1pt)
-    #write-lines(2, height: 10pt)
+    #write-lines(3, height: 10pt)
   ]
   
   v(2pt)
@@ -53,7 +53,7 @@
   [
     #set text(size: 8.5pt)
     #raw("TOPOLOGICAL RELATION:")     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "Do not score 0-10. Trace the friction: Which vector parasitized the other today? Where did attention leak through your defensive boundaries? Did a Resistor capture an emergent Flight Line?"
+    "Trace the friction: Which vector parasitized the other today? Where did attention leak?"
     #v(1pt)
     #write-lines(1, height: 10.5pt)
   ]
@@ -62,7 +62,7 @@
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(10, height: 10pt)
+    #write-lines(11, height: 10pt)
   ]
 }
 

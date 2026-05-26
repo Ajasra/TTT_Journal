@@ -87,15 +87,15 @@
     #set text(size: 8.5pt)
     #raw("> MATERIAL ALLIES:") \
     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "Inventory the active physical tech and local environments shaping your stance today (e.g., lens focal lengths, server CPU states, ambient room light, seating configurations)."
+    "Inventory active physical tech and environments shaping your stance today."
     #v(1pt)
-    #write-lines(2, height: 10pt)
+    #write-lines(3, height: 10pt)
     #v(2pt)
     #raw("> THE AGENTIAL CUT:") \
     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "What specific boundary are you enacting for the next twelve hours? Define what is included within your field of engagement and what is barred from entry."
+    "Define your boundary for the next 12 hours: what is included and what is barred?"
     #v(1pt)
-    #write-lines(2, height: 10pt)
+    #write-lines(3, height: 10pt)
   ]
   
   v(2pt)
@@ -136,7 +136,7 @@
     #set text(size: 8.5pt)
     #raw("TOPOLOGICAL RELATION:") \
     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "Do not score 0-10. Trace the friction: Which vector parasitized the other today? Where did attention leak through your defensive boundaries? Did a Resistor capture an emergent Flight Line?"
+    "Trace the friction: Which vector parasitized the other today? Where did attention leak?"
     #v(1pt)
     #write-lines(1, height: 10.5pt)
   ]
@@ -145,7 +145,7 @@
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(10, height: 10pt)
+    #write-lines(11, height: 10pt)
   ]
 }
 
@@ -164,17 +164,17 @@
       #set text(size: 8.5pt)
       #raw("CHRONOS STRATUM (Striated Logistics / Scheduled Maintenance):") \
       #set text(size: 7pt, fill: rgb("#555555"))
-      "Log necessary linear tasks, server system updates, and clock-tied commitments."
+      "Log linear tasks, server system updates, and clock-tied commitments."
       #v(1.5pt)
-      #write-lines(4, height: 10pt)
+      #write-lines(5, height: 10pt)
     ],
     [
       #set text(size: 8.5pt)
       #raw("AION CURRENT (Smooth Time / Studio Drift & Open Play):") \
       #set text(size: 7pt, fill: rgb("#555555"))
-      "Track non-linear research, un-dated photography concepts, and spontaneous experiments. Core Protocol: Chronos must never parasite Aion."
+      "Track non-linear research, studio drifts, and spontaneous experiments."
       #v(1.5pt)
-      #write-lines(4, height: 10pt)
+      #write-lines(5, height: 10pt)
     ]
   )
   
@@ -183,11 +183,11 @@
     #set text(size: 8.5pt)
     #raw("INTENSIVE INK-TRACE (Un-stratified Associative Space):") \
     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "A raw field for fleeting citations, terminal logs, visual sketches, and sensory metrics to bypass cognitive fragmentation."
+    "Raw field for fleeting citations, logs, sketches, and sensory metrics."
   ]
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(6, height: 10pt)
+    #write-lines(8, height: 10pt)
   ]
   
   v(2pt)
@@ -203,16 +203,16 @@
       #set text(size: 8.5pt)
       #raw("1. STATE SPACE:") \
       #set text(size: 7pt, fill: rgb("#555555"))
-      "Plot coordinate to trace the balance between Vitality/Joy and Exhaustion/Striation."
+      "Plot coordinate balancing Vitality/Joy and Exhaustion/Striation."
       #v(2pt)
       #align(center)[
-        #rect(width: 90pt, height: 90pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"), inset: 0pt)[
-          #place(top + left)[#line(start: (0pt, 45pt), end: (90pt, 45pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + left)[#line(start: (45pt, 0pt), end: (45pt, 90pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + center, dy: 2pt)[#set text(size: 4pt); #raw("VITALITY / JOY")]
-          #place(bottom + center, dy: -2pt)[#set text(size: 4pt); #raw("DRAIN / EXHAUST")]
-          #place(left + horizon, dx: 2pt)[#set text(size: 4pt); #raw("SMOOTH / FLOW")]
-          #place(right + horizon, dx: -2pt)[#set text(size: 4pt); #raw("STRIATED / ORDER")]
+        #rect(width: 80pt, height: 80pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"), inset: 0pt)[
+          #place(top + left)[#line(start: (0pt, 40pt), end: (80pt, 40pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + left)[#line(start: (40pt, 0pt), end: (40pt, 80pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + center, dy: 1.5pt)[#set text(size: 3.5pt); #raw("VITALITY / JOY")]
+          #place(bottom + center, dy: -1.5pt)[#set text(size: 3.5pt); #raw("DRAIN / EXHAUST")]
+          #place(left + horizon, dx: 1.5pt)[#set text(size: 3.5pt); #raw("SMOOTH / FLOW")]
+          #place(right + horizon, dx: -1.5pt)[#set text(size: 3.5pt); #raw("STRIATED / ORDER")]
         ]
       ]
     ],
@@ -220,16 +220,16 @@
       #set text(size: 8.5pt)
       #raw("2. CAPTURE AUDIT:") \
       #set text(size: 7pt, fill: rgb("#555555"))
-      "Register interfaces, platforms, or habit loops that successfully captured your agency today."
+      "Register interfaces, platforms, or habit loops that captured your agency today."
       #v(1.5pt)
-      #write-lines(2, height: 10pt)
+      #write-lines(3, height: 10pt)
       
       #v(3pt)
       #raw("3. DIFFRACTION PATTERN:") \
       #set text(size: 7pt, fill: rgb("#555555"))
       "Map how actions ripple into constructive or destructive wave interferences."
       #v(1.5pt)
-      #write-lines(2, height: 10pt)
+      #write-lines(3, height: 10pt)
     ]
   )
   
@@ -238,7 +238,7 @@
     #set text(size: 8.5pt)
     #raw("THE RECURSIVE SEED:") \
     #set text(size: 7.5pt, fill: rgb("#555555"))
-    "Formulate a single instruction based on tonight's wave pattern. Write it here, then copy it directly into tomorrow morning's Attunement threshold to program your incoming boundaries."
+    "Formulate one instruction based on tonight's wave pattern. Copy it to tomorrow's threshold."
   ]
   v(1pt)
   rect(width: 100%, fill: rgb("#fafafa"), stroke: 0.5pt + rgb("#cccccc"), inset: 5pt)[
