@@ -80,48 +80,53 @@
 // -----------------------------------------------------------------------------
 #let daily-left(day, total: 100) = {
   
-  system-header("DAY [ " + day + " / ___ ]", "MORNING ATTUNEMENT")
+  system-header("DAY [ " + day + " / ___ ]", "INITIAL CONFIGURATION (Morning Threshold)")
   v(2pt)
   
-  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 8pt, radius: 2pt)[
-    #set text(size: 9pt)
-    #raw("> MATERIAL ALLIES (Tools, interfaces, environment):") \
+  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 6pt, radius: 2pt)[
+    #set text(size: 8.5pt)
+    #raw("> MATERIAL ALLIES:") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "Inventory the active physical tech and local environments shaping your stance today (e.g., lens focal lengths, server CPU states, ambient room light, seating configurations)."
+    #v(1pt)
+    #write-lines(2, height: 10pt)
     #v(2pt)
-    #write-lines(3, height: 10pt)
-    #v(3pt)
-    #raw("> AGENTIAL CUT (What boundary are you enacting today?):") \
-    #v(2pt)
-    #write-lines(3, height: 10pt)
+    #raw("> THE AGENTIAL CUT:") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "What specific boundary are you enacting for the next twelve hours? Define what is included within your field of engagement and what is barred from entry."
+    #v(1pt)
+    #write-lines(2, height: 10pt)
   ]
   
-  section-title("VECTOR FORCE FIELD")
+  v(2pt)
+  section-title("VECTOR FORCE MAPPING (Focus, Maintenance, Detours, Drag)")
   v(2pt)
   grid(
     columns: (1fr, 1fr),
-    row-gutter: 6pt,
+    row-gutter: 4pt,
     column-gutter: 11pt,
     [
-      #set text(size: 9pt)
-      #raw("▲ ATTRACTOR (Focus pull)") \
-      #v(2pt)
+      #set text(size: 8.5pt)
+      #raw("▲ ATTRACTOR (Focus Pull)") \
+      #v(1pt)
       #write-lines(2, height: 10pt)
     ],
     [
-      #set text(size: 9pt)
-      #raw("■ STABILIZER (Maintenance)") \
-      #v(2pt)
+      #set text(size: 8.5pt)
+      #raw("■ STABILIZER (Chassis Maintenance)") \
+      #v(1pt)
       #write-lines(2, height: 10pt)
     ],
     [
-      #set text(size: 9pt)
-      #raw("⤏ FLIGHT LINE (Detours)") \
-      #v(2pt)
+      #set text(size: 8.5pt)
+      #raw("⤏ FLIGHT LINE (Spontaneous Detours)") \
+      #v(1pt)
       #write-lines(2, height: 10pt)
     ],
     [
-      #set text(size: 9pt)
-      #raw("▼ RESISTOR (Drag/Friction)") \
-      #v(2pt)
+      #set text(size: 8.5pt)
+      #raw("▼ RESISTOR (Thermodynamic Friction)") \
+      #v(1pt)
       #write-lines(2, height: 10pt)
     ]
   )
@@ -129,16 +134,18 @@
   v(2pt)
   [
     #set text(size: 8.5pt)
-    #raw("TOPOLOGICAL RELATION: Which vector parasitized the other? What leaked?")
+    #raw("TOPOLOGICAL RELATION:") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "Do not score 0-10. Trace the friction: Which vector parasitized the other today? Where did attention leak through your defensive boundaries? Did a Resistor capture an emergent Flight Line?"
     #v(1pt)
-    #write-lines(1, height: 11pt)
+    #write-lines(1, height: 10.5pt)
   ]
   
   v(2pt)
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(13, height: 10pt)
+  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
+    #write-lines(10, height: 10pt)
   ]
 }
 
@@ -147,74 +154,94 @@
 // -----------------------------------------------------------------------------
 #let daily-right() = {
   
-  
-  system-header("OPERATIONAL CONSOLE", "PROCESSING FIELD")
+  system-header("THE TEMPORAL SPLIT", "ASYMMETRIC PROCESSING FIELDS")
   v(2pt)
   
   grid(
     columns: (1fr, 1fr),
-    gutter: 10pt,
+    column-gutter: 10pt,
     [
-      #set text(size: 9pt)
-      #raw("CHRONOS // STRIATED (Tasks)") \
-      #v(2pt)
-      #write-lines(6, height: 10pt)
+      #set text(size: 8.5pt)
+      #raw("CHRONOS STRATUM (Striated Logistics / Scheduled Maintenance):") \
+      #set text(size: 7pt, fill: rgb("#555555"))
+      "Log necessary linear tasks, server system updates, and clock-tied commitments."
+      #v(1.5pt)
+      #write-lines(4, height: 10pt)
     ],
     [
-      #set text(size: 9pt)
-      #raw("AION // SMOOTH (Drifts)") \
-      #v(2pt)
-      #write-lines(6, height: 10pt)
+      #set text(size: 8.5pt)
+      #raw("AION CURRENT (Smooth Time / Studio Drift & Open Play):") \
+      #set text(size: 7pt, fill: rgb("#555555"))
+      "Track non-linear research, un-dated photography concepts, and spontaneous experiments. Core Protocol: Chronos must never parasite Aion."
+      #v(1.5pt)
+      #write-lines(4, height: 10pt)
     ]
   )
   
   v(3pt)
-  raw("FREE INK-LOG / DRIFT PROCESSOR (Associative Notes):")
+  [
+    #set text(size: 8.5pt)
+    #raw("INTENSIVE INK-TRACE (Un-stratified Associative Space):") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "A raw field for fleeting citations, terminal logs, visual sketches, and sensory metrics to bypass cognitive fragmentation."
+  ]
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(10, height: 10pt)
+  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
+    #write-lines(6, height: 10pt)
   ]
   
   v(2pt)
   line(length: 100%, stroke: 0.5pt + rgb("#bbbbbb"))
   v(1pt)
-  raw("EVENING DIAGNOSTIC & FEEDBACK LOOP")
+  raw("RECURSIVE FOLD (Evening Reflection & Feedforward Link)")
   
   v(2pt)
   grid(
     columns: (1.2fr, 1fr),
-    gutter: 10pt,
+    column-gutter: 10pt,
     [
-      #set text(size: 9pt)
-      #raw("1. STATE SPACE") \
+      #set text(size: 8.5pt)
+      #raw("1. STATE SPACE:") \
+      #set text(size: 7pt, fill: rgb("#555555"))
+      "Plot coordinate to trace the balance between Vitality/Joy and Exhaustion/Striation."
       #v(2pt)
       #align(center)[
-        #rect(width: 120pt, height: 120pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"))[
-          #place(top + left)[#line(start: (0pt, 55pt), end: (110pt, 55pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + left)[#line(start: (55pt, 0pt), end: (55pt, 110pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + center, dy: 2pt)[#set text(size: 4.5pt); #raw("VITALITY / JOY")]
-          #place(bottom + center, dy: -2pt)[#set text(size: 4.5pt); #raw("DRAIN / EXHAUST")]
-          #place(left + horizon, dx: 2pt)[#set text(size: 4.5pt); #raw("SMOOTH / FLOW")]
-          #place(right + horizon, dx: -2pt)[#set text(size: 4.5pt); #raw("STRIATED / ORDER")]
+        #rect(width: 90pt, height: 90pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"), inset: 0pt)[
+          #place(top + left)[#line(start: (0pt, 45pt), end: (90pt, 45pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + left)[#line(start: (45pt, 0pt), end: (45pt, 90pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + center, dy: 2pt)[#set text(size: 4pt); #raw("VITALITY / JOY")]
+          #place(bottom + center, dy: -2pt)[#set text(size: 4pt); #raw("DRAIN / EXHAUST")]
+          #place(left + horizon, dx: 2pt)[#set text(size: 4pt); #raw("SMOOTH / FLOW")]
+          #place(right + horizon, dx: -2pt)[#set text(size: 4pt); #raw("STRIATED / ORDER")]
         ]
       ]
     ],
     [
-      #set text(size: 9pt)
-      #raw("2. ENTANGLEMENT AUDIT") \
-      #v(2pt)
-      #write-lines(4, height: 10pt)
+      #set text(size: 8.5pt)
+      #raw("2. CAPTURE AUDIT:") \
+      #set text(size: 7pt, fill: rgb("#555555"))
+      "Register interfaces, platforms, or habit loops that successfully captured your agency today."
+      #v(1.5pt)
+      #write-lines(2, height: 10pt)
       
-      #v(2pt)
-      #raw("3. DIFFRACTION PATTERN") \
-      #v(2pt)
-      #write-lines(4, height:   10pt)
+      #v(3pt)
+      #raw("3. DIFFRACTION PATTERN:") \
+      #set text(size: 7pt, fill: rgb("#555555"))
+      "Map how actions ripple into constructive or destructive wave interferences."
+      #v(1.5pt)
+      #write-lines(2, height: 10pt)
     ]
   )
   
-  v(2pt)
-  raw("4. FEEDFORWARD SEED (Tomorrow's Initial Boundary):")
-  rect(width: 100%, fill: rgb("#fafafa"), stroke: 0.5pt + rgb("#cccccc"), inset: 6pt)[
+  v(3pt)
+  [
+    #set text(size: 8.5pt)
+    #raw("THE RECURSIVE SEED:") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "Formulate a single instruction based on tonight's wave pattern. Write it here, then copy it directly into tomorrow morning's Attunement threshold to program your incoming boundaries."
+  ]
+  v(1pt)
+  rect(width: 100%, fill: rgb("#fafafa"), stroke: 0.5pt + rgb("#cccccc"), inset: 5pt)[
     #write-lines(2, height: 10pt)
   ]
 }
