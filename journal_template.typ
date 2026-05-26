@@ -224,28 +224,42 @@
 // -----------------------------------------------------------------------------
 #let weekly-left(week) = {
   
-  
-  system-header("WEEK [ " + week + " ] FOLD: THE DIFFRACTIVE FIELD", "WEEKLY CALIBRATION")
+  system-header("WEEK [ " + week + " ] FOLD: THE DIFFRACTIVE FIELD", "PHASE ANALYSIS CHECKPOINT")
   v(3pt)
   
-  raw("// 0. MACRO ATTRACTORS (Weekly Focus)")
+  [
+    #set text(size: 9pt)
+    #raw("MAPPED ATTRACTORS (Sustained Focus Vectors):") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "Identify the primary creative or technical fields that pulled your focus this week. Did they maintain their trajectory, or did they distort under friction?"
+  ]
   v(1pt)
-  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 8pt, radius: 2pt)[
-    #write-lines(6, height: 11pt)
+  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 6pt, radius: 2pt)[
+    #write-lines(4, height: 10.5pt)
   ]
   
-  v(4pt)
-  raw("// 1. THE INTERFERENCE PATTERN (Diffractive Analysis)")
+  v(3pt)
+  [
+    #set text(size: 9pt)
+    #raw("DIFFRACTIVE RUNS (Reading actions through one another):") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "Do not record what you did. Record how your actions collided. Did an app deployment update open up a line of flight for your photography, or did your server's technical friction cancel out your vitality?"
+  ]
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(8, height: 11pt)
+    #write-lines(5, height: 10.5pt)
   ]
   
-  v(4pt)
-  raw("// 2. RESERVOIR OF POTENTIALS (Aion Tank / Undated Task List)")
+  v(3pt)
+  [
+    #set text(size: 9pt)
+    #raw("THE AION RESIDUAL (Undated potentials and open drift concepts):") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "A space for un-dated creative seeds, conceptual detours, and raw research ideas. This is not a to-do list; it is a repository of un-stratified possibilities."
+  ]
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(12, height: 11pt)
+    #write-lines(7, height: 10.5pt)
   ]
 }
 
@@ -254,41 +268,44 @@
 // -----------------------------------------------------------------------------
 #let weekly-right() = {
   
-  
-  system-header("SYSTEMIC RE-CALIBRATION", "ADJUSTMENT FIELD")
+  system-header("TOPOLOGICAL DYNAMICS", "ADJUSTMENT FIELD")
   v(3pt)
   
-  raw("// 3. STRUCTURAL SIGNATURE ASSESSMENT (Topological Dynamics / Dominance)")
+  raw("// RELATION BALANCE INDICATORS (Assess dominance or balance):")
   v(2pt)
   grid(
-    columns: (1.1fr, 1fr),
-    gutter: 8pt,
-    [
-      #set text(size: 8pt)
-      #raw("Homeostatic vs Amplifying:  [     ]") \
-      #v(1.5pt)
-      #raw("Flight Lines vs Stagnation: [     ]")
-    ],
-    [
-      #set text(size: 8pt)
-      #raw("Rhizomatic vs Complexity:   [     ]") \
-      #v(1.5pt)
-      #raw("Systemic Leak vs Capture:   [     ]")
-    ]
+    columns: (auto, 1fr),
+    column-gutter: 10pt,
+    row-gutter: 6pt,
+    align: (left + horizon, left + horizon),
+    raw("[ Homeostatic vs. Amplifying ]"), box(width: 100%, stroke: (bottom: 0.25pt + rgb("#cccccc")))[#v(9pt)],
+    raw("[ Rhizomatic vs. Complexity  ]"), box(width: 100%, stroke: (bottom: 0.25pt + rgb("#cccccc")))[#v(9pt)],
+    raw("[ Flight Lines vs. Stagnation]"), box(width: 100%, stroke: (bottom: 0.25pt + rgb("#cccccc")))[#v(9pt)],
+    raw("[ Systemic Leak vs. Capture  ]"), box(width: 100%, stroke: (bottom: 0.25pt + rgb("#cccccc")))[#v(9pt)],
   )
   
-  v(10pt)
-  raw("// 4. MATERIAL ADJUSTMENTS (Workspace, routine, environment)")
+  v(4pt)
+  [
+    #set text(size: 9pt)
+    #raw("INTERFACE RECONFIGURATIONS (Workspace & substrate adjustments):") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "What physical or digital changes must you introduce to your environment (desks, notification blocks, lens selections, server containers) to smooth out your attention flow?"
+  ]
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(12, height: 11pt)
+    #write-lines(5, height: 10.5pt)
   ]
   
   v(4pt)
-  raw("// 5. THE RESIDUE FOLD (Carried-forward issues)")
+  [
+    #set text(size: 9pt)
+    #raw("THE UNRESOLVED STRATUM (Carried-forward friction):") \
+    #set text(size: 7.5pt, fill: rgb("#555555"))
+    "Document the lingering issues, somatic exhaustions, or uncompleted loops that are leaking into the next fold."
+  ]
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(13, height: 11pt)
+    #write-lines(6, height: 10.5pt)
   ]
 }
 

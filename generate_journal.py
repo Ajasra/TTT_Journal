@@ -697,7 +697,7 @@ def main():
         # Page 233: Autopoietic Flow & Homeorhesis Assessment
         # Page 235: Open Sketchpad 1
         # Page 240: System Shutdown
-        preview_indices = [0, 1, 2, 3, 4, 6, 8, 10, 12, 14, 15, 226, 228, 230, 232, 234, 239]
+        preview_indices = [0, 1, 2, 3, 4, 6, 8, 10, 12, 13, 14, 15, 226, 228, 230, 232, 234, 239]
         for p_idx in preview_indices:
             if p_idx < total_pages:
                 page = doc.load_page(p_idx)
