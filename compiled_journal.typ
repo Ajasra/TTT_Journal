@@ -1,5 +1,16 @@
 #import "journal_template.typ": *
-#set page(paper: "a5", margin: (inside: 9.8mm, outside: 7.35mm, top: 8.82mm, bottom: 8.82mm))
+#set page(paper: "a5", margin: (inside: 9.8mm, outside: 7.35mm, top: 8.82mm, bottom: 8.82mm), footer: context {
+  let pg = counter(page).get().first()
+  let num = pg - 1
+  if pg > 2 and pg < 229 {
+    set text(size: 7pt, fill: rgb("#999999"))
+    if calc.odd(pg) {
+      align(right)[#str(num)]
+    } else {
+      align(left)[#str(num)]
+    }
+  }
+})
 #set text(font: ("EB Garamond", "Liberation Serif", "Georgia", "serif"), size: 11.5pt, fill: rgb("#111111"))
 #set block(spacing: 6pt)
 
@@ -1136,78 +1147,199 @@ Audit the 84-day trajectory path by reading your weekly coordinate logs diffract
   #raw("// REGISTRATION FIELD: Map systemic leakage zones and material adjustments required") \
 ]
 #pagebreak()
-// Page 231: 8-Dimensional vector compilation - Left
+// Page 231: 8-Dimensional Topological Compilation (Left Page)
 #system-header("8-DIMENSIONAL TOPOLOGICAL RELATIONSHIPS", "COMPILATION 1/2")
-#v(8pt)
-Analyze vector interactions and boundary leakages for each cycle (Map parasitism, e.g., A1 < R1, or list leaks):
-#v(10pt)
+#v(6pt)
+#set text(size: 9.5pt)
+
+Analyze vector interactions and boundary leakages recorded across each macro-cycle. Rather than treating these metrics as numerical totals, map the relational friction and mutual parasitism that emerged over the 84-day trajectory:
+#v(6pt)
+
 #grid(
-  columns: (1fr),
-  gutter: 10pt,
-  [ #raw("A1 vs R1 (Attractor / Resistance Leakage):  C1 [      ]  C2 [      ]  C3 [      ]") ],
-  [ #raw("S1 vs F1 (Stabilizer / Flight Line Drift):  C1 [      ]  C2 [      ]  C3 [      ]") ],
-  [ #raw("V1 vs D1 (Vitality / Diffraction Wave):   C1 [      ]  C2 [      ]  C3 [      ]") ],
-  [ #raw("C1 vs A2 (Chronos / Aion Parasitism):     C1 [      ]  C2 [      ]  C3 [      ]") ]
+  columns: (1fr, 1fr),
+  gutter: 8pt,
+  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[
+    #set text(size: 8.5pt)
+    *A1 vs. R1* \
+    Attractor / Resistance Leakage\
+    #v(2pt)
+    #set text(size: 8pt, fill: rgb("#555555"))
+    Map where cognitive drag or technical glitches parasitized your focus vectors. Note shifts across cycles: \
+    #v(2pt)
+    #raw("Cycle 1 [                                ]") \
+    #raw("Cycle 2 [                                ]") \
+    #raw("Cycle 3 [                                ]")
+  ],
+  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[
+    #set text(size: 8.5pt)
+    *S1 vs. F1*\
+    Stabilizer / Flight Line Drift \
+    #v(2pt)
+    #set text(size: 8pt, fill: rgb("#555555"))
+    Trace the structural tension between metabolic maintenance and sudden creative breakthroughs: \
+    #v(2pt)
+    #raw("Cycle 1 [                                ]") \
+    #raw("Cycle 2 [                                ]") \
+    #raw("Cycle 3 [                                ]")
+  ],
+  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[
+    #set text(size: 8.5pt)
+    *V1 vs. D1*\
+    Vitality / Diffraction Wave \
+    #v(2pt)
+    #set text(size: 8pt, fill: rgb("#555555"))
+    Evaluate your capacity for action against the constructive coherence of your weekly outputs: \
+    \
+    #v(2pt)
+    #raw("Cycle 1 [                                ]") \
+    #raw("Cycle 2 [                                ]") \
+    #raw("Cycle 3 [                                ]")
+  ],
+  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[
+    #set text(size: 8.5pt)
+    *C1 vs. A2*\
+    Chronos / Aion Parasitism \
+    #v(2pt)
+    #set text(size: 8pt, fill: rgb("#555555"))
+    Expose the specific periods where clock-tied tasks attempted to colonize your open studio drift time: \
+    #v(2pt)
+    #raw("Cycle 1 [                                ]") \
+    #raw("Cycle 2 [                                ]") \
+    #raw("Cycle 3 [                                ]")
+  ]
 )
-#v(10pt)
-Register key topological mutations where smooth space was captured or deterritorialized:
+
 #v(4pt)
-#rect(width: 100%, stroke: 0.25pt + rgb("#bbbbbb"), fill: rgb("#fafafa"), inset: 6pt)[
-  #write-lines(4, height: 11pt)
+#section-title("TOPOLOGICAL MUTATION ARCHIVE")
+#set text(size: 9pt)
+Register key moments across the 84-day circuit where smooth creative space was captured by administrative routine, or where highly structured systems were successfully deterritorialized:
+#v(2pt)
+#rect(width: 100%, height: 190pt, stroke: (left: 0.5pt + rgb("#888888")), fill: rgb("#ffffff"), inset: 6pt)[
+  #set text(size: 8pt, fill: rgb("#888888"))
+  #raw("// RECORDING FIELD: Map spatial boundary transitions and systemic phase changes")
 ]
 #pagebreak()
-// Page 232: 16-Dimensional vector compilation - Right
+// Page 232: 16-Dimensional Topological Compilation (Right Page)
 #system-header("METRIC MATRIX SPECS", "COMPILATION 2/2")
-#v(10pt)
-Notes and secondary coordinate mappings:
-#v(8pt)
-#rect(width: 100%, stroke: 0.25pt + rgb("#bbbbbb"), fill: rgb("#fafafa"), inset: 8pt)[
-  #set text(size: 9pt)
-  Use this space to analyze metric correlations. Compare the chronos metrics and vitality ratings to see if highly striated schedules cause systematic vitality drain, or if high flight lines cause stabilizer degradation.
+#v(6pt)
+#set text(size: 9.5pt)
+
+#rect(width: 100%, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[
+  *#raw("//") METABOLIC & COMPUTATIONAL CROSS-ANALYSIS* \
+  #v(2pt)
+  #set text(size: 8.5pt, fill: rgb("#333333"))
+  Use this un-stratified field to trace core correlations across your 84-day trajectory. Do not treat these notes as passive documentation. Specifically analyze the interference pattern between your striated schedules and somatic vitality:
 ]
-#v(8pt)
-#write-lines(6, height: 11pt)
+
+#v(6pt)
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 8pt,
+  rect(width: 100%, height: 160pt, stroke: 0.5pt + rgb("#bbbbbb"), fill: rgb("#ffffff"), inset: 6pt)[
+    #set text(size: 8pt, fill: rgb("#333333"))
+    *#raw("//") CHRONOS STRATION vs. VITALITY LEAK* \
+    #v(2pt)
+    Did highly striated administrative intervals (C1) cause a systematic drain on Spinozian capacity (V1)? Map the specific technical server loads or posturing baselines that catalyzed energy dissipation:
+  ],
+  rect(width: 100%, height: 160pt, stroke: 0.5pt + rgb("#bbbbbb"), fill: rgb("#ffffff"), inset: 6pt)[
+    #set text(size: 8pt, fill: rgb("#333333"))
+    *#raw("//") FLIGHT VELOCITY vs. STABILIZER DEGRADATION* \
+    #v(2pt)
+    Did intense rhizomatic flight velocity (F1) cause a collapse of your grounding homeostatic stabilization loops (S1)? Document where spontaneous detours compromised recovery parameters:
+  ]
+)
+
+#v(4pt)
+#set text(size: 8.5pt, fill: rgb("#555555"))
+#raw("// UN-STRATIFIED DRIFT PROCESSOR (Fleeting correlations, structural anomalies, and ink traces):")
+#v(2pt)
+#rect(width: 100%, height: 240pt, stroke: (left: 0.5pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[
+  #write-lines(14, height: 12pt)
+]
 #pagebreak()
-// Page 233: Final Autopoietic Diagnostics - Left
+// Page 233: Final Autopoietic Feedback Diagnostics (Left Page)
 #system-header("AUTOPOIETIC FLOW & HOMEORHESIS ASSESSMENT", "FINAL SYSTEM DIAG")
+#v(6pt)
+#set text(size: 9.5pt)
+
+Identify secondary state variables and environmental homeorhesis indicators across the completed 84-day macro-trajectory:
 #v(8pt)
-Identify secondary state variables and environmental homeorhesis indicators:
-#v(8pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
-  #set text(size: 8.5pt)
-  #raw("> ADAPTATION VELOCITY (System reaction to shocks):")
-  #write-lines(3, height: 11pt)
-  #v(8pt)
-  #raw("> DECAY SLOWDOWN (Duration of new habit adherence):")
-  #write-lines(3, height: 11pt)
+
+#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[
+  *#raw("//") METABOLIC REACTION & HABIT PLASTICITY KINEMATICS*
+  #v(4pt)
+  #set text(size: 8.5pt, fill: rgb("#333333"))
+  - *ADAPTATION VELOCITY:* Evaluate the system's reaction time to unexpected environmental shocks, technical failures, or somatic boundary breaks. How fluidly did the apparatus re-stabilize?
+  - *DECAY SLOWDOWN:* Measure the duration and resilience of new habit adherence. How effectively did emergent workflows resist decaying back into old sedimented loops?
+]
+
+#v(6pt)
+#set text(size: 8.5pt, fill: rgb("#222222"), weight: "bold")
+#raw("// HOMEORHETIC SYNTHESIS ARENA (Read adaptation velocity and decay variables diffractively):")
+#v(4pt)
+
+#rect(width: 100%, height: 360pt, stroke: (left: 0.5pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 8pt)[
+  #set text(size: 8pt, fill: rgb("#888888"))
+  #raw("// Map the feedback loops here. Document how technical infrastructure adjustments alloyed with your biological hardware.")
+  #v(4pt)
+  #write-lines(26, height: 13pt)
 ]
 #pagebreak()
-// Page 234: Final Autopoietic Diagnostics - Right
+// Page 234: Final Autopoietic Diagnostics - Right Page
 #system-header("SYSTEM HOMEORHESIS RESULT", "FINAL CLASSIFIER")
+#v(6pt)
+#set text(size: 9.5pt)
+
+Plot your absolute final system coordinates on the scaled wireframe below to visualize the macro-trajectory of your 84-day circuit. Mark the baseline center point of your evolved attractor basin:
 #v(10pt)
-Plot your absolute final system coordinates:
-#v(12pt)
+
 #align(center)[
-  #rect(width: 100pt, height: 100pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[
-    #place(center + horizon)[
-      #line(start: (-50pt, 0pt), end: (50pt, 0pt), stroke: 0.25pt + rgb("#d4d4d8"))
-      #line(start: (0pt, -50pt), end: (0pt, 50pt), stroke: 0.25pt + rgb("#d4d4d8"))
-    ]
-    #place(top + center, dy: 2pt)[#set text(size: 5pt); #raw("VITALITY / JOY")]
-    #place(bottom + center, dy: -2pt)[#set text(size: 5pt); #raw("DRAIN")]
-    #place(left + horizon, dx: 2pt)[#set text(size: 5pt); #raw("SMOOTH")]
-    #place(right + horizon, dx: -2pt)[#set text(size: 5pt); #raw("STRIATED")]
+  #rect(width: 180pt, height: 180pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[
+    #place(top + center, dy: 4pt)[#set text(size: 6pt, weight: "bold"); #raw("VITALITY / JOY (Spinozian Capacity)")]
+    #place(bottom + center, dy: -4pt)[#set text(size: 6pt, weight: "bold"); #raw("DRAIN / EXHAUST (Somatic Leakage)")]
+    #place(left + horizon, dx: 4pt)[#set text(size: 6pt, weight: "bold"); #raw("SMOOTH / FLOW")]
+    #place(right + horizon, dx: -4pt)[#set text(size: 6pt, weight: "bold"); #raw("STRIATED / ORDER")]
   ]
 ]
-#v(14pt)
-Authorized final state classification:
+
+#v(10pt)
+#section-title("TRAJECTORY MUTATION ARCHIVE")
+#set text(size: 9pt)
+Evaluate your final system status. Do not treat these states as static classifications, but as temporary plateaus of your practice. Articulate the qualitative nature of your evolution in the adjacent field:
+
 #v(4pt)
-#grid(
-  columns: (1fr, 1.2fr),
-  gutter: 10pt,
-  [ #raw("[ ] SUSTAINED HOMEORHESIS") \ #raw("[ ] MUTATED SYSTEM STATE") ],
-  [ #raw("[ ] ENTROPIC COLLAPSE") \ #raw("[ ] HYPER-STRIATED REGIME") ]
-)
+#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 8pt)[
+  #grid(
+    columns: (1.2fr, 2fr),
+    gutter: 12pt,
+    [
+      #set text(size: 8.5pt, weight: "bold")
+      #raw("[ ] SUSTAINED HOMEORHESIS") \
+      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))
+      Dynamic, adaptive flow along a continuous path of growth. \
+      #v(8pt)
+      #raw("[ ] MUTATED SYSTEM STATE") \
+      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))
+      Unforeseen structural shift; alternative lines of flight formed.
+    ],
+    [
+      #set text(size: 8.5pt, weight: "bold")
+      #raw("[ ] ENTROPIC COLLAPSE") \
+      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))
+      Systemic leakage; loss of homeostatic stabilization loops. \
+      #v(8pt)
+      #raw("[ ] HYPER-STRIATED REGIME") \
+      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))
+      Re-stratification; capture by rigid administrative metrics.
+    ]
+  )
+]
+
+#v(2pt)
+#rect(width: 100%, height: 110pt, stroke: (left: 0.5pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[
+  #set text(size: 8pt, fill: rgb("#888888"))
+  #raw("// REGISTRATION FIELD: Document the final integration of material allies, somatic baselines, and computational environments.")
+]
 #set page(background: rect(width: 100%, height: 100%, fill: dot-grid))
 // Sketchpad page 1
 #pagebreak()
@@ -1245,51 +1377,11 @@ Authorized final state classification:
 #pagebreak()
 #sketchpad(9)
 
-// Sketchpad page 10
+// Page 2: Blank Page (Back of Cover)
+#align(center + horizon)[]
 #pagebreak()
-#sketchpad(10)
 
-// Sketchpad page 11
-#pagebreak()
-#sketchpad(11)
-
-// Sketchpad page 12
-#pagebreak()
-#sketchpad(12)
-
-// Sketchpad page 13
-#pagebreak()
-#sketchpad(13)
-
-// Sketchpad page 14
-#pagebreak()
-#sketchpad(14)
-
-// Sketchpad page 15
-#pagebreak()
-#sketchpad(15)
-
-// Sketchpad page 16
-#pagebreak()
-#sketchpad(16)
-
-// Sketchpad page 17
-#pagebreak()
-#sketchpad(17)
-
-// Sketchpad page 18
-#pagebreak()
-#sketchpad(18)
-
-// Sketchpad page 19
-#pagebreak()
-#sketchpad(19)
-
-// Sketchpad page 20
-#pagebreak()
-#sketchpad(20)
-
-// Page 240: System Shutdown
+// Page 230: System Shutdown
 #pagebreak()
 #set page(background: none)
 #system-shutdown()

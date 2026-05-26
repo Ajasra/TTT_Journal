@@ -3,7 +3,7 @@
 
 #let dot-grid = pattern(size: (5mm, 5mm))[
   #place(dx: 2.5mm, dy: 2.5mm)[
-    #circle(radius: 0.3pt, fill: rgb("#aaaaaa").lighten(20%))
+    #circle(radius: 0.3pt, fill: rgb("#cccccc").lighten(20%))
   ]
  ]
 
@@ -435,7 +435,7 @@
 // TEMPLATE 8: SKETCHPAD / NOTE FIELD
 // -----------------------------------------------------------------------------
 #let sketchpad(idx) = {
-  system-header("FREE-FORM SKETCHPAD / DRIFT FIELDS", "NOTE FIELD " + str(idx) + "/5")
+  system-header("FREE-FORM SKETCHPAD / DRIFT FIELDS", "NOTE FIELD " + str(idx) + "/9")
   v(380pt) // dot grid covers background
 }
 
@@ -445,26 +445,23 @@
 #let system-shutdown() = {
   
   
-  system-header("SYSTEM SHUTDOWN", "FINAL SEQUENCE")
   align(center + horizon)[
-    #rect(stroke: 1pt + rgb("#111111"), inset: 15pt, fill: rgb("#fafafa"))[
-      #set text(size: 14pt, weight: "bold")
+    #block(width: 85%)[
+      #set text(size: 13pt, weight: "bold")
       #raw("SYSTEM STATUS: SHUTDOWN")
-    ]
-    #v(15pt)
-    #set text(size: 9pt)
-    #raw("The 84-day cycle has fully actualized and stabilized.") \
-    #raw("Agential cuts are completed. State coordinates are archived.")
-    #v(40pt)
-    #rect(width: 80%, stroke: 0.5pt + rgb("#bbbbbb"), inset: 8pt)[
-      #align(left)[
-        #grid(
-          columns: (auto, 1fr),
-          gutter: 8pt,
-          raw("FINAL SHUTDOWN TIMESTAMP:"), [ #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#999999")))[] ],
-          raw("AUTHORIZED BY OPERATOR:  "), [ #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#999999")))[] ]
-        )
-      ]
+      #v(15pt)
+      #set text(size: 9pt, weight: "regular")
+      #raw("The 84-day cycle has fully actualized and stabilized.") \
+      #raw("Agential cuts are completed. State coordinates are archived.")
+      #v(40pt)
+        #align(left)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 8pt,
+            raw("FINAL SHUTDOWN TIMESTAMP:"), [ #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#999999")))[] ],
+            raw("OPERATOR:  "), [ #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#999999")))[] ]
+          )
+        ]
     ]
   ]
 }
