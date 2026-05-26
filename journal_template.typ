@@ -3,7 +3,7 @@
 
 #let dot-grid = pattern(size: (5mm, 5mm))[
   #place(dx: 2.5mm, dy: 2.5mm)[
-    #circle(radius: 0.3pt, fill: rgb("#cccccc").lighten(20%))
+    #circle(radius: 0.3pt, fill: rgb("#aaaaaa").lighten(20%))
   ]
  ]
 
@@ -22,11 +22,11 @@
 // Global raw block styling for monospaced fields
 #show raw: set text(
   font: ("JetBrains Mono", "Courier New", "Consolas", "monospace"),
-  size: 10pt,
+  size: 9pt,
 )
 
 // Dotted lines generator
-#let write-lines(count, height: 18pt) = {
+#let write-lines(count, height: 11pt) = {
   stack(
     spacing: 0pt,
     for i in range(count) {
@@ -131,14 +131,14 @@
     #set text(size: 8.5pt)
     #raw("TOPOLOGICAL RELATION: Which vector parasitized the other? What leaked?")
     #v(1pt)
-    #write-lines(1, height: 10pt)
+    #write-lines(1, height: 11pt)
   ]
   
   v(2pt)
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(13, height: 10pt)
+    #write-lines(16, height: 10pt)
   ]
 }
 
@@ -301,7 +301,7 @@
   v(3pt)
   
   rect(width: 100%, stroke: 0.75pt + rgb("#111111"), inset: 6pt, fill: rgb("#fafafa"))[
-    #set text(weight: "bold", size: 10pt)
+    #set text(weight: "bold", size: 9pt)
     #raw(title) \
     #set text(weight: "regular", size: 9pt, style: "italic")
     #subtitle \

@@ -39,7 +39,7 @@ Establish and document your core cybernetic operator baseline parameters:
   columns: (1fr),
   gutter: 10pt,
   [
-    #set text(weight: "bold", size: 10pt)
+    #set text(weight: "bold", size: 9pt)
     #raw("PHYSICAL CHASSIS REF (Biological Baseline):") \
     #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))
     "Document biological status: weight, chronic posture baselines, cardiovascular stats, or physical limitations."
@@ -51,7 +51,7 @@ Establish and document your core cybernetic operator baseline parameters:
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
   ],
   [
-    #set text(weight: "bold", size: 10pt)
+    #set text(weight: "bold", size: 9pt)
     #raw("COGNITIVE FREQUENCY (Mental Focus State):") \
     #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))
     "Define baseline intellectual bandwidth, primary study domains, and estimated daily deep-focus limit."
@@ -63,7 +63,7 @@ Establish and document your core cybernetic operator baseline parameters:
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
   ],
   [
-    #set text(weight: "bold", size: 10pt)
+    #set text(weight: "bold", size: 9pt)
     #raw("METABOLIC BASE LEVEL (Energy & Recovery):") \
     #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))
     "Log physiological recovery indicators: sleep hours/quality, resting heart rate, nutritional defaults, or hydration level."
@@ -75,7 +75,7 @@ Establish and document your core cybernetic operator baseline parameters:
     #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#bbbbbb")))[#v(9pt)]
   ],
   [
-    #set text(weight: "bold", size: 10pt)
+    #set text(weight: "bold", size: 9pt)
     #raw("ATTENTION FILTER ID (Device & Filter Rules):") \
     #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))
     "List the active device configurations, screen time thresholds, website blocklists, or notification rules in place."
@@ -170,7 +170,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
@@ -186,7 +186,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
@@ -202,7 +202,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
@@ -218,7 +218,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #pagebreak()
@@ -241,7 +241,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
@@ -257,7 +257,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
@@ -273,7 +273,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
@@ -289,7 +289,7 @@ Reference matrix for tracking systemic cognitive forces and metrics:
   #v(4pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
   #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 12pt)
+  #write-lines(1, height: 11pt)
 ]
 #v(2pt)
 #pagebreak()
@@ -298,14 +298,14 @@ Reference matrix for tracking systemic cognitive forces and metrics:
 #system-header("CALIBRATION ZERO: SOMATIC & ATTENTION BASELINE", "PRE-CYCLE 1/4")
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), inset: 8pt)[
-  #set text(size: 10pt)
+  #set text(size: 9pt)
   #raw("> CURRENT HABIT STAGNATION (What rigid routines or dependencies hold you?):")
   #v(2pt)
   #write-lines(12, height: 11pt)
 ]
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
-  #set text(size: 10pt)
+  #set text(size: 9pt)
   #raw("> ATTENTION SPAN STABILITY (How long can you focus? Map your screen-time loops):")
   #v(2pt)
   #write-lines(12, height: 11pt)
@@ -316,14 +316,14 @@ Reference matrix for tracking systemic cognitive forces and metrics:
 #system-header("CALIBRATION ZERO: MATERIAL ALLIES & INFRASTRUCTURE", "PRE-CYCLE 2/4")
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
-  #set text(size: 10pt)
+  #set text(size: 9pt)
   #raw("> MATERIAL ALLY AUDIT (List active tools, phones, software, screens, desks):")
   #v(2pt)
   #write-lines(12, height: 11pt)
 ]
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
-  #set text(size: 10pt)
+  #set text(size: 9pt)
   #raw("> SOMATIC BASE LEVEL (Sleep health, dietary triggers, physical energy constraints):")
   #v(2pt)
   #write-lines(12, height: 11pt)
@@ -375,14 +375,14 @@ Plot your initial 8-coordinate vector space signature below. Set coordinates for
 #system-header("CALIBRATION ZERO: SYSTEMIC INTENTIONS", "PRE-CYCLE 4/4")
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
-  #set text(size: 10pt)
+  #set text(size: 9pt)
   #raw("> CORE COGNITIVE GOALS (What states do you intend to cultivate?):")
   #v(2pt)
   #write-lines(12, height: 11pt)
 ]
 #v(6pt)
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
-  #set text(size: 10pt)
+  #set text(size: 9pt)
   #raw("> HOMEOSTATIC ATTRACTOR DAMPING (What threshold triggers automated intervention to reduce energy expenditure?):")
   #v(2pt)
   #write-lines(12, height: 11pt)
@@ -1122,7 +1122,7 @@ Analyze vector interactions and boundary leakages for each cycle (Map parasitism
 Register key topological mutations where smooth space was captured or deterritorialized:
 #v(4pt)
 #rect(width: 100%, stroke: 0.25pt + rgb("#bbbbbb"), fill: rgb("#fafafa"), inset: 6pt)[
-  #write-lines(4, height: 14pt)
+  #write-lines(4, height: 11pt)
 ]
 #pagebreak()
 // Page 232: 16-Dimensional vector compilation - Right
@@ -1135,7 +1135,7 @@ Notes and secondary coordinate mappings:
   Use this space to analyze metric correlations. Compare the chronos metrics and vitality ratings to see if highly striated schedules cause systematic vitality drain, or if high flight lines cause stabilizer degradation.
 ]
 #v(8pt)
-#write-lines(6, height: 18pt)
+#write-lines(6, height: 11pt)
 #pagebreak()
 // Page 233: Final Autopoietic Diagnostics - Left
 #system-header("AUTOPOIETIC FLOW & HOMEORHESIS ASSESSMENT", "FINAL SYSTEM DIAG")
@@ -1145,10 +1145,10 @@ Identify secondary state variables and environmental homeorhesis indicators:
 #rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
   #set text(size: 8.5pt)
   #raw("> ADAPTATION VELOCITY (System reaction to shocks):")
-  #write-lines(3, height: 16pt)
+  #write-lines(3, height: 11pt)
   #v(8pt)
   #raw("> DECAY SLOWDOWN (Duration of new habit adherence):")
-  #write-lines(3, height: 16pt)
+  #write-lines(3, height: 11pt)
 ]
 #pagebreak()
 // Page 234: Final Autopoietic Diagnostics - Right
