@@ -138,7 +138,7 @@
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(16, height: 10pt)
+    #write-lines(13, height: 10pt)
   ]
 }
 
