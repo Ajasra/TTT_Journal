@@ -418,9 +418,18 @@ def main():
         
         print(f"Generating Cycle {c_idx} (Days {cycle_start_day} to {cycle_end_day})...")
         
+        # Extract and escape variables for Typst template call
+        title = cal_data["title"].replace('"', '\\"')
+        subtitle = cal_data["subtitle"].replace('"', '\\"')
+        focus = cal_data["focus"].replace('"', '\\"')
+        what_is = cal_data["what_is"].replace('"', '\\"')
+        why = cal_data["why"].replace('"', '\\"')
+        effect = cal_data["effect"].replace('"', '\\"')
+        prompts_dict = to_typst_dict(cal_data["prompts"])
+        
         # 1. Cycle setup calibration (2 pages)
         lines.append(f"// --- CYCLE {c_idx} SETUP ---")
-        lines.append(f'#calibration-left("{c_idx}", "{cal_data["title"]}", "{cal_data["subtitle"]}", "{cal_data["guideline"]}", {to_typst_dict(cal_data["prompts"])})')
+        lines.append(f'#calibration-left("{c_idx}", "{title}", "{subtitle}", "{focus}", "{what_is}", "{why}", "{effect}", {prompts_dict})')
         lines.append("#pagebreak()")
         lines.append(f'#calibration-right("{c_idx}", {to_typst_dict(cal_data["prompts"])})')
         lines.append("#pagebreak()")

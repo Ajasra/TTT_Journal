@@ -59,36 +59,45 @@
   "calibration_prompts": {
     "cycle_1": {
       "title": "CYCLE 1: DETERRITORIALIZATION",
-      "subtitle": "Days 1–31 // Phase Focus: Destabilizing Stagnation & Pruning Obsolete Habit Loops",
-      "guideline": "Map systemic constraints, identify digital/physical dependencies to drop, and prune stagnant goals.",
+      "subtitle": "Days 1–31 // Phase Designation: Deterritorialization",
+      "focus": "Pruning Capture Loops & Tracing Baseline Friction",
+      "what_is": "An initial phase of deliberate destabilization. It is a month dedicated to identifying where your cognitive agency has been captured by sedimented routines, automated digital platforms, and unexamined workspace habits.",
+      "why": "Before any fluid creative trajectory can be mapped, the rigid, encrusted structures that dictate your daily time must be cracked open to allow alternative lines of flight to leak through.",
+      "effect": "You do not force control; you consciously withdraw attention from energy leaks.",
       "prompts": {
-        "left_1": "ATTRACTOR DECAY (Pruning stagnant goals or tasks):",
-        "left_2": "EMERGENT FLIGHT LINES (New, spontaneous interests):",
-        "left_3": "CYCLE 1 CONSTRAINTS (What dependencies will you deterritorialize?):",
+        "left_1": "ATTRACTOR EVAPORATION (Allowing stagnant commitments to dissolve):\nIdentify creative projects, server tasks, or goals that no longer generate vital force but continue to drain processing power. Let them drop from the console.",
+        "left_2": "INFRASTRUCTURAL ANOMALIES (Emergent, unscheduled detours):\nLog sudden, spontaneous paths, unexpected conceptual drift, or technical anomalies that caught your attention outside your scheduled routines.",
+        "left_3": "RIGID LAYERS TO DISMANTLE (Capture zones marked for termination):\nSpecify the digital habit traps, screen dependencies, or workspace layouts you intend to break apart this month to restore systemic plasticity.",
         "right_1": "THERMODYNAMIC TUNING (How will you adjust system temperature?):",
         "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 1):"
       }
     },
     "cycle_2": {
       "title": "CYCLE 2: RE-ORGANIZATION",
-      "subtitle": "Days 32–62 // Phase Focus: Assembling Emergent Workflows & Homeorhesis",
-      "guideline": "Assemble new workflows, connect habits, and balance discipline with creative deviation.",
+      "subtitle": "Days 32–62 // Phase Designation: Re-Organization",
+      "focus": "Assembling Workflows & Calibrating Elastic Connections",
+      "what_is": "A generative phase of assemblage building. This cycle takes the raw material, open focus space, and spontaneous drift discovered in Cycle 1 and coordinates them into dynamic, flexible practices.",
+      "why": "Pure deterritorialization without re-assembly results in entropic collapse. This phase builds open, resilient structures that can carry out rigorous studio and computational work without collapsing into hyper-regulated rigidity.",
+      "effect": "Establishing fluid workflows that balance somatic discipline with real-time creative deviation.",
       "prompts": {
-        "left_1": "ATTRACTOR INTEGRATION (Merging new workflows together):",
-        "left_2": "EMERGENT CONNECTIONS (New rhizomatic connections built):",
-        "left_3": "CYCLE 2 WORKFLOWS (How did you adjust and re-assemble structure?):",
+        "left_1": "ATTRACTOR ALLOYING (Weaving collaborative workflows):\nHow will you thread your newly discovered creative attractors into your daily technical baseline without choking out your open play intervals?",
+        "left_2": "RHIZOMATIC COUPLING (New technical and physical linkages):\nDocument the new connections built between your material allies and your routines (e.g., aligning server deployment intervals with your physical energy peaks).",
+        "left_3": "AFFORDANCE DESIGN (Configuring adaptive structures):\nDetail the explicit layout changes made to your digital blocks and physical environment to support continuous, uninterrupted creative flow.",
         "right_1": "THERMODYNAMIC TUNING (Modulating energy vs. focus):",
         "right_2": "PROTOCOL EVOLUTION (Rule changes for Cycle 2):"
       }
     },
     "cycle_3": {
       "title": "CYCLE 3: SUSTAINED HOMEORHESIS",
-      "subtitle": "Days 63–93 // Phase Focus: Dynamic Trajectory Flow & Evolutionary Adaptation",
-      "guideline": "Anchor resilient flow states, calibrate dynamic boundaries, and support open flight trajectories.",
+      "subtitle": "Days 63–93 // Phase Designation: Sustained Homeorhesis",
+      "focus": "Trajectory Flow & Evolutionary Boundaries",
+      "what_is": "The final orchestration of the 93-day circuit. It completely rejects the disciplinary desire to 'lock down' or freeze your routines into a permanent, unyielding schedule. Instead, it focuses on protecting a moving trajectory of growth.",
+      "why": "To prove that long-term stability does not require rigid uniformity. This cycle tests your system's capacity to absorb real-world shocks, server updates, and environmental disruptions while maintaining high vitality and deep artistic focus.",
+      "effect": "Achieving a self-organizing, evolving equilibrium that preserves difference and open-ended transformation.",
       "prompts": {
-        "left_1": "TRAJECTORY CALIBRATION (Supporting dynamic flow along active flight lines):",
-        "left_2": "RESILIENT ANCHORS (Flexible triggers that adapt to somatic and environmental fluctuations):",
-        "left_3": "CYCLE 3 EVOLUTION (How will you maintain flow without collapsing into rigid homeostasis?):",
+        "left_1": "HORIZON CALIBRATION (Supporting dynamic trajectory velocity):\nHow will you adjust the speed and scale of your active projects to ensure they continue to evolve without exhausting your biological chassis?",
+        "left_2": "METABOLIC CHECKPOINTS (Somatic and technical fluid boundaries):\nIdentify your flexible check-ins—the warning signs from your posture, sleep history, or server error logs—that trigger a gentle re-balancing of your daily fields.",
+        "left_3": "HOMEORHETIC VELOCITY (Sustaining flow against capture):\nWhat protective filters will you maintain to shield your un-dated evental time (Aion) from being slowly colonized by administrative tracking metrics?",
         "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):",
         "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"
       }

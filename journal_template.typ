@@ -295,40 +295,43 @@
 // -----------------------------------------------------------------------------
 // TEMPLATE 5: CYCLE CALIBRATION SETUP - LEFT PAGE
 // -----------------------------------------------------------------------------
-#let calibration-left(cycle, title, subtitle, guideline, prompts) = {
+#let calibration-left(cycle, title, subtitle, focus, what_is, why, effect, prompts) = {
   
   system-header("CYCLE [ " + cycle + " ] SETUP: METRIC CALIBRATION", "SYSTEM CONFIG")
-  v(3pt)
+  v(2pt)
   
   rect(width: 100%, stroke: 0.75pt + rgb("#111111"), inset: 6pt, fill: rgb("#fafafa"))[
-    #set text(weight: "bold", size: 9pt)
-    #raw(title) \
-    #set text(weight: "regular", size: 9pt, style: "italic")
+    #set text(size: 8.5pt)
+    *#title* \
+    #set text(size: 8pt, style: "italic")
     #subtitle \
-    #v(3pt)
-    #set text(style: "normal", weight: "regular", size: 9pt)
-    #raw(guideline)
+    #v(2pt)
+    #set text(size: 7.5pt, style: "normal")
+    *Target Focus:* #focus \
+    *What It Is:* #what_is \
+    *Why It Is:* #why \
+    *Effect:* #effect
   ]
   
-  v(4pt)
+  v(3pt)
   raw(prompts.at("left_1"))
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(7, height: 11pt)
+    #write-lines(5, height: 10.5pt)
   ]
   
-  v(4pt)
+  v(3pt)
   raw(prompts.at("left_2"))
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(7, height: 11pt)
+    #write-lines(5, height: 10.5pt)
   ]
   
-  v(4pt)
+  v(3pt)
   raw(prompts.at("left_3"))
   v(1pt)
   rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(7, height: 11pt)
+    #write-lines(5, height: 10.5pt)
   ]
 }
 
