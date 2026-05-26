@@ -1,0 +1,17 @@
+{
+  "version": "13",
+  "total_days": 84,
+  "days_per_cycle": 28,
+  "days_per_week": 7,
+  "target_pages": 230,
+  "paper_size": "a5",
+  "margin_inside": "9.8mm",
+  "margin_outside": "7.35mm",
+  "margin_top": "8.82mm",
+  "margin_bottom": "8.82mm",
+  "font_body": ["EB Garamond", "Liberation Serif", "Georgia", "serif"],
+  "font_mono": ["JetBrains Mono", "Courier New", "Consolas", "monospace"],
+  "font_size": "11.5pt",
+  "line_spacing": "6pt",
+  "fill_color": "#111111"
+}

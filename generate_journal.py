@@ -2,29 +2,50 @@ import json
 import os
 import sys
 
-def to_typst_dict(py_dict):
-    items = []
-    for k, v in py_dict.items():
-        v_escaped = v.replace('"', '\\"')
-        items.append(f'"{k}": "{v_escaped}"')
-    return "(" + ", ".join(items) + ")"
+def to_typst_val(val):
+    """
+    Recursively serializes a Python value to its Typst literal representation.
+    """
+    if isinstance(val, str):
+        val_esc = val.replace('\\', '\\\\').replace('"', '\\"')
+        return f'"{val_esc}"'
+    elif isinstance(val, (int, float)):
+        return str(val)
+    elif isinstance(val, bool):
+        return "true" if val else "false"
+    elif isinstance(val, list):
+        items = [to_typst_val(item) for item in val]
+        return "(" + ", ".join(items) + ")"
+    elif isinstance(val, dict):
+        items = []
+        for k, v in val.items():
+            items.append(f'{k}: {to_typst_val(v)}')
+        return "(" + ", ".join(items) + ")"
+    elif val is None:
+        return "none"
+    return str(val)
 
 def main():
-    print("Initializing Cybernetic Journal generation pipeline...")
+    print("Initializing Procedural Cybernetic Journal generation pipeline...")
     
     # Paths
     content_path = "journal_content.json"
-    template_path = "journal_template.typ"
-    output_typ_path = "compiled_journal.typ"
-    output_pdf_path = "compiled_journal.pdf"
+    config_path = "config.json"
+    output_typ_path = "renders/compiled_journal.typ"
+    output_pdf_path = "renders/compiled_journal.pdf"
     
     # Load content
     if not os.path.exists(content_path):
         print(f"Error: {content_path} not found.")
         sys.exit(1)
+    if not os.path.exists(config_path):
+        print(f"Error: {config_path} not found.")
+        sys.exit(1)
         
     with open(content_path, "r", encoding="utf-8") as f:
         content = json.load(f)
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = json.load(f)
         
     metadata = content["system_metadata"]
     guide = content["guide_text"]
@@ -32,13 +53,47 @@ def main():
     calibration = content["calibration_prompts"]
     challenges = content["challenge_trackers"]
     
+    # Extract config variables
+    total_days = config.get("total_days", 84)
+    target_pages = config.get("target_pages", 230)
+    paper_size = config.get("paper_size", "a5")
+    margin_inside = config.get("margin_inside", "9.8mm")
+    margin_outside = config.get("margin_outside", "7.35mm")
+    margin_top = config.get("margin_top", "8.82mm")
+    margin_bottom = config.get("margin_bottom", "8.82mm")
+    font_body = to_typst_val(config.get("font_body", ["EB Garamond", "Liberation Serif", "Georgia", "serif"]))
+    font_size = config.get("font_size", "11.5pt")
+    fill_color = config.get("fill_color", "#111111")
+    cycle_version = config.get("version", "13")
+    
     # Start building compiled_journal.typ
     lines = []
-    lines.append(f'#import "{template_path}": *')
-    lines.append('#set page(paper: "a5", margin: (inside: 9.8mm, outside: 7.35mm, top: 8.82mm, bottom: 8.82mm), footer: context {')
+    
+    # Import all modular templates
+    lines.append('// Procedurally generated Cybernetic Journal')
+    templates = [
+        "common.typ", "title.typ", "blank.typ", "baseline.typ",
+        "guide_philosophy.typ", "guide_temporal.typ", "guide_taxonomy.typ", "guide_loops.typ",
+        "taxonomy_left.typ", "taxonomy_right.typ",
+        "stratification_baselines.typ", "stratification_allies.typ", "stratification_vector.typ", "stratification_intentions.typ",
+        "calibration_left.typ", "calibration_right.typ",
+        "weekly_left.typ", "weekly_right.typ",
+        "daily_left.typ", "daily_right.typ",
+        "challenges_left.typ", "challenges_right.typ",
+        "trajectory_mapping.typ", "trajectory_analysis.typ",
+        "topological_left.typ", "topological_right.typ",
+        "diagnostics_left.typ", "diagnostics_right.typ",
+        "sketchpad.typ", "shutdown.typ"
+    ]
+    for t in templates:
+        lines.append(f'#import "../templates/{t}": *')
+    lines.append("")
+    
+    # Global page rules based on config.json
+    lines.append(f'#set page(paper: "{paper_size}", margin: (inside: {margin_inside}, outside: {margin_outside}, top: {margin_top}, bottom: {margin_bottom}), footer: context {{')
     lines.append('  let pg = counter(page).get().first()')
     lines.append('  let num = pg - 1')
-    lines.append('  if pg > 2 and pg < 229 {')
+    lines.append(f'  if pg > 2 and pg < {target_pages} - 1 {{')
     lines.append('    set text(size: 7pt, fill: rgb("#999999"))')
     lines.append('    if calc.odd(pg) {')
     lines.append('      align(right)[#str(num)]')
@@ -47,795 +102,223 @@ def main():
     lines.append('    }')
     lines.append('  }')
     lines.append('})')
-    lines.append('#set text(font: ("EB Garamond", "Liberation Serif", "Georgia", "serif"), size: 11.5pt, fill: rgb("#111111"))')
+    lines.append(f'#set text(font: {font_body}, size: {font_size}, fill: rgb("{fill_color}"))')
     lines.append('#set block(spacing: 6pt)')
     lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGE 1: TITLE PAGE (Front Page)
-    # -------------------------------------------------------------------------
+    # 1. Front-matter pages
     lines.append("// Page 1: Title Page")
-    lines.append("#place(top + right)[")
-    lines.append('  #set text(size: 8pt)')
-    lines.append('  #raw("VOL ______ YEAR _____")')
-    lines.append("]")
-    lines.append("#align(center + horizon)[")
-    lines.append("  #v(-20pt)")
-    lines.append('  #block(width: 85%)[')
-    lines.append("    #set align(center)")
-    lines.append('    #set text(size: 13pt, weight: "bold")')
-    lines.append('    #raw("THE TRAJECTORY TRACE")')
-    lines.append("    #v(6pt)")
-    lines.append('    #set text(size: 8.5pt, weight: "regular")')
-    lines.append('    #text(style: "italic")[An 84-Day Grid for Evolutionary Flow and Temporal Split]')
-    lines.append("    #v(15pt)")
-    lines.append('    #set text(size: 7.5pt)')
-    lines.append('    #raw("[ TRACK: CYCLE 13 ]  [ SPAN: 84 DAYS ]")')
-    lines.append("    #v(50pt)")
-    lines.append("    #align(left)[")
-    lines.append("      #set text(size: 8pt)")
-    lines.append("      #grid(")
-    lines.append("        columns: (auto, 1fr),")
-    lines.append("        gutter: 12pt,")
-    lines.append('        raw("OPERATOR:"), [ #box(width: 100%, stroke: (bottom: 0.1pt + rgb("#888888")))[] ],')
-    lines.append('        raw("INIT DATE:"), [ #box(width: 100%, stroke: (bottom: 0.1pt + rgb("#888888")))[] ]')
-    lines.append("      )")
-    lines.append("    ]")
-    lines.append("  ]")
-    lines.append("]")
+    lines.append(f'#title-page("{cycle_version}", "{total_days}")')
     lines.append("#pagebreak()")
     lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGE 2: BLANK PAGE (Back of Cover)
-    # -------------------------------------------------------------------------
-    lines.append("// Page 2: Blank Page (Back of Cover)")
-    lines.append("#align(center + horizon)[]")
+    lines.append("// Page 2: Blank Page")
+    lines.append("#blank-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGE 2: SYSTEM STATE BASELINE
-    # -------------------------------------------------------------------------
-    lines.append("// Page 2: System State Baseline")
-    lines.append('#system-header("SYSTEM BASELINE", "OWNERSHIP & ENCODING")')
-    lines.append("#v(4pt)")
-    lines.append('#set text(size: 8pt)')
-    lines.append("Establish and document your core cybernetic operator baseline parameters:")
-    lines.append("#v(4pt)")
-    lines.append("#grid(")
-    lines.append("  columns: (1fr),")
-    lines.append("  gutter: 10pt,")
-    lines.append('  [')
-    lines.append('    #set text(weight: "bold", size: 9pt)')
-    lines.append('    #raw("PHYSICAL CHASSIS REF (Biological Baseline):") \\')
-    lines.append('    #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))')
-    lines.append('    "Document biological status: weight, chronic posture baselines, cardiovascular stats, or physical limitations."')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('  ],')
-    lines.append('  [')
-    lines.append('    #set text(weight: "bold", size: 9pt)')
-    lines.append('    #raw("COGNITIVE FREQUENCY (Mental Focus State):") \\')
-    lines.append('    #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))')
-    lines.append('    "Define baseline intellectual bandwidth, primary study domains, and estimated daily deep-focus limit."')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('  ],')
-    lines.append('  [')
-    lines.append('    #set text(weight: "bold", size: 9pt)')
-    lines.append('    #raw("METABOLIC BASE LEVEL (Energy & Recovery):") \\')
-    lines.append('    #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))')
-    lines.append('    "Log physiological recovery indicators: sleep hours/quality, resting heart rate, nutritional defaults, or hydration level."')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('  ],')
-    lines.append('  [')
-    lines.append('    #set text(weight: "bold", size: 9pt)')
-    lines.append('    #raw("ATTENTION FILTER ID (Device & Filter Rules):") \\')
-    lines.append('    #set text(size: 8.5pt, weight: "regular", style: "italic", fill: rgb("#555555"))')
-    lines.append('    "List the active device configurations, screen time thresholds, website blocklists, or notification rules in place."')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('    #v(1pt)')
-    lines.append('    #box(width: 100%, stroke: (bottom: 0.25pt + rgb("#dddddd")))[#v(9pt)]')
-    lines.append('  ]')
-    lines.append(")")
-    lines.append("#v(6pt)")
-    lines.append("Operator Systemic Commitment:")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), inset: 8pt, fill: rgb("#fafafa"))[')
-    lines.append('  #set text(style: "italic", size: 8.5pt)')
-    lines.append('  "I commit to materializing the agential cut. I will use this apparatus daily to register state trajectories, stabilize homeostatic loops, and allow flight lines to emerge constructively without collapsing into administrative anxiety."')
-    lines.append("]")
-    lines.append("#v(8pt)")
-    lines.append('#align(right)[')
-    lines.append('  #grid(')
-    lines.append('    columns: (1.5fr, 1fr),')
-    lines.append('    gutter: 15pt,')
-    lines.append('    [ #box(width: 100%, stroke: (bottom: 0.5pt + rgb("#999999")))[] \\ #set text(size: 7pt); #raw("OPERATOR SIGNATURE") ],')
-    lines.append('    [ #box(width: 100%, stroke: (bottom: 0.5pt + rgb("#999999")))[] \\ #set text(size: 7pt); #raw("DATE INITIALIZED") ]')
-    lines.append('  )')
-    lines.append(']')
+    lines.append("// Page 3: System State Baseline")
+    lines.append("#set text(size: 8pt)")
+    lines.append("#baseline-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGES 4-7: CYBERNETIC OPERATING GUIDE (exactly 4 pages)
-    # -------------------------------------------------------------------------
-    # Page 4: Operating Guide - Manifesto & Philosophy
-    lines.append("// Page 4: Operating Guide - Manifesto & Philosophy")
-    lines.append('#system-header("THE INTIMATE ENTANGLEMENT", "SYSTEM GUIDE 1/4", show-date: false)')
-    lines.append("#v(4pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 10pt, radius: 2pt, fill: rgb("#fafafa"))[')
-    lines.append('  #set text(size: 10pt, weight: "bold")')
-    lines.append('  #raw("THE INTRA-ACTIVE LEDGER: A MANIFESTO FOR MATERIAL ENGAGEMENT") \\')
-    lines.append('  #set text(size: 8.5pt, weight: "bold")')
-    lines.append('  #raw("[ SYSTEM STATUS: UNBOUND // TRAJECTORY MODE: ACTIVE ]") \\')
-    lines.append('  #raw("[ REGIMEN: ENGAGING THE CHASSIS AND INTERFACES ]") \\')
-    lines.append('  #v(4pt)')
-    lines.append('  #set text(size: 8.5pt, weight: "regular", style: "italic")')
-    lines.append('  "This print block rejects the standard human-computer interaction paradigm that treats technology as a transparent, mindless slave. It is not a tool to be spent, nor an administrative whip to discipline human behavior. It is a physical-conceptual instrument designed to performing an agential cut into the drift of daily focus. Grounded in Materialist Media Theory, it acknowledges that cognitive bandwidth, server deployments, and photographic lens work are deeply entangled with their physical technical substrates. By forcing a direct encounter with the page, this ledger balances homeostatic preservation with homeorhetic evolution, resisting premature consensus and model collapse by structurally protecting difference, friction, and divergence."')
-    lines.append(']')
-    lines.append("#v(8pt)")
-    lines.append("")
-    lines.append('#section-title("CORE RE-PROGRAMMING FIELDS")')
+    lines.append("// Page 4: Guide - Philosophy")
     lines.append("#set text(size: 9.5pt)")
-    lines.append("- *The Refusal of Seamlessness:* Traditional productivity devices focus on removing friction to accelerate consumption. This ledger introduces deliberate, tactile resistance. Writing with ink on a physical paper grid forces an explicit, material accountability to your immediate environment.")
-    lines.append("- *The Anti-Mastery Stance:* We banish the language of domination, control, and capture. You do not \'manage\' your day; you curate the probability fields and affordance spaces within which creative phenomena can emerge.")
-    lines.append("- *The Voice of the Apparatus:* The glitches in your code, the server CPU heat spikes, the noise in low-light camera sensors, and the physical exhaustion of your biological chassis are not errors to be wiped away—they are active agents defining the boundaries of your practice.")
+    lines.append("#guide-philosophy-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 5: Operating Guide - Temporal Cleavage & Vector Force Field
-    lines.append("// Page 5: Operating Guide - Temporal Cleavage & Vector Force Field")
-    lines.append('#system-header("THE SPLIT CONSOLE & VECTOR FIELDS", "SYSTEM GUIDE 2/4", show-date: false)')
-    lines.append("#v(6pt)")
-    lines.append("")
-    lines.append('#section-title("I. The Temporal Cleavage: Chronos \\\\ Aion")')
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("- *What It Is:* A spatial partitioning of the daily console layout into two asymmetric, non-hierarchical processing fields: Chronos (striated, clock-tied administrative tracking) and Aion (the smooth, intensive evental time of non-linear studio play and drift).")
-    lines.append("- *Why It Is Here:* Standard workflow architectures prioritize the complete colonization of time by Chronos, reducing human and machine activity to linear task completion metrics. This section acts as an architectural sanctuary for the un-scheduled.")
-    lines.append("- *The Targeted Effect:* Chronos logs essential logistics, system configurations, and routine calendar maintenance. Aion hosts open-ended research, fluid note-traces, and spontaneous experiments. *The Core Protocol:* Chronos must never parasite Aion drift. Setting aside dedicated segments for open experimentation protects the posthuman ecosystem from administrative anxiety and structural decay.")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append('#section-title("II. The Vector Force Field: Diagnosing Relational Friction")')
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("- *What It Is:* A morning cartography field mapping the four active forces intersecting your landscape: Attractors (focus gradients), Stabilizers (metabolic maintenance), Flight Lines (rhizomatic escapes), and Resistors (thermodynamic drag).")
-    lines.append("- *Why It Is Here:* To escape the trap of traditional tracking metrics that turn daily life into a sterile score out of ten, replacing it with a spatial map of energetic flows.")
-    lines.append("- *The Targeted Effect:* This field forces an ongoing diagnosis of relational dominance. Instead of asking how much you \'controlled\' your day, you track topological friction: Which vector parasitized the other today? Where did attention leak through your defensive boundaries? Did an administrative Resistor capture a sudden, emergent Flight Line?")
+    lines.append("// Page 5: Guide - Temporal")
+    lines.append("#guide-temporal-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 6: Operating Guide - 8-D Matrix & Morning Attunement
-    lines.append("// Page 6: Operating Guide - 8-D Matrix & Morning Attunement")
-    lines.append('#system-header("THE TAXONOMY AND AGENTIAL CUT", "SYSTEM GUIDE 3/4", show-date: false)')
-    lines.append("#v(6pt)")
-    lines.append("")
-    lines.append('#section-title("III. The 8-Dimensional Matrix: Relational Pairing")')
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("Rather than tracking isolated metrics, the taxonomy operates as a series of asymmetric, colliding pairs registered in the morning and evaluated under a diffractive framework in the evening:")
-    lines.append("- *A1 (Attractor Force) \\/\\/ R1 (Thermodynamic Resistance):* Tracks the intensive pull of primary creative fields against the inevitable cognitive drag, system glitches, and somatic fatigue of the day.")
-    lines.append("- *S1 (Stabilization Index) \\/\\/ F1 (Flight Velocity):* Measures the tension between grounding homeostatic routines (posture baselines, sleep, hydration) and the non-linear detours of unexpected creative breakthroughs.")
-    lines.append("- *V1 (Vitality / Joy) \\/\\/ D1 (Diffraction Ratio):* Maps your capacity for action against the coherence of your daily outputs. High diffraction indicates your actions generated constructive wave interferences across your work.")
-    lines.append("- *C1 (Chronos Metric) \\/\\/ A2 (Aion Drift):* Monitors the ratio between clock-tied administrative logistics and smooth time, exposing exactly when structured tasks are attempting to parasite open play.")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append('#section-title("IV. The Morning Attunement & The Agential Cut")')
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("- *What It Is:* A daily threshold checkpoint where you explicitly inventory your \"Material Allies\" (technical substrates, server terminals, lenses, screen rules) and declare an \"Agential Cut.\"")
-    lines.append("- *Why It Is Here:* Grounded in posthuman ethics, it acknowledges that you do not think or create in a vacuum. Your technical infrastructure actively shapes your agency.")
-    lines.append("- *The Targeted Effect:* Declaring the Agential Cut marks out your intentional boundaries for the next twelve hours. It isolates what is included within your field of engagement and what is barred from entry, transforming daily focus from an act of willpower into a clear spatial configuration.")
+    lines.append("// Page 6: Guide - Taxonomy")
+    lines.append("#guide-taxonomy-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 7: Operating Guide - Macro Trajectories & Recursive Loops
-    lines.append("// Page 7: Operating Guide - Macro Trajectories & Recursive Loops")
-    lines.append('#system-header("DYNAMIC LOOPS AND CYCLES", "SYSTEM GUIDE 4/4", show-date: false)')
-    lines.append("#v(6pt)")
-    lines.append("")
-    lines.append('#section-title("V. The Macro-Dynamic Folds (The 84-Day Trajectory)")')
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("The long-term movement through this ledger treats time as an evolutionary circuit divided into three distinct, month-long turnings:")
-    lines.append("- *Cycle 1: Deterritorialization (Days 1–28) \\/\\/ Target: Habit Pruning:* Stripping away rigid, sedimented routines, dropping digital dependencies, and mapping the baseline friction of your workspace to allow new potentials to leak through and disrupt stagnation.")
-    lines.append("- *Cycle 2: Re-Organization (Days 29–56) \\/\\/ Target: Assembling Workflows:* Connecting newly discovered habits and building flexible workflows that balance operational discipline with creative deviation, alloying your routines with active creative vectors.")
-    lines.append("- *Cycle 3: Sustained Homeorhesis (Days 57–84) \\/\\/ Target: Evolutionary Flow:* Calibrating fluid boundaries to support open flight trajectories without collapsing back into rigid, paranoid structure. The goal is a self-organizing, dynamic equilibrium that moves along a continuous path of growth without freezing up.")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append('#section-title("VI. The Diffractive Field & The Recursive Seed")')
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("- *What It Is:* A weekly calibration ritual (\\\"The Fold\\\") paired with a nightly second-order cybernetic feedback loop that allows the ledger to function as a self-evolutionary machine.")
-    lines.append("- *Why It Is Here:* To turn historic journaling away from passive documentation and toward a generative engine that actively re-programs its own next steps based on real-time interference patterns.")
-    lines.append("- *The Targeted Effect:* Each evening, you chart your position within the State Space graph and carry out a Capture Audit on your digital entanglements. You extract the entire day\'s interference pattern into a single instruction—the *Feedforward Seed*. The next morning, this seed is copied directly into your Attunement block, programmatically setting the entry boundaries for the incoming day. The system continuously learns from its own operational history.")
+    lines.append("// Page 7: Guide - Loops")
+    lines.append(f'#guide-loops-page("{total_days}")')
     lines.append("#pagebreak()")
     lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGES 8-9: 8-DIMENSIONAL TAXONOMY REFERENCE (2 pages)
-    # -------------------------------------------------------------------------
-    print("Generating 8-Dimensional Taxonomy Reference spreads...")
-    # Page 5: Taxonomy Left Page
-    lines.append("// Page 5: 8-Dimensional Taxonomy Reference (1/2)")
-    lines.append('#system-header("8-DIMENSIONAL TAXONOMY REFERENCE (1/2)", "SYSTEM REFERENCE")')
-    lines.append("#v(6pt)")
-    lines.append("Reference matrix for tracking the eight primary systemic coordinates and metrics across the daily attunement loop:")
-    lines.append("#v(8pt)")
+    # Taxonomy Dimensions serialization
+    dim_left = to_typst_val(taxonomy["dimensions"][:4])
+    dim_right = to_typst_val(taxonomy["dimensions"][4:8])
     
-    for dim in taxonomy["dimensions"][:4]:
-        dim_id = dim["id"]
-        dim_name = dim["name"]
-        dim_desc = dim["desc"]
-        lines.append(f'#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[')
-        lines.append(f'  #set text(size: 9pt)')
-        lines.append(f'  #grid(')
-        lines.append(f'    columns: (auto, 1fr),')
-        lines.append(f'    gutter: 10pt,')
-        lines.append(f'    raw("{dim_id}:"), [ *{dim_name}* ]')
-        lines.append(f'  )')
-        lines.append(f'  #v(1pt)')
-        lines.append(f'  #set text(size: 8.5pt, fill: rgb("#444444"))')
-        lines.append(f'  "{dim_desc}"')
-        lines.append(f'  #v(2pt)')
-        lines.append(f'  #set text(size: 7.5pt, fill: rgb("#888888"))')
-        lines.append(f'  #write-lines(5, height: 9.5pt)')
-        lines.append(f']')
-        lines.append(f'#v(1pt)')
+    lines.append("// Page 8: Taxonomy Reference Left")
+    lines.append(f'#taxonomy-page-left({dim_left})')
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 6: Taxonomy Right Page
-    lines.append("// Page 6: 8-Dimensional Taxonomy Reference (2/2)")
-    lines.append('#system-header("8-DIMENSIONAL TAXONOMY REFERENCE (2/2)", "SYSTEM REFERENCE")')
-    lines.append("#v(6pt)")
-    lines.append("Reference matrix for tracking the eight primary systemic coordinates and metrics across the daily attunement loop:")
-    lines.append("#v(8pt)")
-    
-    for dim in taxonomy["dimensions"][4:]:
-        dim_id = dim["id"]
-        dim_name = dim["name"]
-        dim_desc = dim["desc"]
-        lines.append(f'#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[')
-        lines.append(f'  #set text(size: 9pt)')
-        lines.append(f'  #grid(')
-        lines.append(f'    columns: (auto, 1fr),')
-        lines.append(f'    gutter: 10pt,')
-        lines.append(f'    raw("{dim_id}:"), [ *{dim_name}* ]')
-        lines.append(f'  )')
-        lines.append(f'  #v(1pt)')
-        lines.append(f'  #set text(size: 8.5pt, fill: rgb("#444444"))')
-        lines.append(f'  "{dim_desc}"')
-        lines.append(f'  #v(2pt)')
-        lines.append(f'  #set text(size: 7.5pt, fill: rgb("#888888"))')
-        lines.append(f'  #write-lines(5, height: 9.5pt)')
-        lines.append(f']')
-        lines.append(f'#v(1pt)')
+    lines.append("// Page 9: Taxonomy Reference Right")
+    lines.append(f'#taxonomy-page-right({dim_right})')
     lines.append("#pagebreak()")
     lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGES 7-10: INITIAL STRATIFICATION & SOMATIC ENMESHMENT (4 pages)
-    # -------------------------------------------------------------------------
-    # Page 7: Somatic & Attention Baselines
-    lines.append("// Page 7: Initial Stratification - Somatic & Attention Baselines")
-    lines.append('#system-header("INITIAL STRATIFICATION (Somatic & Attentional Baselines)", "SYSTEM ATTUNEMENT // PRE-CYCLE 1/4")')
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[')
-    lines.append('  #set text(size: 9pt)')
-    lines.append('  #raw("Sedimented Routines & Capture Fields:") \\')
-    lines.append('  #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append('  "Map the rigid dependencies, automatic behaviors, or loop-traps currently capturing your daily agency. What loops perform you before you can perform an agential cut?"')
-    lines.append('  #v(2pt)')
-    lines.append('  #write-lines(13, height: 10pt)')
-    lines.append("]")
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[')
-    lines.append('  #set text(size: 9pt)')
-    lines.append('  #raw("Attention Span Kinematics:") \\')
-    lines.append('  #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append('  "Document your current deep-focus boundaries. Map the exact technical or environmental triggers that shatter your attention span and accelerate drift into computational distraction loops."')
-    lines.append('  #v(2pt)')
-    lines.append('  #write-lines(13, height: 10pt)')
-    lines.append("]")
+    lines.append("// Page 10: Stratification Somatic Baselines")
+    lines.append("#stratification-baselines-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 8: Material Allies & Infrastructure
-    lines.append("// Page 8: Material Allies & Infrastructure")
-    lines.append('#system-header("MATERIAL ALLIES & INFRASTRUCTURE", "SYSTEM ATTUNEMENT // PRE-CYCLE 2/4")')
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[')
-    lines.append('  #set text(size: 9pt)')
-    lines.append('  #raw("Material Ally Audit:") \\')
-    lines.append('  #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append('  "Inventory the physical technical substrates of your practice (e.g., VPS configurations, compact camera interfaces, low-light optics, specific desktop layouts). Treat these tools not as passive objects, but as active participants that define what you can perceive and create."')
-    lines.append('  #v(2pt)')
-    lines.append('  #write-lines(12, height: 10pt)')
-    lines.append("]")
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[')
-    lines.append('  #set text(size: 9pt)')
-    lines.append('  #raw("Chassis Metabolism & Recovery Baselines:") \\')
-    lines.append('  #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append('  "Log the physiological baseline conditions of your biological hardware: structural posture defaults, sleep duration/quality indicators, and nutritional triggers that fluctuate your daily intensive energy fields."')
-    lines.append('  #v(2pt)')
-    lines.append('  #write-lines(12, height: 10pt)')
-    lines.append("]")
+    lines.append("// Page 11: Stratification Allies")
+    lines.append("#stratification-allies-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 9: Radar Space
-    lines.append("// Page 9: The Initial Vector Space")
-    lines.append('#system-header("THE INITIAL VECTOR SPACE", "SYSTEM ATTUNEMENT // PRE-CYCLE 3/4")')
-    lines.append("#v(6pt)")
-    lines.append('#set text(size: 8.5pt)')
-    lines.append('Plot your initial 8-coordinate vector space signature on the grid below. Set baseline positions for your Attractors (*A1*), Stabilizers (*S1*), Flight Lines (*F1*), and Resistors (*R1*), alongside your initial readings for Vitality (*V1*), Diffraction (*D1*), Chronos (*C1*), and Aion (*A2*) based on your typical baseline week.')
-    lines.append("#v(10pt)")
-    lines.append("#align(center)[")
-    lines.append('  #rect(width: 300pt, height: 300pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[')
-    lines.append('    #place(center + horizon)[#circle(radius: 130pt, stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 98pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 74pt, stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 52pt, stroke: 0.25pt + rgb("#eeeeee"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 26pt, stroke: 0.25pt + rgb("#f4f4f4"))]')
-    lines.append('    #place(center + horizon, dx: 3pt, dy: -26pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("2")]')
-    lines.append('    #place(center + horizon, dx: 3pt, dy: -52pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("4")]')
-    lines.append('    #place(center + horizon, dx: 3pt, dy: -74pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("6")]')
-    lines.append('    #place(center + horizon, dx: 3pt, dy: -98pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("8")]')
-    lines.append('    #place(center + horizon, dx: 3pt, dy: -130pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("10")]')
-    lines.append('    #place(top + left)[#line(start: (0pt, 145pt), end: (290pt, 145pt), stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(top + left)[#line(start: (145pt, 0pt), end: (145pt, 290pt), stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(top + left)[#line(start: (0pt, 0pt), end: (290pt, 290pt), stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(top + left)[#line(start: (0pt, 290pt), end: (290pt, 0pt), stroke: 0.25pt + rgb("#dddddd"))]')
-    lines.append('    #place(top + center, dy: 4pt)[#set text(size: 6pt); #raw("A1 (ATTRACTOR)")]')
-    lines.append('    #place(bottom + center, dy: -4pt)[#set text(size: 6pt); #raw("R1 (RESISTOR)")]')
-    lines.append('    #place(left + horizon, dx: 4pt)[#set text(size: 6pt); #raw("S1 (STABILIZER)")]')
-    lines.append('    #place(right + horizon, dx: -4pt)[#set text(size: 6pt); #raw("F1 (FLIGHT)")]')
-    lines.append('    #place(top + left, dx: 14pt, dy: 14pt)[#set text(size: 5.5pt); #raw("V1 (VITALITY)")]')
-    lines.append('    #place(bottom + right, dx: -14pt, dy: -14pt)[#set text(size: 5.5pt); #raw("D1 (DIFFRACTION)")]')
-    lines.append('    #place(top + right, dx: -14pt, dy: 14pt)[#set text(size: 5.5pt); #raw("C1 (CHRONOS)")]')
-    lines.append('    #place(bottom + left, dx: 14pt, dy: -14pt)[#set text(size: 5.5pt); #raw("A2 (AION)")]')
-    lines.append('  ]')
-    lines.append("]")
-    lines.append("#v(8pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#111111"), inset: 8pt, fill: rgb("#f4f4f5"))[')
-    lines.append('  #grid(')
-    lines.append('    columns: (1fr, auto),')
-    lines.append('    [ #raw("RADAR COHERENCE VERIFIED // LEVEL: PRE_FLIGHT") ],')
-    lines.append('    [ #raw("[ APPROVED ]") ]')
-    lines.append('  )')
-    lines.append(']')
+    lines.append("// Page 12: Stratification Vector")
+    lines.append("#set text(size: 8.5pt)")
+    lines.append("#stratification-vector-page()")
     lines.append("#pagebreak()")
     lines.append("")
     
-    # Page 10: Calibration Zero - Diffractive Baseline & Systemic Goals
-    lines.append("// Page 10: Calibration Zero - Diffractive Baseline & Systemic Goals")
-    lines.append('#system-header("SYSTEMIC INTENTIONS", "SYSTEM ATTUNEMENT // PRE-CYCLE 4/4")')
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[')
-    lines.append('  #set text(size: 9pt)')
-    lines.append('  #raw("Emergent Attractor Fields:") \\')
-    lines.append('  #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append('  "What qualitative states of focus, creative output, or collaborative mutation do you intend to cultivate across this 84-day trajectory?"')
-    lines.append('  #v(2pt)')
-    lines.append('  #write-lines(13, height: 11pt)')
-    lines.append("]")
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[')
-    lines.append('  #set text(size: 9pt)')
-    lines.append('  #raw("Homeostatic Attractor Damping:") \\')
-    lines.append('  #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append('  "Define your defensive systemic thresholds. What exact somatic or computational drag triggers an automated intervention by the system to reduce energy expenditure and prevent entropic collapse?"')
-    lines.append('  #v(2pt)')
-    lines.append('  #write-lines(12, height: 11pt)')
-    lines.append("]")
+    lines.append("// Page 13: Stratification Intentions")
+    lines.append("#stratification-intentions-page()")
     lines.append("#pagebreak()")
     lines.append("")
+    
+    # 2. Cycles & Weeks Layout Engine
     lines.append("#set page(background: rect(width: 100%, height: 100%, fill: dot-grid))")
     
-    # -------------------------------------------------------------------------
-    # CYCLES 1-3 DYNAMIC LAYOUT ENGINE (Pages 11-226)
-    for c_idx, cycle_key in enumerate(["cycle_1", "cycle_2", "cycle_3"], start=1):
+    days_per_cycle = config.get("days_per_cycle", 28)
+    days_per_week = config.get("days_per_week", 7)
+    num_cycles = total_days // days_per_cycle
+    
+    for c_idx in range(1, num_cycles + 1):
+        cycle_key = f"cycle_{c_idx}"
         cal_data = calibration[cycle_key]
-        cycle_start_day = (c_idx - 1) * 28 + 1
-        cycle_end_day = c_idx * 28
+        cycle_start_day = (c_idx - 1) * days_per_cycle + 1
         
-        print(f"Generating Cycle {c_idx} (Days {cycle_start_day} to {cycle_end_day})...")
+        print(f"Generating Cycle {c_idx} (Days {cycle_start_day} to {cycle_start_day + days_per_cycle - 1})...")
         
-        # Extract and escape variables for Typst template call
-        title = cal_data["title"].replace('"', '\\"')
-        subtitle = cal_data["subtitle"].replace('"', '\\"')
-        focus = cal_data["focus"].replace('"', '\\"')
-        what_is = cal_data["what_is"].replace('"', '\\"')
-        why = cal_data["why"].replace('"', '\\"')
-        effect = cal_data["effect"].replace('"', '\\"')
-        prompts_dict = to_typst_dict(cal_data["prompts"])
+        # Serialize fields for Typst
+        title_val = to_typst_val(cal_data["title"])
+        subtitle_val = to_typst_val(cal_data["subtitle"])
+        focus_val = to_typst_val(cal_data["focus"])
+        what_is_val = to_typst_val(cal_data["what_is"])
+        why_val = to_typst_val(cal_data["why"])
+        effect_val = to_typst_val(cal_data["effect"])
+        prompts_val = to_typst_val(cal_data["prompts"])
         
-        # 1. Cycle setup calibration (2 pages)
+        # Calibration (2 pages)
         lines.append(f"// --- CYCLE {c_idx} SETUP ---")
-        lines.append(f'#calibration-left("{c_idx}", "{title}", "{subtitle}", "{focus}", "{what_is}", "{why}", "{effect}", {prompts_dict})')
+        lines.append(f'#calibration-left-page("{c_idx}", {title_val}, {subtitle_val}, {focus_val}, {what_is_val}, {why_val}, {effect_val}, {prompts_val})')
         lines.append("#pagebreak()")
-        lines.append(f'#calibration-right("{c_idx}", {to_typst_dict(cal_data["prompts"])})')
+        lines.append(f'#calibration-right-page("{c_idx}", {prompts_val})')
         lines.append("#pagebreak()")
         lines.append("")
         
-        # 2. Weeks loops (4 weeks * 16 pages = 64 pages)
-        for w_idx in range(1, 5):
-            week_num = (c_idx - 1) * 4 + w_idx
+        # Weeks in Cycle
+        weeks_per_cycle = days_per_cycle // days_per_week
+        for w_idx in range(1, weeks_per_cycle + 1):
+            week_num = (c_idx - 1) * weeks_per_cycle + w_idx
             
-            # Weekly Fold at the beginning of the week
+            # Weekly Fold (2 pages)
             lines.append(f"// --- WEEK {week_num} FOLD ---")
-            lines.append(f'#weekly-left("{week_num}")')
+            lines.append(f'#weekly-left-page("{week_num}")')
             lines.append("#pagebreak()")
-            lines.append("#weekly-right()")
+            lines.append("#weekly-right-page()")
             lines.append("#pagebreak()")
             lines.append("")
             
-            # 7 Daily Spreads
-            for d in range(7):
-                day_num = cycle_start_day + (w_idx - 1) * 7 + d
+            # Daily spreads (7 * 2 = 14 pages)
+            for d in range(days_per_week):
+                day_num = cycle_start_day + (w_idx - 1) * days_per_week + d
                 lines.append(f"// --- DAY {day_num} SPREAD ---")
-                lines.append('#daily-left("___")')
+                lines.append(f'#daily-left-page("___")')
                 lines.append("#pagebreak()")
-                lines.append("#daily-right()")
+                lines.append("#daily-right-page()")
                 lines.append("#pagebreak()")
                 lines.append("")
+                
     lines.append("#set page(background: none)")
-            
-    # -------------------------------------------------------------------------
-    # PAGES 227-228: THE CHALLENGE TRACKERS
-    # -------------------------------------------------------------------------
+    
+    # 3. Challenges Trackers
     print("Generating Challenge Trackers spreads...")
-    # Spread 1: Challenges 1-3
-    lines.append("// Page 227: Challenge Trackers Page 1 Left")
-    lines.append('#system-header("SYSTEM CHALLENGE TRACKERS: FIELD 1/2", "METRIC GRIDS")')
-    lines.append("#v(8pt)")
-    lines.append(f'#challenge-tracker-block("{challenges[0]["title"]}", "{challenges[0].get("target", "28 DAYS")}")')
-    lines.append("#v(8pt)")
-    lines.append(f'#challenge-tracker-block("{challenges[1]["title"]}", "{challenges[1].get("target", "28 DAYS")}")')
-    lines.append("#v(8pt)")
-    lines.append(f'#challenge-tracker-block("{challenges[2]["title"]}", "{challenges[2].get("target", "28 DAYS")}")')
-    lines.append("#pagebreak()")
+    ch1_title, ch1_target = to_typst_val(challenges[0]["title"]), to_typst_val(challenges[0].get("target", "28 DAYS"))
+    ch2_title, ch2_target = to_typst_val(challenges[1]["title"]), to_typst_val(challenges[1].get("target", "28 DAYS"))
+    ch3_title, ch3_target = to_typst_val(challenges[2]["title"]), to_typst_val(challenges[2].get("target", "28 DAYS"))
+    ch4_title, ch4_target = to_typst_val(challenges[3]["title"]), to_typst_val(challenges[3].get("target", "28 DAYS"))
+    ch5_title, ch5_target = to_typst_val(challenges[4]["title"]), to_typst_val(challenges[4].get("target", "28 DAYS"))
+    ch6_title, ch6_target = to_typst_val(challenges[5]["title"]), to_typst_val(challenges[5].get("target", "28 DAYS"))
     
-    # Spread 2: Challenges 4-6
-    lines.append("// Page 228: Challenge Trackers Page 2 Right")
-    lines.append('#system-header("SYSTEM CHALLENGE TRACKERS: FIELD 2/2", "METRIC GRIDS")')
-    lines.append("#v(8pt)")
-    lines.append(f'#challenge-tracker-block("{challenges[3]["title"]}", "{challenges[3].get("target", "28 DAYS")}")')
-    lines.append("#v(8pt)")
-    lines.append(f'#challenge-tracker-block("{challenges[4]["title"]}", "{challenges[4].get("target", "28 DAYS")}")')
-    lines.append("#v(8pt)")
-    lines.append(f'#challenge-tracker-block("{challenges[5]["title"]}", "{challenges[5].get("target", "28 DAYS")}")')
+    lines.append("// Challenge Trackers Page 1 Left")
+    lines.append(f'#challenges-left-page({ch1_title}, {ch1_target}, {ch2_title}, {ch2_target}, {ch3_title}, {ch3_target})')
     lines.append("#pagebreak()")
+    lines.append("")
     
-    # -------------------------------------------------------------------------
-    # PAGES 229-230: ABSOLUTE DIAGNOSTIC & TRAJECTORY MAPPING
-    # -------------------------------------------------------------------------
-    print("Generating Absolute Diagnostics spreads...")
-    lines.append("// Page 229: Trajectory Mapping Setup")
-    lines.append('#system-header("ABSOLUTE DIAGNOSTIC: TRAJECTORY MAPPING", "LONG-TERM MAPPING")')
-    lines.append("#v(8pt)")
-    lines.append("Use this grid to aggregate your F_net and Vitality ratings across the entire 84-day cycle.")
-    lines.append("Plot coordinates weekly to visualize your autopoietic stabilization trajectory:")
-    lines.append("#v(10pt)")
-    lines.append("#align(center)[")
-    lines.append('  #rect(width: 300pt, height: 300pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[')
-    lines.append('    #place(center + horizon)[#circle(radius: 130pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 100pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 74pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 40pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(center + horizon)[#circle(radius: 26pt, stroke: 0.25pt + rgb("#cccccc"))]')
-    lines.append('    #place(top + left)[#line(start: (0pt, 145pt), end: (290pt, 145pt), stroke: 0.25pt + rgb("#a1a1aa"))]')
-    lines.append('    #place(top + left)[#line(start: (145pt, 0pt), end: (145pt, 290pt), stroke: 0.25pt + rgb("#a1a1aa"))]')
-    lines.append('    #place(top + center, dy: 6pt)[#set text(size: 6pt); #raw("VITALITY (JOY)")]')
-    lines.append('    #place(bottom + center, dy: -6pt)[#set text(size: 6pt); #raw("DRAIN (EXHAUST)")]')
-    lines.append('    #place(left + horizon, dx: 6pt)[#set text(size: 6pt); #raw("SMOOTH (FLOW)")]')
-    lines.append('    #place(right + horizon, dx: -6pt)[#set text(size: 6pt); #raw("STRIATED (ORDER)")]')
-    lines.append('  ]')
-    lines.append("]")
-    lines.append("#v(12pt)")
-    lines.append("Weekly Trajectory Coordinates:")
-    lines.append("#v(4pt)")
-    lines.append("#grid(")
-    lines.append("  columns: (1fr, 1fr, 1fr, 1fr),")
-    lines.append("  gutter: 10pt,")
-    lines.append('  [ #raw("W1:  [  ,  ]") \\ #raw("W2:  [  ,  ]") \\ #raw("W3:  [  ,  ]") ],')
-    lines.append('  [ #raw("W4:  [  ,  ]") \\ #raw("W5:  [  ,  ]") \\ #raw("W6:  [  ,  ]") ],')
-    lines.append('  [ #raw("W7:  [  ,  ]") \\ #raw("W8:  [  ,  ]") \\ #raw("W9:  [  ,  ]") ],')
-    lines.append('  [ #raw("W10: [  ,  ]") \\ #raw("W11: [  ,  ]") \\ #raw("W12: [  ,  ]") ]')
-    lines.append(")")
+    lines.append("// Challenge Trackers Page 2 Right")
+    lines.append(f'#challenges-right-page({ch4_title}, {ch4_target}, {ch5_title}, {ch5_target}, {ch6_title}, {ch6_target})')
     lines.append("#pagebreak()")
+    lines.append("")
     
-    lines.append("// Page 230: Trajectory Mapping & Macro-Systemic Analysis")
-    lines.append('#system-header("TRAJECTORY ANALYSIS METRICS", "COORDINATE SPECS")')
-    lines.append("#v(6pt)")
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("")
-    lines.append("Audit the 84-day trajectory path by reading your weekly coordinate logs diffractively through second-order cybernetic principles:")
-    lines.append("#v(8pt)")
-    lines.append("")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[')
-    lines.append("  *1. Homeostatic Attractor Basin:* Does your trajectory circle around a single central coordinate point over the weeks? This indicates a resilient baseline operation and a balanced conservation of somatic energy.")
-    lines.append("]")
-    lines.append("#v(2pt)")
-    lines.append('#rect(width: 100%, height: 95pt, stroke: (left: 1pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('  #set text(size: 8pt, fill: rgb("#888888"))')
-    lines.append('  #raw("// REGISTRATION FIELD: Tracing stability coordinates and center points") \\')
-    lines.append("]")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[')
-    lines.append("  *2. Bifurcation Jumps:* Identify sharp, non-linear jumps between quadrants (e.g., a sudden shift from striated order to smooth drift). What local technical anomaly or somatic trigger caused the state transition?")
-    lines.append("]")
-    lines.append("#v(2pt)")
-    lines.append('#rect(width: 100%, height: 95pt, stroke: (left: 1pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('  #set text(size: 8pt, fill: rgb("#888888"))')
-    lines.append('  #raw("// REGISTRATION FIELD: Log environmental shock lines and sudden phase changes") \\')
-    lines.append("]")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[')
-    lines.append("  *3. Entropy Dissipation:* Are your weekly coordinates drifting steadily downward into the drain/exhaust quadrant? This flags a systematic leak in intensive energy, chronic posture collapse, or severe workspace misalignment.")
-    lines.append("]")
-    lines.append("#v(2pt)")
-    lines.append('#rect(width: 100%, height: 95pt, stroke: (left: 1pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('  #set text(size: 8pt, fill: rgb("#888888"))')
-    lines.append('  #raw("// REGISTRATION FIELD: Map systemic leakage zones and material adjustments required") \\')
-    lines.append("]")
+    # 4. Trajectory Mapping
+    print("Generating Trajectory and Topological spreads...")
+    lines.append("// Trajectory Mapping Setup")
+    lines.append("#trajectory-mapping-page()")
     lines.append("#pagebreak()")
+    lines.append("")
     
-    # Pages 231-232: 8-Dimensional vector compilation
-    lines.append("// Page 231: 8-Dimensional Topological Compilation (Left Page)")
-    lines.append('#system-header("8-DIMENSIONAL TOPOLOGICAL RELATIONSHIPS", "COMPILATION 1/2")')
-    lines.append("#v(6pt)")
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("")
-    lines.append("Analyze vector interactions and boundary leakages recorded across each macro-cycle. Rather than treating these metrics as numerical totals, map the relational friction and mutual parasitism that emerged over the 84-day trajectory:")
-    lines.append("#v(6pt)")
-    lines.append("")
-    lines.append("#grid(")
-    lines.append("  columns: (1fr, 1fr),")
-    lines.append("  gutter: 8pt,")
-    # Panel 1: A1 vs R1
-    lines.append('  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[')
-    lines.append("    #set text(size: 8.5pt)")
-    lines.append('    *A1 vs. R1* \\')
-    lines.append('    Attractor / Resistance Leakage\\')
-    lines.append("    #v(2pt)")
-    lines.append('    #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append("    Map where cognitive drag or technical glitches parasitized your focus vectors. Note shifts across cycles: \\")
-    lines.append("    #v(2pt)")
-    lines.append('    #raw("Cycle 1 [                                ]") \\')
-    lines.append('    #raw("Cycle 2 [                                ]") \\')
-    lines.append('    #raw("Cycle 3 [                                ]")')
-    lines.append("  ],")
-    # Panel 2: S1 vs F1
-    lines.append('  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[')
-    lines.append("    #set text(size: 8.5pt)")
-    lines.append('    *S1 vs. F1*\\')
-    lines.append('    Stabilizer / Flight Line Drift \\')
-    lines.append("    #v(2pt)")
-    lines.append('    #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append("    Trace the structural tension between metabolic maintenance and sudden creative breakthroughs: \\")
-    lines.append("    #v(2pt)")
-    lines.append('    #raw("Cycle 1 [                                ]") \\')
-    lines.append('    #raw("Cycle 2 [                                ]") \\')
-    lines.append('    #raw("Cycle 3 [                                ]")')
-    lines.append("  ],")
-    # Panel 3: V1 vs D1
-    lines.append('  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[')
-    lines.append("    #set text(size: 8.5pt)")
-    lines.append('    *V1 vs. D1*\\')
-    lines.append('    Vitality / Diffraction Wave \\')
-    lines.append("    #v(2pt)")
-    lines.append('    #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append("    Evaluate your capacity for action against the constructive coherence of your weekly outputs: \\")
-    lines.append('    \\')
-    lines.append("    #v(2pt)")
-    lines.append('    #raw("Cycle 1 [                                ]") \\')
-    lines.append('    #raw("Cycle 2 [                                ]") \\')
-    lines.append('    #raw("Cycle 3 [                                ]")')
-    lines.append("  ],")
-    # Panel 4: C1 vs A2
-    lines.append('  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 6pt)[')
-    lines.append("    #set text(size: 8.5pt)")
-    lines.append('    *C1 vs. A2*\\')
-    lines.append('    Chronos / Aion Parasitism \\')
-    lines.append("    #v(2pt)")
-    lines.append('    #set text(size: 8pt, fill: rgb("#555555"))')
-    lines.append("    Expose the specific periods where clock-tied tasks attempted to colonize your open studio drift time: \\")
-    lines.append("    #v(2pt)")
-    lines.append('    #raw("Cycle 1 [                                ]") \\')
-    lines.append('    #raw("Cycle 2 [                                ]") \\')
-    lines.append('    #raw("Cycle 3 [                                ]")')
-    lines.append("  ]")
-    lines.append(")")
-    lines.append("")
-    lines.append("#v(4pt)")
-    lines.append('#section-title("TOPOLOGICAL MUTATION ARCHIVE")')
-    lines.append("#set text(size: 9pt)")
-    lines.append("Register key moments across the 84-day circuit where smooth creative space was captured by administrative routine, or where highly structured systems were successfully deterritorialized:")
-    lines.append("#v(2pt)")
-    lines.append('#rect(width: 100%, height: 190pt, stroke: (left: 0.5pt + rgb("#888888")), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('  #set text(size: 8pt, fill: rgb("#888888"))')
-    lines.append('  #raw("// RECORDING FIELD: Map spatial boundary transitions and systemic phase changes")')
-    lines.append("]")
+    lines.append("// Trajectory Analysis Metrics")
+    lines.append("#trajectory-analysis-page()")
     lines.append("#pagebreak()")
+    lines.append("")
     
-    # Page 232: 16-Dimensional Topological Compilation (Right Page)
-    lines.append("// Page 232: 16-Dimensional Topological Compilation (Right Page)")
-    lines.append('#system-header("METRIC MATRIX SPECS", "COMPILATION 2/2")')
-    lines.append("#v(6pt)")
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[')
-    lines.append('  *#raw("//") METABOLIC & COMPUTATIONAL CROSS-ANALYSIS* \\')
-    lines.append("  #v(2pt)")
-    lines.append('  #set text(size: 8.5pt, fill: rgb("#333333"))')
-    lines.append("  Use this un-stratified field to trace core correlations across your 84-day trajectory. Do not treat these notes as passive documentation. Specifically analyze the interference pattern between your striated schedules and somatic vitality:")
-    lines.append("]")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append("#grid(")
-    lines.append("  columns: (1fr, 1fr),")
-    lines.append("  gutter: 8pt,")
-    lines.append('  rect(width: 100%, height: 160pt, stroke: 0.5pt + rgb("#bbbbbb"), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('    #set text(size: 8pt, fill: rgb("#333333"))')
-    lines.append('    *#raw("//") CHRONOS STRATION vs. VITALITY LEAK* \\')
-    lines.append("    #v(2pt)")
-    lines.append("    Did highly striated administrative intervals (C1) cause a systematic drain on Spinozian capacity (V1)? Map the specific technical server loads or posturing baselines that catalyzed energy dissipation:")
-    lines.append("  ],")
-    lines.append('  rect(width: 100%, height: 160pt, stroke: 0.5pt + rgb("#bbbbbb"), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('    #set text(size: 8pt, fill: rgb("#333333"))')
-    lines.append('    *#raw("//") FLIGHT VELOCITY vs. STABILIZER DEGRADATION* \\')
-    lines.append("    #v(2pt)")
-    lines.append("    Did intense rhizomatic flight velocity (F1) cause a collapse of your grounding homeostatic stabilization loops (S1)? Document where spontaneous detours compromised recovery parameters:")
-    lines.append("  ]")
-    lines.append(")")
-    lines.append("")
-    lines.append("#v(4pt)")
-    lines.append('#set text(size: 8.5pt, fill: rgb("#555555"))')
-    lines.append('#raw("// UN-STRATIFIED DRIFT PROCESSOR (Fleeting correlations, structural anomalies, and ink traces):")')
-    lines.append("#v(2pt)")
-    lines.append('#rect(width: 100%, height: 240pt, stroke: (left: 0.5pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('  #write-lines(14, height: 12pt)')
-    lines.append("]")
+    # 5. Topological Compilations
+    lines.append("// Topological Left Page")
+    lines.append("#topological-left-page()")
     lines.append("#pagebreak()")
+    lines.append("")
     
-    # Page 233: Final Autopoietic Feedback Diagnostics (Left Page)
-    lines.append("// Page 233: Final Autopoietic Feedback Diagnostics (Left Page)")
-    lines.append('#system-header("AUTOPOIETIC FLOW & HOMEORHESIS ASSESSMENT", "FINAL SYSTEM DIAG")')
-    lines.append("#v(6pt)")
-    lines.append("#set text(size: 9.5pt)")
-    lines.append("")
-    lines.append("Identify secondary state variables and environmental homeorhesis indicators across the completed 84-day macro-trajectory:")
-    lines.append("#v(8pt)")
-    lines.append("")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[')
-    lines.append('  *#raw("//") METABOLIC REACTION & HABIT PLASTICITY KINEMATICS*')
-    lines.append("  #v(4pt)")
-    lines.append('  #set text(size: 8.5pt, fill: rgb("#333333"))')
-    lines.append("  - *ADAPTATION VELOCITY:* Evaluate the system's reaction time to unexpected environmental shocks, technical failures, or somatic boundary breaks. How fluidly did the apparatus re-stabilize?")
-    lines.append("  - *DECAY SLOWDOWN:* Measure the duration and resilience of new habit adherence. How effectively did emergent workflows resist decaying back into old sedimented loops?")
-    lines.append("]")
-    lines.append("")
-    lines.append("#v(6pt)")
-    lines.append('#set text(size: 8.5pt, fill: rgb("#222222"), weight: "bold")')
-    lines.append('#raw("// HOMEORHETIC SYNTHESIS ARENA (Read adaptation velocity and decay variables diffractively):")')
-    lines.append("#v(4pt)")
-    lines.append("")
-    lines.append('#rect(width: 100%, height: 360pt, stroke: (left: 0.5pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 8pt)[')
-    lines.append('  #set text(size: 8pt, fill: rgb("#888888"))')
-    lines.append('  #raw("// Map the feedback loops here. Document how technical infrastructure adjustments alloyed with your biological hardware.")')
-    lines.append("  #v(4pt)")
-    lines.append('  #write-lines(26, height: 13pt)')
-    lines.append("]")
+    lines.append("// Topological Right Page")
+    lines.append("#topological-right-page()")
     lines.append("#pagebreak()")
+    lines.append("")
     
-    lines.append("// Page 234: Final Autopoietic Diagnostics - Right Page")
-    lines.append('#system-header("SYSTEM HOMEORHESIS RESULT", "FINAL CLASSIFIER")')
-    lines.append("#v(6pt)")
-    lines.append("#set text(size: 9.5pt)")
+    # 6. Autopoietic Diagnostics
+    lines.append("// Diagnostics Left Page")
+    lines.append("#diagnostics-left-page()")
+    lines.append("#pagebreak()")
     lines.append("")
-    lines.append("Plot your absolute final system coordinates on the scaled wireframe below to visualize the macro-trajectory of your 84-day circuit. Mark the baseline center point of your evolved attractor basin:")
-    lines.append("#v(10pt)")
+    
+    lines.append("// Diagnostics Right Page")
+    lines.append("#diagnostics-right-page()")
     lines.append("")
-    lines.append("#align(center)[")
-    lines.append('  #rect(width: 180pt, height: 180pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[')
-    lines.append('    #place(top + center, dy: 4pt)[#set text(size: 6pt, weight: "bold"); #raw("VITALITY / JOY (Spinozian Capacity)")]')
-    lines.append('    #place(bottom + center, dy: -4pt)[#set text(size: 6pt, weight: "bold"); #raw("DRAIN / EXHAUST (Somatic Leakage)")]')
-    lines.append('    #place(left + horizon, dx: 4pt)[#set text(size: 6pt, weight: "bold"); #raw("SMOOTH / FLOW")]')
-    lines.append('    #place(right + horizon, dx: -4pt)[#set text(size: 6pt, weight: "bold"); #raw("STRIATED / ORDER")]')
-    lines.append("  ]")
-    lines.append("]")
-    lines.append("")
-    lines.append("#v(10pt)")
-    lines.append('#section-title("TRAJECTORY MUTATION ARCHIVE")')
-    lines.append("#set text(size: 9pt)")
-    lines.append("Evaluate your final system status. Do not treat these states as static classifications, but as temporary plateaus of your practice. Articulate the qualitative nature of your evolution in the adjacent field:")
-    lines.append("")
-    lines.append("#v(4pt)")
-    lines.append('#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), fill: rgb("#fafafa"), inset: 8pt)[')
-    lines.append("  #grid(")
-    lines.append("    columns: (1.2fr, 2fr),")
-    lines.append("    gutter: 12pt,")
-    lines.append("    [")
-    lines.append('      #set text(size: 8.5pt, weight: "bold")')
-    lines.append('      #raw("[ ] SUSTAINED HOMEORHESIS") \\')
-    lines.append('      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))')
-    lines.append("      Dynamic, adaptive flow along a continuous path of growth. \\")
-    lines.append("      #v(8pt)")
-    lines.append('      #raw("[ ] MUTATED SYSTEM STATE") \\')
-    lines.append('      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))')
-    lines.append("      Unforeseen structural shift; alternative lines of flight formed.")
-    lines.append("    ],")
-    lines.append("    [")
-    lines.append('      #set text(size: 8.5pt, weight: "bold")')
-    lines.append('      #raw("[ ] ENTROPIC COLLAPSE") \\')
-    lines.append('      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))')
-    lines.append("      Systemic leakage; loss of homeostatic stabilization loops. \\")
-    lines.append("      #v(8pt)")
-    lines.append('      #raw("[ ] HYPER-STRIATED REGIME") \\')
-    lines.append('      #set text(size: 7.5pt, weight: "regular", fill: rgb("#555555"))')
-    lines.append("      Re-stratification; capture by rigid administrative metrics.")
-    lines.append("    ]")
-    lines.append("  )")
-    lines.append("]")
-    lines.append("")
-    lines.append("#v(2pt)")
-    lines.append('#rect(width: 100%, height: 110pt, stroke: (left: 0.5pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[')
-    lines.append('  #set text(size: 8pt, fill: rgb("#888888"))')
-    lines.append('  #raw("// REGISTRATION FIELD: Document the final integration of material allies, somatic baselines, and computational environments.")')
-    lines.append("]")
-    # -------------------------------------------------------------------------
-    # DYNAMIC SKETCHPAD GENERATION
-    # -------------------------------------------------------------------------
+    
+    # 7. Dynamic Sketchpads (fills remaining budget to meet signature page constraint)
     pages_before_sketchpads = 1 + sum(1 for line in lines if "#pagebreak()" in line)
-    total_target = 229
-    # Shutdown takes 1 page at the end, so target remaining is total_target - pages_before_sketchpads - 1
-    sketchpad_pages_needed = total_target - pages_before_sketchpads - 1
+    
+    # We require 2 pages at the very end: 1 blank cover-back page and 1 shutdown page.
+    sketchpad_pages_needed = target_pages - pages_before_sketchpads - 2
     
     print(f"Pages generated before sketchpad: {pages_before_sketchpads}")
-    print(f"Sketchpad pages needed: {sketchpad_pages_needed}")
+    print(f"Sketchpad pages needed to reach {target_pages}: {sketchpad_pages_needed}")
     
     lines.append("#set page(background: rect(width: 100%, height: 100%, fill: dot-grid))")
     for idx in range(1, sketchpad_pages_needed + 1):
         lines.append(f"// Sketchpad page {idx}")
         lines.append("#pagebreak()")
-        lines.append(f"#sketchpad({idx})")
+        lines.append(f"#sketchpad-page({idx}, {sketchpad_pages_needed})")
         lines.append("")
-
-    # -------------------------------------------------------------------------
-    # PAGE 239: BLANK PAGE (Back of Cover)
-    # -------------------------------------------------------------------------
-    lines.append("// Page 2: Blank Page (Back of Cover)")
-    lines.append("#align(center + horizon)[]")
+        
+    # Page before shutdown (back of cover blank)
+    lines.append("// Page blank before shutdown")
+    lines.append("#blank-page()")
     lines.append("#pagebreak()")
     lines.append("")
-        
-    # -------------------------------------------------------------------------
-    # SYSTEM SHUTDOWN / END PAGE (Exactly Page 240)
-    # -------------------------------------------------------------------------
+    
+    # Page 230: Shutdown Page
     print("Generating End Page (Page 230)...")
     lines.append("// Page 230: System Shutdown")
     lines.append("#pagebreak()")
     lines.append("#set page(background: none)")
-    lines.append("#system-shutdown()")
+    lines.append("#shutdown-page()")
     lines.append("")
     
     # Save the output compiled_journal.typ
+    os.makedirs(os.path.dirname(output_typ_path), exist_ok=True)
     with open(output_typ_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
         
@@ -845,7 +328,7 @@ def main():
     try:
         import typst
         print("Compiling Typst file using embedded typst compiler backend...")
-        typst.compile(output_typ_path, output=output_pdf_path)
+        typst.compile(output_typ_path, output=output_pdf_path, root=".")
         print(f"Compilation successful! Output written to {output_pdf_path}")
     except ImportError:
         print("Error: The python-typst package was not found. Please install via 'pip install typst'.")
@@ -853,42 +336,23 @@ def main():
     except Exception as e:
         print(f"Compilation error: {e}")
         sys.exit(1)
-
-    # Preview Rendering
+        
+    # Preview Rendering & Page Count verification
     try:
         import fitz  # PyMuPDF
-        print("Generating page spreads previews...")
+        print("Verifying page count and generating previews...")
         doc = fitz.open(output_pdf_path)
         
-        # Verify page count
         total_pages = doc.page_count
         print(f"Document total page count check: {total_pages} pages.")
-        if total_pages == 230:
-            print("Perfect Page Count Verification: EXACTLY 230 PAGES. Signature constraint met.")
+        if total_pages == target_pages:
+            print(f"Perfect Page Count Verification: EXACTLY {target_pages} PAGES. Signature constraint met.")
         else:
-            print(f"Warning: Page count is {total_pages}, expected exactly 240 pages.")
+            print(f"Warning: Page count is {total_pages}, expected exactly {target_pages} pages.")
             
         # Ensure target previews folder exists
         os.makedirs("previews", exist_ok=True)
         
-        # Page indexes to preview:
-        # Page 1: Title
-        # Page 2: Blank Page
-        # Page 3: System State Baseline
-        # Page 4: Manual Guide (Philosophy & Attunement)
-        # Page 8: 16-Dimensional Taxonomy Reference
-        # Page 10: Calibration Zero Somatic Baseline
-        # Page 12: Calibration Zero Initial Vector Space
-        # Page 14: Cycle 1 Calibration (Setup)
-        # Page 16: Weekly Fold 1 (Diffractive Field)
-        # Page 18: Day 1 Left (Morning Attunement)
-        # Page 19: Day 1 Right (Operational Console)
-        # Page 230: Challenge Trackers Page 1 Left
-        # Page 232: Trajectory Mapping Setup
-        # Page 234: 16-Dimensional Topological Relationships
-        # Page 236: Autopoietic Flow & Homeorhesis Assessment
-        # Page 238: Open Sketchpad 1
-        # Page 240: System Shutdown
         print("Generating page spreads previews...")
         for p_idx in range(total_pages):
             page = doc.load_page(p_idx)
@@ -896,7 +360,6 @@ def main():
             preview_file = f"previews/page_{p_idx + 1:03d}.png"
             pix.save(preview_file)
             
-                
         print("All previews generated successfully in the 'previews/' directory.")
         
     except ImportError:
