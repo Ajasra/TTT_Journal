@@ -415,18 +415,19 @@
     #v(4pt)
     #align(center)[
       #table(
-        columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+        columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
         stroke: 0.25pt + rgb("#aaaaaa"),
         inset: 3pt,
         align: center,
-        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
-        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
-        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" ")
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "),
+        raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" "), raw(" ")
       )
     ]
     #v(2pt)
     #raw("SYSTEM DIAGNOSTIC (Somatic and attentional adjustments):") \
-    #write-lines(6, height: 10pt)
+    #write-lines(5, height: 10pt)
   ]
 }
 
@@ -452,7 +453,7 @@
     ]
     #v(15pt)
     #set text(size: 9pt)
-    #raw("The 93-day cycle has fully actualized and stabilized.") \
+    #raw("The 84-day cycle has fully actualized and stabilized.") \
     #raw("Agential cuts are completed. State coordinates are archived.")
     #v(40pt)
     #rect(width: 80%, stroke: 0.5pt + rgb("#bbbbbb"), inset: 8pt)[

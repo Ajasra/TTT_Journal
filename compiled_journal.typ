@@ -16,10 +16,10 @@
     #raw("THE TRAJECTORY TRACE")
     #v(6pt)
     #set text(size: 8.5pt, weight: "regular")
-    #text(style: "italic")[A 93-Day Grid for Evolutionary Flow and Temporal Split]
+    #text(style: "italic")[An 84-Day Grid for Evolutionary Flow and Temporal Split]
     #v(15pt)
     #set text(size: 7.5pt)
-    #raw("[ TRACK: CYCLE 13 ]  [ SPAN: 93 DAYS ]")
+    #raw("[ TRACK: CYCLE 13 ]  [ SPAN: 84 DAYS ]")
     #v(50pt)
     #align(left)[
       #set text(size: 8pt)
@@ -177,12 +177,12 @@ Rather than tracking isolated metrics, the taxonomy operates as a series of asym
 #system-header("DYNAMIC LOOPS AND CYCLES", "SYSTEM GUIDE 4/4", show-date: false)
 #v(6pt)
 
-#section-title("V. The Macro-Dynamic Folds (The 93-Day Trajectory)")
+#section-title("V. The Macro-Dynamic Folds (The 84-Day Trajectory)")
 #set text(size: 9.5pt)
 The long-term movement through this ledger treats time as an evolutionary circuit divided into three distinct, month-long turnings:
-- *Cycle 1: Deterritorialization (Days 1–31) \/\/ Target: Habit Pruning:* Stripping away rigid, sedimented routines, dropping digital dependencies, and mapping the baseline friction of your workspace to allow new potentials to leak through and disrupt stagnation.
-- *Cycle 2: Re-Organization (Days 32–62) \/\/ Target: Assembling Workflows:* Connecting newly discovered habits and building flexible workflows that balance operational discipline with creative deviation, alloying your routines with active creative vectors.
-- *Cycle 3: Sustained Homeorhesis (Days 63–93) \/\/ Target: Evolutionary Flow:* Calibrating fluid boundaries to support open flight trajectories without collapsing back into rigid, paranoid structure. The goal is a self-organizing, dynamic equilibrium that moves along a continuous path of growth without freezing up.
+- *Cycle 1: Deterritorialization (Days 1–28) \/\/ Target: Habit Pruning:* Stripping away rigid, sedimented routines, dropping digital dependencies, and mapping the baseline friction of your workspace to allow new potentials to leak through and disrupt stagnation.
+- *Cycle 2: Re-Organization (Days 29–56) \/\/ Target: Assembling Workflows:* Connecting newly discovered habits and building flexible workflows that balance operational discipline with creative deviation, alloying your routines with active creative vectors.
+- *Cycle 3: Sustained Homeorhesis (Days 57–84) \/\/ Target: Evolutionary Flow:* Calibrating fluid boundaries to support open flight trajectories without collapsing back into rigid, paranoid structure. The goal is a self-organizing, dynamic equilibrium that moves along a continuous path of growth without freezing up.
 
 #v(6pt)
 #section-title("VI. The Diffractive Field & The Recursive Seed")
@@ -419,7 +419,7 @@ Plot your initial 8-coordinate vector space signature on the grid below. Set bas
   #set text(size: 9pt)
   #raw("Emergent Attractor Fields:") \
   #set text(size: 8pt, fill: rgb("#555555"))
-  "What qualitative states of focus, creative output, or collaborative mutation do you intend to cultivate across this 93-day trajectory?"
+  "What qualitative states of focus, creative output, or collaborative mutation do you intend to cultivate across this 84-day trajectory?"
   #v(2pt)
   #write-lines(13, height: 11pt)
 ]
@@ -639,25 +639,6 @@ Specify the digital habit traps, screen dependencies, or workspace layouts you i
 #daily-right()
 #pagebreak()
 
-// --- CYCLE 1 TRANSITION PHASE ---
-// --- DAY 29 SPREAD (TRANSITION) ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 30 SPREAD (TRANSITION) ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 31 SPREAD (TRANSITION) ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
 // --- CYCLE 2 SETUP ---
 #calibration-left("2", "CYCLE 2: RE-ORGANIZATION", "Days 32–62 // Phase Designation: Re-Organization", "Assembling Workflows & Calibrating Elastic Connections", "A generative phase of assemblage building. This cycle takes the raw material, open focus space, and spontaneous drift discovered in Cycle 1 and coordinates them into dynamic, flexible practices.", "Pure deterritorialization without re-assembly results in entropic collapse. This phase builds open, resilient structures that can carry out rigorous studio and computational work without collapsing into hyper-regulated rigidity.", "Establishing fluid workflows that balance somatic discipline with real-time creative deviation.", ("left_1": "ATTRACTOR ALLOYING (Weaving collaborative workflows):
 How will you thread your newly discovered creative attractors into your daily technical baseline without choking out your open play intervals?", "left_2": "RHIZOMATIC COUPLING (New technical and physical linkages):
@@ -674,6 +655,24 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #weekly-left("5")
 #pagebreak()
 #weekly-right()
+#pagebreak()
+
+// --- DAY 29 SPREAD ---
+#daily-left("___")
+#pagebreak()
+#daily-right()
+#pagebreak()
+
+// --- DAY 30 SPREAD ---
+#daily-left("___")
+#pagebreak()
+#daily-right()
+#pagebreak()
+
+// --- DAY 31 SPREAD ---
+#daily-left("___")
+#pagebreak()
+#daily-right()
 #pagebreak()
 
 // --- DAY 32 SPREAD ---
@@ -700,6 +699,12 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-right()
 #pagebreak()
 
+// --- WEEK 6 FOLD ---
+#weekly-left("6")
+#pagebreak()
+#weekly-right()
+#pagebreak()
+
 // --- DAY 36 SPREAD ---
 #daily-left("___")
 #pagebreak()
@@ -716,12 +721,6 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-left("___")
 #pagebreak()
 #daily-right()
-#pagebreak()
-
-// --- WEEK 6 FOLD ---
-#weekly-left("6")
-#pagebreak()
-#weekly-right()
 #pagebreak()
 
 // --- DAY 39 SPREAD ---
@@ -748,6 +747,12 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-right()
 #pagebreak()
 
+// --- WEEK 7 FOLD ---
+#weekly-left("7")
+#pagebreak()
+#weekly-right()
+#pagebreak()
+
 // --- DAY 43 SPREAD ---
 #daily-left("___")
 #pagebreak()
@@ -764,12 +769,6 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-left("___")
 #pagebreak()
 #daily-right()
-#pagebreak()
-
-// --- WEEK 7 FOLD ---
-#weekly-left("7")
-#pagebreak()
-#weekly-right()
 #pagebreak()
 
 // --- DAY 46 SPREAD ---
@@ -796,6 +795,12 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-right()
 #pagebreak()
 
+// --- WEEK 8 FOLD ---
+#weekly-left("8")
+#pagebreak()
+#weekly-right()
+#pagebreak()
+
 // --- DAY 50 SPREAD ---
 #daily-left("___")
 #pagebreak()
@@ -812,12 +817,6 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-left("___")
 #pagebreak()
 #daily-right()
-#pagebreak()
-
-// --- WEEK 8 FOLD ---
-#weekly-left("8")
-#pagebreak()
-#weekly-right()
 #pagebreak()
 
 // --- DAY 53 SPREAD ---
@@ -844,6 +843,24 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-right()
 #pagebreak()
 
+// --- CYCLE 3 SETUP ---
+#calibration-left("3", "CYCLE 3: SUSTAINED HOMEORHESIS", "Days 57–84 // Phase Designation: Sustained Homeorhesis", "Trajectory Flow & Evolutionary Boundaries", "The final orchestration of the 84-day circuit. It completely rejects the disciplinary desire to 'lock down' or freeze your routines into a permanent, unyielding schedule. Instead, it focuses on protecting a moving trajectory of growth.", "To prove that long-term stability does not require rigid uniformity. This cycle tests your system's capacity to absorb real-world shocks, server updates, and environmental disruptions while maintaining high vitality and deep artistic focus.", "Achieving a self-organizing, evolving equilibrium that preserves difference and open-ended transformation.", ("left_1": "HORIZON CALIBRATION (Supporting dynamic trajectory velocity):
+How will you adjust the speed and scale of your active projects to ensure they continue to evolve without exhausting your biological chassis?", "left_2": "METABOLIC CHECKPOINTS (Somatic and technical fluid boundaries):
+Identify your flexible check-ins—the warning signs from your posture, sleep history, or server error logs—that trigger a gentle re-balancing of your daily fields.", "left_3": "HOMEORHETIC VELOCITY (Sustaining flow against capture):
+What protective filters will you maintain to shield your un-dated evental time (Aion) from being slowly colonized by administrative tracking metrics?", "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):", "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"))
+#pagebreak()
+#calibration-right("3", ("left_1": "HORIZON CALIBRATION (Supporting dynamic trajectory velocity):
+How will you adjust the speed and scale of your active projects to ensure they continue to evolve without exhausting your biological chassis?", "left_2": "METABOLIC CHECKPOINTS (Somatic and technical fluid boundaries):
+Identify your flexible check-ins—the warning signs from your posture, sleep history, or server error logs—that trigger a gentle re-balancing of your daily fields.", "left_3": "HOMEORHETIC VELOCITY (Sustaining flow against capture):
+What protective filters will you maintain to shield your un-dated evental time (Aion) from being slowly colonized by administrative tracking metrics?", "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):", "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"))
+#pagebreak()
+
+// --- WEEK 9 FOLD ---
+#weekly-left("9")
+#pagebreak()
+#weekly-right()
+#pagebreak()
+
 // --- DAY 57 SPREAD ---
 #daily-left("___")
 #pagebreak()
@@ -862,47 +879,34 @@ Detail the explicit layout changes made to your digital blocks and physical envi
 #daily-right()
 #pagebreak()
 
-// --- CYCLE 2 TRANSITION PHASE ---
-// --- DAY 60 SPREAD (TRANSITION) ---
+// --- DAY 60 SPREAD ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
 #pagebreak()
 
-// --- DAY 61 SPREAD (TRANSITION) ---
+// --- DAY 61 SPREAD ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
 #pagebreak()
 
-// --- DAY 62 SPREAD (TRANSITION) ---
+// --- DAY 62 SPREAD ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
-#pagebreak()
-
-// --- CYCLE 3 SETUP ---
-#calibration-left("3", "CYCLE 3: SUSTAINED HOMEORHESIS", "Days 63–93 // Phase Designation: Sustained Homeorhesis", "Trajectory Flow & Evolutionary Boundaries", "The final orchestration of the 93-day circuit. It completely rejects the disciplinary desire to 'lock down' or freeze your routines into a permanent, unyielding schedule. Instead, it focuses on protecting a moving trajectory of growth.", "To prove that long-term stability does not require rigid uniformity. This cycle tests your system's capacity to absorb real-world shocks, server updates, and environmental disruptions while maintaining high vitality and deep artistic focus.", "Achieving a self-organizing, evolving equilibrium that preserves difference and open-ended transformation.", ("left_1": "HORIZON CALIBRATION (Supporting dynamic trajectory velocity):
-How will you adjust the speed and scale of your active projects to ensure they continue to evolve without exhausting your biological chassis?", "left_2": "METABOLIC CHECKPOINTS (Somatic and technical fluid boundaries):
-Identify your flexible check-ins—the warning signs from your posture, sleep history, or server error logs—that trigger a gentle re-balancing of your daily fields.", "left_3": "HOMEORHETIC VELOCITY (Sustaining flow against capture):
-What protective filters will you maintain to shield your un-dated evental time (Aion) from being slowly colonized by administrative tracking metrics?", "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):", "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"))
-#pagebreak()
-#calibration-right("3", ("left_1": "HORIZON CALIBRATION (Supporting dynamic trajectory velocity):
-How will you adjust the speed and scale of your active projects to ensure they continue to evolve without exhausting your biological chassis?", "left_2": "METABOLIC CHECKPOINTS (Somatic and technical fluid boundaries):
-Identify your flexible check-ins—the warning signs from your posture, sleep history, or server error logs—that trigger a gentle re-balancing of your daily fields.", "left_3": "HOMEORHETIC VELOCITY (Sustaining flow against capture):
-What protective filters will you maintain to shield your un-dated evental time (Aion) from being slowly colonized by administrative tracking metrics?", "right_1": "THERMODYNAMIC DAMPING (Managing systemic heat to sustain long-term creativity):", "right_2": "PROTOCOL MUTATION (Adaptive rule changes for Cycle 3 evolution):"))
-#pagebreak()
-
-// --- WEEK 9 FOLD ---
-#weekly-left("9")
-#pagebreak()
-#weekly-right()
 #pagebreak()
 
 // --- DAY 63 SPREAD ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
+#pagebreak()
+
+// --- WEEK 10 FOLD ---
+#weekly-left("10")
+#pagebreak()
+#weekly-right()
 #pagebreak()
 
 // --- DAY 64 SPREAD ---
@@ -941,16 +945,16 @@ What protective filters will you maintain to shield your un-dated evental time (
 #daily-right()
 #pagebreak()
 
-// --- WEEK 10 FOLD ---
-#weekly-left("10")
-#pagebreak()
-#weekly-right()
-#pagebreak()
-
 // --- DAY 70 SPREAD ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
+#pagebreak()
+
+// --- WEEK 11 FOLD ---
+#weekly-left("11")
+#pagebreak()
+#weekly-right()
 #pagebreak()
 
 // --- DAY 71 SPREAD ---
@@ -989,16 +993,16 @@ What protective filters will you maintain to shield your un-dated evental time (
 #daily-right()
 #pagebreak()
 
-// --- WEEK 11 FOLD ---
-#weekly-left("11")
-#pagebreak()
-#weekly-right()
-#pagebreak()
-
 // --- DAY 77 SPREAD ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
+#pagebreak()
+
+// --- WEEK 12 FOLD ---
+#weekly-left("12")
+#pagebreak()
+#weekly-right()
 #pagebreak()
 
 // --- DAY 78 SPREAD ---
@@ -1037,68 +1041,7 @@ What protective filters will you maintain to shield your un-dated evental time (
 #daily-right()
 #pagebreak()
 
-// --- WEEK 12 FOLD ---
-#weekly-left("12")
-#pagebreak()
-#weekly-right()
-#pagebreak()
-
 // --- DAY 84 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 85 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 86 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 87 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 88 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 89 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 90 SPREAD ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- CYCLE 3 TRANSITION PHASE ---
-// --- DAY 91 SPREAD (TRANSITION) ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 92 SPREAD (TRANSITION) ---
-#daily-left("___")
-#pagebreak()
-#daily-right()
-#pagebreak()
-
-// --- DAY 93 SPREAD (TRANSITION) ---
 #daily-left("___")
 #pagebreak()
 #daily-right()
@@ -1108,35 +1051,36 @@ What protective filters will you maintain to shield your un-dated evental time (
 // Page 227: Challenge Trackers Page 1 Left
 #system-header("SYSTEM CHALLENGE TRACKERS: FIELD 1/2", "METRIC GRIDS")
 #v(8pt)
-#challenge-tracker-block("", "30 DAYS")
+#challenge-tracker-block("", "28 DAYS")
 #v(8pt)
-#challenge-tracker-block("", "30 DAYS")
+#challenge-tracker-block("", "28 DAYS")
 #v(8pt)
-#challenge-tracker-block("", "30 DAYS")
+#challenge-tracker-block("", "28 DAYS")
 #pagebreak()
 // Page 228: Challenge Trackers Page 2 Right
 #system-header("SYSTEM CHALLENGE TRACKERS: FIELD 2/2", "METRIC GRIDS")
 #v(8pt)
-#challenge-tracker-block("", "30 DAYS")
+#challenge-tracker-block("", "28 DAYS")
 #v(8pt)
-#challenge-tracker-block("", "30 DAYS")
+#challenge-tracker-block("", "28 DAYS")
 #v(8pt)
-#challenge-tracker-block("", "30 DAYS")
+#challenge-tracker-block("", "28 DAYS")
 #pagebreak()
 // Page 229: Trajectory Mapping Setup
 #system-header("ABSOLUTE DIAGNOSTIC: TRAJECTORY MAPPING", "LONG-TERM MAPPING")
 #v(8pt)
-Use this grid to aggregate your F_net and Vitality ratings across the entire 93-day cycle.
+Use this grid to aggregate your F_net and Vitality ratings across the entire 84-day cycle.
 Plot coordinates weekly to visualize your autopoietic stabilization trajectory:
 #v(10pt)
 #align(center)[
-  #rect(width: 200pt, height: 200pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[
-    #place(center + horizon)[#circle(radius: 80pt, stroke: 0.25pt + rgb("#cccccc"))]
-    #place(center + horizon)[#circle(radius: 60pt, stroke: 0.25pt + rgb("#cccccc"))]
+  #rect(width: 300pt, height: 300pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[
+    #place(center + horizon)[#circle(radius: 130pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 100pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 74pt, stroke: 0.25pt + rgb("#cccccc"))]
     #place(center + horizon)[#circle(radius: 40pt, stroke: 0.25pt + rgb("#cccccc"))]
-    #place(center + horizon)[#circle(radius: 20pt, stroke: 0.25pt + rgb("#cccccc"))]
-    #place(top + left)[#line(start: (0pt, 95pt), end: (190pt, 95pt), stroke: 0.25pt + rgb("#a1a1aa"))]
-    #place(top + left)[#line(start: (95pt, 0pt), end: (95pt, 190pt), stroke: 0.25pt + rgb("#a1a1aa"))]
+    #place(center + horizon)[#circle(radius: 26pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(top + left)[#line(start: (0pt, 145pt), end: (290pt, 145pt), stroke: 0.25pt + rgb("#a1a1aa"))]
+    #place(top + left)[#line(start: (145pt, 0pt), end: (145pt, 290pt), stroke: 0.25pt + rgb("#a1a1aa"))]
     #place(top + center, dy: 6pt)[#set text(size: 6pt); #raw("VITALITY (JOY)")]
     #place(bottom + center, dy: -6pt)[#set text(size: 6pt); #raw("DRAIN (EXHAUST)")]
     #place(left + horizon, dx: 6pt)[#set text(size: 6pt); #raw("SMOOTH (FLOW)")]
@@ -1147,25 +1091,49 @@ Plot coordinates weekly to visualize your autopoietic stabilization trajectory:
 Weekly Trajectory Coordinates:
 #v(4pt)
 #grid(
-  columns: (1fr, 1fr, 1fr),
+  columns: (1fr, 1fr, 1fr, 1fr),
   gutter: 10pt,
-  [ #raw("W1:  [   ,   ]") \ #raw("W2:  [   ,   ]") \ #raw("W3:  [   ,   ]") ],
-  [ #raw("W4:  [   ,   ]") \ #raw("W5:  [   ,   ]") \ #raw("W6:  [   ,   ]") ],
-  [ #raw("W7:  [   ,   ]") \ #raw("W8:  [   ,   ]") \ #raw("W9:  [   ,   ]") ]
+  [ #raw("W1:  [  ,  ]") \ #raw("W2:  [  ,  ]") \ #raw("W3:  [  ,  ]") ],
+  [ #raw("W4:  [  ,  ]") \ #raw("W5:  [  ,  ]") \ #raw("W6:  [  ,  ]") ],
+  [ #raw("W7:  [  ,  ]") \ #raw("W8:  [  ,  ]") \ #raw("W9:  [  ,  ]") ],
+  [ #raw("W10: [  ,  ]") \ #raw("W11: [  ,  ]") \ #raw("W12: [  ,  ]") ]
 )
 #pagebreak()
-// Page 230: Trajectory Mapping Instructions
+// Page 230: Trajectory Mapping & Macro-Systemic Analysis
 #system-header("TRAJECTORY ANALYSIS METRICS", "COORDINATE SPECS")
-#v(10pt)
-Audit the trajectory path using second-order cybernetic principles:
-#v(12pt)
-#rect(width: 100%, stroke: 0.25pt + rgb("#bbbbbb"), fill: rgb("#fafafa"), inset: 8pt)[
-  #set text(size: 9pt)
-  *1. Homeostatic Attractor Basin:* Does your trajectory circle around a single central point? This indicates stable baseline operations and balanced energy.
-  #v(8pt)
-  *2. Bifurcation Jumps:* Look for sharp jumps between quadrants (e.g., striated to smooth). What environmental trigger caused the state transition?
-  #v(8pt)
-  *3. Entropy Dissipation:* Are coordinates drifting steadily downwards into low vitality? This shows a systemic leak in energy or workspace alignment.
+#v(6pt)
+#set text(size: 9.5pt)
+
+Audit the 84-day trajectory path by reading your weekly coordinate logs diffractively through second-order cybernetic principles:
+#v(8pt)
+
+#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[
+  *1. Homeostatic Attractor Basin:* Does your trajectory circle around a single central coordinate point over the weeks? This indicates a resilient baseline operation and a balanced conservation of somatic energy.
+]
+#v(2pt)
+#rect(width: 100%, height: 95pt, stroke: (left: 1pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[
+  #set text(size: 8pt, fill: rgb("#888888"))
+  #raw("// REGISTRATION FIELD: Tracing stability coordinates and center points") \
+]
+
+#v(6pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[
+  *2. Bifurcation Jumps:* Identify sharp, non-linear jumps between quadrants (e.g., a sudden shift from striated order to smooth drift). What local technical anomaly or somatic trigger caused the state transition?
+]
+#v(2pt)
+#rect(width: 100%, height: 95pt, stroke: (left: 1pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[
+  #set text(size: 8pt, fill: rgb("#888888"))
+  #raw("// REGISTRATION FIELD: Log environmental shock lines and sudden phase changes") \
+]
+
+#v(6pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), fill: rgb("#fafafa"), inset: 8pt, radius: 1pt)[
+  *3. Entropy Dissipation:* Are your weekly coordinates drifting steadily downward into the drain/exhaust quadrant? This flags a systematic leak in intensive energy, chronic posture collapse, or severe workspace misalignment.
+]
+#v(2pt)
+#rect(width: 100%, height: 95pt, stroke: (left: 1pt + rgb("#aaaaaa")), fill: rgb("#ffffff"), inset: 6pt)[
+  #set text(size: 8pt, fill: rgb("#888888"))
+  #raw("// REGISTRATION FIELD: Map systemic leakage zones and material adjustments required") \
 ]
 #pagebreak()
 // Page 231: 8-Dimensional vector compilation - Left
@@ -1241,13 +1209,85 @@ Authorized final state classification:
   [ #raw("[ ] ENTROPIC COLLAPSE") \ #raw("[ ] HYPER-STRIATED REGIME") ]
 )
 #set page(background: rect(width: 100%, height: 100%, fill: dot-grid))
-// Page 238: Sketchpad 1
+// Sketchpad page 1
 #pagebreak()
 #sketchpad(1)
 
-// Page 239: Sketchpad 2
+// Sketchpad page 2
 #pagebreak()
 #sketchpad(2)
+
+// Sketchpad page 3
+#pagebreak()
+#sketchpad(3)
+
+// Sketchpad page 4
+#pagebreak()
+#sketchpad(4)
+
+// Sketchpad page 5
+#pagebreak()
+#sketchpad(5)
+
+// Sketchpad page 6
+#pagebreak()
+#sketchpad(6)
+
+// Sketchpad page 7
+#pagebreak()
+#sketchpad(7)
+
+// Sketchpad page 8
+#pagebreak()
+#sketchpad(8)
+
+// Sketchpad page 9
+#pagebreak()
+#sketchpad(9)
+
+// Sketchpad page 10
+#pagebreak()
+#sketchpad(10)
+
+// Sketchpad page 11
+#pagebreak()
+#sketchpad(11)
+
+// Sketchpad page 12
+#pagebreak()
+#sketchpad(12)
+
+// Sketchpad page 13
+#pagebreak()
+#sketchpad(13)
+
+// Sketchpad page 14
+#pagebreak()
+#sketchpad(14)
+
+// Sketchpad page 15
+#pagebreak()
+#sketchpad(15)
+
+// Sketchpad page 16
+#pagebreak()
+#sketchpad(16)
+
+// Sketchpad page 17
+#pagebreak()
+#sketchpad(17)
+
+// Sketchpad page 18
+#pagebreak()
+#sketchpad(18)
+
+// Sketchpad page 19
+#pagebreak()
+#sketchpad(19)
+
+// Sketchpad page 20
+#pagebreak()
+#sketchpad(20)
 
 // Page 240: System Shutdown
 #pagebreak()
