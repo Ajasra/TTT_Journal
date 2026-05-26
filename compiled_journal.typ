@@ -113,249 +113,260 @@ Operator Systemic Commitment:
 ]
 #pagebreak()
 
-// Page 4: Operating Guide - Philosophy & Temporal Cleavage
+// Page 4: Operating Guide - Manifesto & Philosophy
 #system-header("THE INTIMATE ENTANGLEMENT", "SYSTEM GUIDE 1/4", show-date: false)
 #v(4pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 8pt, radius: 2pt, fill: rgb("#fafafa"))[
+#rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 10pt, radius: 2pt, fill: rgb("#fafafa"))[
   #set text(size: 10pt, weight: "bold")
-  #raw("A MATERIAL COMPANION TO ACCIDENTAL VITALITY") \
+  #raw("THE INTRA-ACTIVE LEDGER: A MANIFESTO FOR MATERIAL ENGAGEMENT") \
   #set text(size: 8.5pt, weight: "bold")
-  #raw("[ SYSTEM STATUS: UNBOUND ]") \
+  #raw("[ SYSTEM STATUS: UNBOUND // TRAJECTORY MODE: ACTIVE ]") \
   #raw("[ REGIMEN: ENGAGING THE CHASSIS AND INTERFACES ]") \
-  #v(3pt)
-  #set text(size: 8.5pt, weight: "regular")
-  "This text is not a step-by-step guide or a top-down instruction ledger. It is a physical-conceptual instrument of material-discursive boundary making, functioning as an active site of Material Engagement over seamless automation. It is designed to restructure cognitive pathways, modulate intensive energy fields, and trace the shifts between systemic stability (Homeostasis) and dynamic, evolutionary transformation (Homeorhesis)."
+  #v(4pt)
+  #set text(size: 8.5pt, weight: "regular", style: "italic")
+  "This print block rejects the standard human-computer interaction paradigm that treats technology as a transparent, mindless slave. It is not a tool to be spent, nor an administrative whip to discipline human behavior. It is a physical-conceptual instrument designed to performing an agential cut into the drift of daily focus. Grounded in Materialist Media Theory, it acknowledges that cognitive bandwidth, server deployments, and photographic lens work are deeply entangled with their physical technical substrates. By forcing a direct encounter with the page, this ledger balances homeostatic preservation with homeorhetic evolution, resisting premature consensus and model collapse by structurally protecting difference, friction, and divergence."
 ]
-#v(6pt)
+#v(8pt)
 
-#section-title("I. The Temporal Cleavage: Chronos \/\/ Aion")
+#section-title("CORE RE-PROGRAMMING FIELDS")
 #set text(size: 9.5pt)
-- *What It Is:* A deliberate, spatial division of your daily processing fields into two distinct, non-hierarchical temporalities: Chronos (striated, clock-tied administrative tracking) and Aion (the smooth, intensive evental time of non-linear creative play).
-- *Why It Is Here:* Traditional workflow layouts default to the complete colonization of time by Chronos, reducing all human and machine activity to linear task completion metrics. This section acts as an architectural sanctuary for the un-scheduled.
-- *The Targeted Effect:* Chronos is restricted to recording essential logistics, server maintenance routines, and linear calendars. Aion hosts rhizomatic drift research, fluid note-traces, and spontaneous studio experiments.
-- *The Core Protocol:* Chronos must never parasite Aion drift. Setting aside dedicated intervals for open experimentation protects the posthuman ecosystem from administrative anxiety and cognitive decay.
+- *The Refusal of Seamlessness:* Traditional productivity devices focus on removing friction to accelerate consumption. This ledger introduces deliberate, tactile resistance. Writing with ink on a physical paper grid forces an explicit, material accountability to your immediate environment.
+- *The Anti-Mastery Stance:* We banish the language of domination, control, and capture. You do not 'manage' your day; you curate the probability fields and affordance spaces within which creative phenomena can emerge.
+- *The Voice of the Apparatus:* The glitches in your code, the server CPU heat spikes, the noise in low-light camera sensors, and the physical exhaustion of your biological chassis are not errors to be wiped away—they are active agents defining the boundaries of your practice.
 #pagebreak()
 
-// Page 5: Operating Guide - Vector Force Field & Relational Paring
-#system-header("VECTOR MAPPING & RELATIONAL PARING", "SYSTEM GUIDE 2/4", show-date: false)
+// Page 5: Operating Guide - Temporal Cleavage & Vector Force Field
+#system-header("THE SPLIT CONSOLE & VECTOR FIELDS", "SYSTEM GUIDE 2/4", show-date: false)
 #v(6pt)
-#section-title("II. The Vector Force Field: Diagnosing Parasitism")
+
+#section-title("I. The Temporal Cleavage: Chronos \\ Aion")
 #set text(size: 9.5pt)
-- *What It Is:* A morning cartography field mapping the four active forces currently intersecting your somatic and creative landscape: Attractors (focus gradients), Stabilizers (metabolic maintenance), Flight Lines (rhizomatic escapes), and Resistors (thermodynamic drag).
-- *Why It Is Here:* To escape the trap of traditional performance metrics that turn daily life into a sterile score out of ten.
-- *The Targeted Effect:* This field forces an ongoing diagnosis of relational dominance. Instead of asking how much you \"controlled\" your day, you track topological friction: Which vector parasitized the other today? Where did attention leak through your defensive boundaries? Did an administrative Resistor capture a sudden, emergent Flight Line?
-#v(4pt)
-#section-title("III. The 16-Dimensional Matrix: Mapping Relational Paring")
+- *What It Is:* A spatial partitioning of the daily console layout into two asymmetric, non-hierarchical processing fields: Chronos (striated, clock-tied administrative tracking) and Aion (the smooth, intensive evental time of non-linear studio play and drift).
+- *Why It Is Here:* Standard workflow architectures prioritize the complete colonization of time by Chronos, reducing human and machine activity to linear task completion metrics. This section acts as an architectural sanctuary for the un-scheduled.
+- *The Targeted Effect:* Chronos logs essential logistics, system configurations, and routine calendar maintenance. Aion hosts open-ended research, fluid note-traces, and spontaneous experiments. *The Core Protocol:* Chronos must never parasite Aion drift. Setting aside dedicated segments for open experimentation protects the posthuman ecosystem from administrative anxiety and structural decay.
+
+#v(6pt)
+#section-title("II. The Vector Force Field: Diagnosing Relational Friction")
 #set text(size: 9.5pt)
-Rather than tracking isolated, linear metrics, the taxonomy operates as a series of asymmetric, colliding pairs. You register their presence in the morning, and diagnose their mutual parasitism in the evening:
-- *A1 (Attractor Force) \/\/ R1 (Thermodynamic Resistance):* Measures the internal pull of your core creative vectors against the inevitable cognitive drag, server glitches, and somatic fatigue of the day. *Target Effect:* To visualize whether your primary projects are generating energetic momentum or being slowly hollowed out by daily friction.
-- *S1 (Stabilization Index) \/\/ F1 (Flight Velocity):* Traces the tension between your grounding homeostatic routines (sleep, posture, nutrition) and the sudden, non-linear detours of unexpected creative breakthroughs. *Target Effect:* To ensure your experimental \"lines of flight\" expand your practice rather than burning out your physical chassis.
-- *V1 (Vitality / Joy) \/\/ D1 (Diffraction Ratio):* Maps your Spinozian capacity for action against the coherence of your daily outputs. High diffraction means your actions generated constructive wave interferences across your work, while a low ratio indicates fragmented, cancelled-out energy.
-- *C1 (Chronos Metric) \/\/ A2 (Aion Drift):* Tracks the ratio between clock-tied, scheduled administrative logistics and smooth, un-dated evental time. *Target Effect:* To expose exactly when structured tasks are attempting to parasite and colonize your open studio play.
+- *What It Is:* A morning cartography field mapping the four active forces intersecting your landscape: Attractors (focus gradients), Stabilizers (metabolic maintenance), Flight Lines (rhizomatic escapes), and Resistors (thermodynamic drag).
+- *Why It Is Here:* To escape the trap of traditional tracking metrics that turn daily life into a sterile score out of ten, replacing it with a spatial map of energetic flows.
+- *The Targeted Effect:* This field forces an ongoing diagnosis of relational dominance. Instead of asking how much you 'controlled' your day, you track topological friction: Which vector parasitized the other today? Where did attention leak through your defensive boundaries? Did an administrative Resistor capture a sudden, emergent Flight Line?
 #pagebreak()
 
-// Page 6: Operating Guide - Morning Attunement & Agential Cut
-#system-header("THE AGENTIAL CUT", "SYSTEM GUIDE 3/4", show-date: false)
+// Page 6: Operating Guide - 8-D Matrix & Morning Attunement
+#system-header("THE TAXONOMY AND AGENTIAL CUT", "SYSTEM GUIDE 3/4", show-date: false)
+#v(6pt)
+
+#section-title("III. The 8-Dimensional Matrix: Relational Pairing")
+#set text(size: 9.5pt)
+Rather than tracking isolated metrics, the taxonomy operates as a series of asymmetric, colliding pairs registered in the morning and evaluated under a diffractive framework in the evening:
+- *A1 (Attractor Force) \/\/ R1 (Thermodynamic Resistance):* Tracks the intensive pull of primary creative fields against the inevitable cognitive drag, system glitches, and somatic fatigue of the day.
+- *S1 (Stabilization Index) \/\/ F1 (Flight Velocity):* Measures the tension between grounding homeostatic routines (posture baselines, sleep, hydration) and the non-linear detours of unexpected creative breakthroughs.
+- *V1 (Vitality / Joy) \/\/ D1 (Diffraction Ratio):* Maps your capacity for action against the coherence of your daily outputs. High diffraction indicates your actions generated constructive wave interferences across your work.
+- *C1 (Chronos Metric) \/\/ A2 (Aion Drift):* Monitors the ratio between clock-tied administrative logistics and smooth time, exposing exactly when structured tasks are attempting to parasite open play.
+
 #v(6pt)
 #section-title("IV. The Morning Attunement & The Agential Cut")
 #set text(size: 9.5pt)
-- *What It Is:* A daily threshold checkpoint where you explicitly inventory your \"Material Allies\" (technical substrates, lenses, screen configurations, server environments) and materialize an \"Agential Cut.\"
-- *Why It Is Here:* Grounded in new materialist ethics, it acknowledges that you do not think or create in a vacuum. Your technical infrastructure—the heat of a server's CPU, the specific focal length of a compact camera, the notification configurations on a screen—actively shapes your agency.
-- *The Targeted Effect:* Declaring the Agential Cut marks out your intentional boundaries for the next twelve hours. It isolates what is included in your field of engagement and what is barred from entry, transforming daily focus from an act of willpower into a clear spatial configuration.
-#v(4pt)
-#section-title("V. The Macro-Dynamic Folds (The 93-Day Trajectory)")
-#set text(size: 9.5pt)
-The long-term movement through this journal acts as a macro-exhibition design, treating time as a circuit divided into three distinct, month-long evolutionary turnings:
-- *Cycle 1: Deterritorialization (Days 1–31) \/\/ Target: Habit Pruning:* Stripping away rigid, sedimented routines, dropping toxic digital dependencies, and mapping the baseline friction of your workspace. It deliberately introduces instability to allow new potentials to leak through.
-- *Cycle 2: Re-Organization (Days 32–62) \/\/ Target: Assembling Workflows:* Connecting newly discovered habits and building flexible workflows that balance operational discipline with creative deviation. It tests system resilience under mild, real-world shocks.
-- *Cycle 3: Sustained Homeorhesis (Days 63–93) \/\/ Target: Evolutionary Flow:* Calibrating fluid boundaries to support open flight trajectories without collapsing back into rigid, paranoid structure. The goal is a self-organizing, dynamic equilibrium.
+- *What It Is:* A daily threshold checkpoint where you explicitly inventory your "Material Allies" (technical substrates, server terminals, lenses, screen rules) and declare an "Agential Cut."
+- *Why It Is Here:* Grounded in posthuman ethics, it acknowledges that you do not think or create in a vacuum. Your technical infrastructure actively shapes your agency.
+- *The Targeted Effect:* Declaring the Agential Cut marks out your intentional boundaries for the next twelve hours. It isolates what is included within your field of engagement and what is barred from entry, transforming daily focus from an act of willpower into a clear spatial configuration.
 #pagebreak()
 
-// Page 7: Operating Guide - Recursive Folds
-#system-header("RECURSIVE FOLDS", "SYSTEM GUIDE 4/4", show-date: false)
+// Page 7: Operating Guide - Macro Trajectories & Recursive Loops
+#system-header("DYNAMIC LOOPS AND CYCLES", "SYSTEM GUIDE 4/4", show-date: false)
+#v(6pt)
+
+#section-title("V. The Macro-Dynamic Folds (The 93-Day Trajectory)")
+#set text(size: 9.5pt)
+The long-term movement through this ledger treats time as an evolutionary circuit divided into three distinct, month-long turnings:
+- *Cycle 1: Deterritorialization (Days 1–31) \/\/ Target: Habit Pruning:* Stripping away rigid, sedimented routines, dropping digital dependencies, and mapping the baseline friction of your workspace to allow new potentials to leak through and disrupt stagnation.
+- *Cycle 2: Re-Organization (Days 32–62) \/\/ Target: Assembling Workflows:* Connecting newly discovered habits and building flexible workflows that balance operational discipline with creative deviation, alloying your routines with active creative vectors.
+- *Cycle 3: Sustained Homeorhesis (Days 63–93) \/\/ Target: Evolutionary Flow:* Calibrating fluid boundaries to support open flight trajectories without collapsing back into rigid, paranoid structure. The goal is a self-organizing, dynamic equilibrium that moves along a continuous path of growth without freezing up.
+
 #v(6pt)
 #section-title("VI. The Diffractive Field & The Recursive Seed")
 #set text(size: 9.5pt)
-- *What It Is:* A weekly calibration ritual (\"The Fold\") paired with a nightly second-order cybernetic feedback loop.
-- *Why It Is Here:* To turn historic journaling into a generative, forward-facing machine that actively re-programs its own next steps.
-- *The Targeted Effect:* Each evening, you chart your position within the State Space graph (Vitality/Joy vs. Drain/Exhaust) and audit your digital entanglements. You extract the entire day's interference pattern into a single instruction—the Feedforward Seed. The next morning, this seed is copied directly into your Attunement block, programmatically setting the entry boundaries for the incoming day.
+- *What It Is:* A weekly calibration ritual (\"The Fold\") paired with a nightly second-order cybernetic feedback loop that allows the ledger to function as a self-evolutionary machine.
+- *Why It Is Here:* To turn historic journaling away from passive documentation and toward a generative engine that actively re-programs its own next steps based on real-time interference patterns.
+- *The Targeted Effect:* Each evening, you chart your position within the State Space graph and carry out a Capture Audit on your digital entanglements. You extract the entire day's interference pattern into a single instruction—the *Feedforward Seed*. The next morning, this seed is copied directly into your Attunement block, programmatically setting the entry boundaries for the incoming day. The system continuously learns from its own operational history.
 #pagebreak()
 
-// Page 5: 16-Dimensional Taxonomy Reference (1/2)
-#system-header("16-DIMENSIONAL TAXONOMY REFERENCE (1/2)", "SYSTEM REFERENCE")
+// Page 5: 8-Dimensional Taxonomy Reference (1/2)
+#system-header("8-DIMENSIONAL TAXONOMY REFERENCE (1/2)", "SYSTEM REFERENCE")
 #v(6pt)
-Reference matrix for tracking systemic cognitive forces and metrics:
+Reference matrix for tracking the eight primary systemic coordinates and metrics across the daily attunement loop:
 #v(8pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("A1:"), [ *ATTRACTOR FORCE* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Focus gradient; pull strength towards primary creative and intellectual vectors."
-  #v(4pt)
+  #v(2pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
-  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 11pt)
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#v(1pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("S1:"), [ *STABILIZATION INDEX* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Sustenance level of homeostatic habits and system maintenance routines."
-  #v(4pt)
+  #v(2pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
-  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 11pt)
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#v(1pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("F1:"), [ *FLIGHT VELOCITY* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Rate of creative escape, detour, and unexpected rhizomatic associations."
-  #v(4pt)
+  #v(2pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
-  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 11pt)
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#v(1pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("R1:"), [ *THERMODYNAMIC RESISTANCE* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Cognitive drag, somatic exhaustion, and system-level friction."
-  #v(4pt)
+  #v(2pt)
   #set text(size: 7.5pt, fill: rgb("#888888"))
-  #raw("OPERATOR NOTES / PERSONAL ANCHORS:")
-  #write-lines(1, height: 11pt)
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
+#v(1pt)
 #pagebreak()
 
-// Page 6: 16-Dimensional Taxonomy Reference (2/2)
-#system-header("16-DIMENSIONAL TAXONOMY REFERENCE (2/2)", "SYSTEM REFERENCE")
+// Page 6: 8-Dimensional Taxonomy Reference (2/2)
+#system-header("8-DIMENSIONAL TAXONOMY REFERENCE (2/2)", "SYSTEM REFERENCE")
 #v(6pt)
-Reference matrix for tracking systemic cognitive forces and metrics:
+Reference matrix for tracking the eight primary systemic coordinates and metrics across the daily attunement loop:
 #v(8pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("V1:"), [ *VITALITY / JOY* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Spinozian affect score. Measure of intensive power of action."
-  #v(4pt)
-  #write-lines(1, height: 11pt)
+  #v(2pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#v(1pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("D1:"), [ *DIFFRACTION RATIO* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Coherence of actions. High values indicate constructive wave ripples."
-  #v(4pt)
-  #write-lines(1, height: 11pt)
+  #v(2pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#v(1pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("C1:"), [ *CHRONOS METRIC* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Completion rate of scheduled linear tasks."
-  #v(4pt)
-  #write-lines(1, height: 11pt)
+  #v(2pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 6pt, radius: 2pt)[
+#v(1pt)
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 6pt, radius: 2pt)[
   #set text(size: 9pt)
   #grid(
     columns: (auto, 1fr),
     gutter: 10pt,
     raw("A2:"), [ *AION DRIFT* ]
   )
-  #v(2pt)
+  #v(1pt)
   #set text(size: 8.5pt, fill: rgb("#444444"))
   "Depth and duration of un-dated evental time and research play."
-  #v(4pt)
-  #write-lines(1, height: 11pt)
+  #v(2pt)
+  #set text(size: 7.5pt, fill: rgb("#888888"))
+  #write-lines(5, height: 9.5pt)
 ]
-#v(2pt)
+#v(1pt)
 #pagebreak()
 
 // Page 7: Initial Stratification - Somatic & Attention Baselines
 #system-header("INITIAL STRATIFICATION (Somatic & Attentional Baselines)", "SYSTEM ATTUNEMENT // PRE-CYCLE 1/4")
 #v(6pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#dddddd"), inset: 8pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[
   #set text(size: 9pt)
   #raw("Sedimented Routines & Capture Fields:") \
   #set text(size: 8pt, fill: rgb("#555555"))
   "Map the rigid dependencies, automatic behaviors, or loop-traps currently capturing your daily agency. What loops perform you before you can perform an agential cut?"
   #v(2pt)
-  #write-lines(10, height: 11pt)
+  #write-lines(13, height: 10pt)
 ]
 #v(6pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[
   #set text(size: 9pt)
   #raw("Attention Span Kinematics:") \
   #set text(size: 8pt, fill: rgb("#555555"))
   "Document your current deep-focus boundaries. Map the exact technical or environmental triggers that shatter your attention span and accelerate drift into computational distraction loops."
   #v(2pt)
-  #write-lines(10, height: 11pt)
+  #write-lines(13, height: 10pt)
 ]
 #pagebreak()
 
 // Page 8: Material Allies & Infrastructure
 #system-header("MATERIAL ALLIES & INFRASTRUCTURE", "SYSTEM ATTUNEMENT // PRE-CYCLE 2/4")
 #v(6pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[
   #set text(size: 9pt)
   #raw("Material Ally Audit:") \
   #set text(size: 8pt, fill: rgb("#555555"))
   "Inventory the physical technical substrates of your practice (e.g., VPS configurations, compact camera interfaces, low-light optics, specific desktop layouts). Treat these tools not as passive objects, but as active participants that define what you can perceive and create."
   #v(2pt)
-  #write-lines(10, height: 11pt)
+  #write-lines(12, height: 10pt)
 ]
 #v(6pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[
   #set text(size: 9pt)
   #raw("Chassis Metabolism & Recovery Baselines:") \
   #set text(size: 8pt, fill: rgb("#555555"))
   "Log the physiological baseline conditions of your biological hardware: structural posture defaults, sleep duration/quality indicators, and nutritional triggers that fluctuate your daily intensive energy fields."
   #v(2pt)
-  #write-lines(10, height: 11pt)
+  #write-lines(12, height: 10pt)
 ]
 #pagebreak()
 
@@ -366,21 +377,21 @@ Reference matrix for tracking systemic cognitive forces and metrics:
 Plot your initial 8-coordinate vector space signature on the grid below. Set baseline positions for your Attractors (*A1*), Stabilizers (*S1*), Flight Lines (*F1*), and Resistors (*R1*), alongside your initial readings for Vitality (*V1*), Diffraction (*D1*), Chronos (*C1*), and Aion (*A2*) based on your typical baseline week.
 #v(10pt)
 #align(center)[
-  #rect(width: 200pt, height: 200pt, stroke: 0.5pt + rgb("#111111"), fill: rgb("#ffffff"))[
-    #place(center + horizon)[#circle(radius: 90pt, stroke: 0.25pt + rgb("#bbbbbb"))]
-    #place(center + horizon)[#circle(radius: 72pt, stroke: 0.25pt + rgb("#cccccc"))]
-    #place(center + horizon)[#circle(radius: 54pt, stroke: 0.25pt + rgb("#dddddd"))]
-    #place(center + horizon)[#circle(radius: 36pt, stroke: 0.25pt + rgb("#eeeeee"))]
-    #place(center + horizon)[#circle(radius: 18pt, stroke: 0.25pt + rgb("#f4f4f4"))]
-    #place(center + horizon, dx: 3pt, dy: -18pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("2")]
-    #place(center + horizon, dx: 3pt, dy: -36pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("4")]
-    #place(center + horizon, dx: 3pt, dy: -54pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("6")]
-    #place(center + horizon, dx: 3pt, dy: -72pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("8")]
-    #place(center + horizon, dx: 3pt, dy: -90pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("10")]
-    #place(top + left)[#line(start: (0pt, 95pt), end: (190pt, 95pt), stroke: 0.25pt + rgb("#b1b1b1"))]
-    #place(top + left)[#line(start: (95pt, 0pt), end: (95pt, 190pt), stroke: 0.25pt + rgb("#b1b1b1"))]
-    #place(top + left)[#line(start: (25pt, 25pt), end: (165pt, 165pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-    #place(top + left)[#line(start: (25pt, 165pt), end: (165pt, 25pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+  #rect(width: 300pt, height: 300pt, stroke: 0.5pt + rgb("#aaaaaa"), fill: rgb("#ffffff"))[
+    #place(center + horizon)[#circle(radius: 130pt, stroke: 0.25pt + rgb("#dddddd"))]
+    #place(center + horizon)[#circle(radius: 98pt, stroke: 0.25pt + rgb("#cccccc"))]
+    #place(center + horizon)[#circle(radius: 74pt, stroke: 0.25pt + rgb("#dddddd"))]
+    #place(center + horizon)[#circle(radius: 52pt, stroke: 0.25pt + rgb("#eeeeee"))]
+    #place(center + horizon)[#circle(radius: 26pt, stroke: 0.25pt + rgb("#f4f4f4"))]
+    #place(center + horizon, dx: 3pt, dy: -26pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("2")]
+    #place(center + horizon, dx: 3pt, dy: -52pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("4")]
+    #place(center + horizon, dx: 3pt, dy: -74pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("6")]
+    #place(center + horizon, dx: 3pt, dy: -98pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("8")]
+    #place(center + horizon, dx: 3pt, dy: -130pt)[#set text(size: 5pt, fill: rgb("#888888")); #raw("10")]
+    #place(top + left)[#line(start: (0pt, 145pt), end: (290pt, 145pt), stroke: 0.25pt + rgb("#dddddd"))]
+    #place(top + left)[#line(start: (145pt, 0pt), end: (145pt, 290pt), stroke: 0.25pt + rgb("#dddddd"))]
+    #place(top + left)[#line(start: (0pt, 0pt), end: (290pt, 290pt), stroke: 0.25pt + rgb("#dddddd"))]
+    #place(top + left)[#line(start: (0pt, 290pt), end: (290pt, 0pt), stroke: 0.25pt + rgb("#dddddd"))]
     #place(top + center, dy: 4pt)[#set text(size: 6pt); #raw("A1 (ATTRACTOR)")]
     #place(bottom + center, dy: -4pt)[#set text(size: 6pt); #raw("R1 (RESISTOR)")]
     #place(left + horizon, dx: 4pt)[#set text(size: 6pt); #raw("S1 (STABILIZER)")]
@@ -404,22 +415,22 @@ Plot your initial 8-coordinate vector space signature on the grid below. Set bas
 // Page 10: Calibration Zero - Diffractive Baseline & Systemic Goals
 #system-header("SYSTEMIC INTENTIONS", "SYSTEM ATTUNEMENT // PRE-CYCLE 4/4")
 #v(6pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[
   #set text(size: 9pt)
   #raw("Emergent Attractor Fields:") \
   #set text(size: 8pt, fill: rgb("#555555"))
   "What qualitative states of focus, creative output, or collaborative mutation do you intend to cultivate across this 93-day trajectory?"
   #v(2pt)
-  #write-lines(10, height: 11pt)
+  #write-lines(13, height: 11pt)
 ]
 #v(6pt)
-#rect(width: 100%, stroke: 0.5pt + rgb("#cccccc"), inset: 8pt)[
+#rect(width: 100%, stroke: 0.5pt + rgb("#eeeeee"), inset: 8pt)[
   #set text(size: 9pt)
   #raw("Homeostatic Attractor Damping:") \
   #set text(size: 8pt, fill: rgb("#555555"))
   "Define your defensive systemic thresholds. What exact somatic or computational drag triggers an automated intervention by the system to reduce energy expenditure and prevent entropic collapse?"
   #v(2pt)
-  #write-lines(10, height: 11pt)
+  #write-lines(12, height: 11pt)
 ]
 #pagebreak()
 
@@ -1157,8 +1168,8 @@ Audit the trajectory path using second-order cybernetic principles:
   *3. Entropy Dissipation:* Are coordinates drifting steadily downwards into low vitality? This shows a systemic leak in energy or workspace alignment.
 ]
 #pagebreak()
-// Page 231: 16-Dimensional vector compilation - Left
-#system-header("16-DIMENSIONAL TOPOLOGICAL RELATIONSHIPS", "COMPILATION 1/2")
+// Page 231: 8-Dimensional vector compilation - Left
+#system-header("8-DIMENSIONAL TOPOLOGICAL RELATIONSHIPS", "COMPILATION 1/2")
 #v(8pt)
 Analyze vector interactions and boundary leakages for each cycle (Map parasitism, e.g., A1 < R1, or list leaks):
 #v(10pt)

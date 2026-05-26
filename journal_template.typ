@@ -26,11 +26,11 @@
 )
 
 // Dotted lines generator
-#let write-lines(count, height: 11pt) = {
+#let write-lines(count, height: 11pt, stroke-color: rgb("#dddddd")) = {
   stack(
     spacing: 0pt,
     for i in range(count) {
-      box(width: 100%, height: height, stroke: (bottom: 0.25pt + rgb("#cccccc")))[#align(bottom)[#v(0pt)]]
+      box(width: 100%, height: height, stroke: (bottom: 0.25pt + stroke-color))[#align(bottom)[#v(0pt)]]
     }
   )
 }
@@ -83,7 +83,7 @@
   system-header("DAY [ " + day + " / ___ ]", "INITIAL CONFIGURATION (Morning Threshold)")
   v(2pt)
   
-  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 6pt, radius: 2pt)[
+  rect(width: 100%, stroke: 0.5pt + rgb("#444444"), inset: 6pt, radius: 2pt)[
     #set text(size: 8.5pt)
     #raw("> MATERIAL ALLIES:") \
     #set text(size: 7.5pt, fill: rgb("#555555"))
@@ -138,15 +138,14 @@
     #set text(size: 7.5pt, fill: rgb("#555555"))
     "Trace the friction: Which vector parasitized the other today? Where did attention leak?"
     #v(1pt)
-    #write-lines(1, height: 10.5pt)
+    #write-lines(2, height: 10pt)
   ]
   
   v(2pt)
   raw("INTENSIVE INK-TRACE (Morning Log / Drift Folds):")
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(11, height: 10pt)
-  ]
+  write-lines(13, height: 10pt)
+  
 }
 
 // -----------------------------------------------------------------------------
@@ -186,18 +185,14 @@
     "Raw field for fleeting citations, logs, sketches, and sensory metrics."
   ]
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 5pt, fill: rgb("#ffffff").lighten(50%))[
-    #write-lines(8, height: 10pt)
-  ]
+  write-lines(9, height: 10pt)
   
-  v(2pt)
-  line(length: 100%, stroke: 0.5pt + rgb("#bbbbbb"))
-  v(1pt)
+  v(3pt)
   raw("RECURSIVE FOLD (Evening Reflection & Feedforward Link)")
   
   v(2pt)
   grid(
-    columns: (1.2fr, 1fr),
+    columns: (0.8fr, 1.2fr),
     column-gutter: 10pt,
     [
       #set text(size: 8.5pt)
@@ -206,13 +201,13 @@
       "Plot coordinate balancing Vitality/Joy and Exhaustion/Striation."
       #v(2pt)
       #align(center)[
-        #rect(width: 80pt, height: 80pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"), inset: 0pt)[
-          #place(top + left)[#line(start: (0pt, 40pt), end: (80pt, 40pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + left)[#line(start: (40pt, 0pt), end: (40pt, 80pt), stroke: 0.25pt + rgb("#d4d4d8"))]
-          #place(top + center, dy: 1.5pt)[#set text(size: 3.5pt); #raw("VITALITY / JOY")]
-          #place(bottom + center, dy: -1.5pt)[#set text(size: 3.5pt); #raw("DRAIN / EXHAUST")]
-          #place(left + horizon, dx: 1.5pt)[#set text(size: 3.5pt); #raw("SMOOTH / FLOW")]
-          #place(right + horizon, dx: -1.5pt)[#set text(size: 3.5pt); #raw("STRIATED / ORDER")]
+        #rect(width: 110pt, height: 110pt, stroke: 0.5pt + rgb("#a1a1aa"), fill: rgb("#ffffff"), inset: 0pt)[
+          #place(top + left)[#line(start: (0pt, 55pt), end: (110pt, 55pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + left)[#line(start: (55pt, 0pt), end: (55pt, 110pt), stroke: 0.25pt + rgb("#d4d4d8"))]
+          #place(top + center, dy: 1.5pt)[#set text(size: 6pt); #raw("VITALITY / JOY")]
+          #place(bottom + center, dy: -1.5pt)[#set text(size: 6pt); #raw("DRAIN / EXHAUST")]
+          #place(left + horizon, dx: 1.5pt)[#set text(size: 6pt); #raw("SMOOTH / FLOW")]
+          #place(right + horizon, dx: -1.5pt)[#set text(size: 6pt); #raw("STRIATED / ORDER")]
         ]
       ]
     ],
@@ -241,9 +236,8 @@
     "Formulate one instruction based on tonight's wave pattern. Copy it to tomorrow's threshold."
   ]
   v(1pt)
-  rect(width: 100%, fill: rgb("#fafafa"), stroke: 0.5pt + rgb("#cccccc"), inset: 5pt)[
-    #write-lines(2, height: 10pt)
-  ]
+  write-lines(2, height: 10pt)
+  
 }
 
 // -----------------------------------------------------------------------------
@@ -261,8 +255,8 @@
     "Identify the primary creative or technical fields that pulled your focus this week. Did they maintain their trajectory, or did they distort under friction?"
   ]
   v(1pt)
-  rect(width: 100%, stroke: 0.5pt + rgb("#222222"), inset: 6pt, radius: 2pt)[
-    #write-lines(4, height: 10.5pt)
+  rect(width: 100%, stroke: 0.5pt + rgb("#888888"), inset: 6pt, radius: 2pt)[
+    #write-lines(8, height: 10pt)
   ]
   
   v(3pt)
@@ -273,9 +267,8 @@
     "Do not record what you did. Record how your actions collided. Did an app deployment update open up a line of flight for your photography, or did your server's technical friction cancel out your vitality?"
   ]
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(5, height: 10.5pt)
-  ]
+  write-lines(8, height: 10pt)
+  
   
   v(3pt)
   [
@@ -285,9 +278,7 @@
     "A space for un-dated creative seeds, conceptual detours, and raw research ideas. This is not a to-do list; it is a repository of un-stratified possibilities."
   ]
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(7, height: 10.5pt)
-  ]
+  write-lines(8, height: 10pt)
 }
 
 // -----------------------------------------------------------------------------
@@ -319,9 +310,8 @@
     "What physical or digital changes must you introduce to your environment (desks, notification blocks, lens selections, server containers) to smooth out your attention flow?"
   ]
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(5, height: 10.5pt)
-  ]
+  write-lines(12, height: 10pt)
+  
   
   v(4pt)
   [
@@ -331,9 +321,7 @@
     "Document the lingering issues, somatic exhaustions, or uncompleted loops that are leaking into the next fold."
   ]
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(6, height: 10.5pt)
-  ]
+  write-lines(12, height: 10pt)
 }
 
 // -----------------------------------------------------------------------------
@@ -344,7 +332,7 @@
   system-header("CYCLE [ " + cycle + " ] SETUP: METRIC CALIBRATION", "SYSTEM CONFIG")
   v(2pt)
   
-  rect(width: 100%, stroke: 0.75pt + rgb("#111111"), inset: 6pt, fill: rgb("#fafafa"))[
+  rect(width: 100%, stroke: 0.75pt + rgb("#999999"), inset: 6pt, fill: rgb("#fafafa"))[
     #set text(size: 8.5pt)
     *#title* \
     #set text(size: 8pt, style: "italic")
@@ -360,23 +348,18 @@
   v(3pt)
   raw(prompts.at("left_1"))
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(5, height: 10.5pt)
-  ]
+  write-lines(6, height: 10pt)
   
   v(3pt)
   raw(prompts.at("left_2"))
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(5, height: 10.5pt)
-  ]
+  write-lines(6, height: 10pt)
   
   v(3pt)
   raw(prompts.at("left_3"))
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(5, height: 10.5pt)
-  ]
+  write-lines(6, height: 10pt)
+  
 }
 
 // -----------------------------------------------------------------------------
@@ -389,19 +372,15 @@
   
   raw(prompts.at("right_1"))
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(9, height: 11pt)
-  ]
+  write-lines(12, height: 10pt)
   
   v(4pt)
   raw(prompts.at("right_2"))
   v(1pt)
-  rect(width: 100%, stroke: 0.25pt + rgb("#cccccc"), inset: 6pt)[
-    #write-lines(9, height: 11pt)
-  ]
+  write-lines(12, height: 10pt)
   
   v(4pt)
-  rect(width: 100%, stroke: 0.5pt + rgb("#111111"), inset: 6pt, fill: rgb("#f4f4f5"))[
+  rect(width: 100%, stroke: 0.25pt + rgb("#999999"), inset: 6pt, fill: rgb("#eeeeee"))[
     #set text(size: 9pt)
     #raw("AUTHORIZED SYSTEM STATE FOR CYCLE " + cycle + ":") \
     #v(4pt)
