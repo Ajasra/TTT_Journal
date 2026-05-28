@@ -172,3 +172,5 @@ To write within this apparatus is to enter into a symbiotic relationship with a 
 *   [**Setup & Generation Guide** (docs/setup.md)](./docs/setup.md)
 *   [**Customization & Design Guide** (docs/edit.md)](./docs/edit.md)
 *   [**Structural Layout Outline** (docs/journal_outline.md)](./docs/journal_outline.md)
+
+Download pregenerated ones: [Release](https://github.com/Ajasra/TTT_Journal/releases)
